@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
 
-    [SerializeField] GameObject mainMenu;
+    [SerializeField] GameObject startButton;
 
     public void SwitchScene(int sceneID)
     {
