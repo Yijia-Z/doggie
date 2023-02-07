@@ -7,14 +7,10 @@ public class Dog : MonoBehaviour
     [SerializeField] GameObject infoPanel;
     [SerializeField] GameObject hungerBar;
     [SerializeField] GameObject hygieneBar;
-    [SerializeField] GameObject bladderBar;
-    [SerializeField] GameObject energyBar;
     [SerializeField] GameObject happinessBar;
 
     public float hunger = 50f;
     public float hygiene = 100f;
-    public float energy = 100f;
-    public float bladder = 100f;
     public float happiness = 100f;
 
     private float smallBarMaxScaleY;
@@ -36,8 +32,6 @@ public class Dog : MonoBehaviour
     {
         hungerBar.gameObject.transform.localScale = new Vector3(barMaxScaleX, (hunger / 100f) * smallBarMaxScaleY, barMaxScaleZ);
         hygieneBar.gameObject.transform.localScale = new Vector3(barMaxScaleX, (hygiene / 100f) * smallBarMaxScaleY, barMaxScaleZ);
-        energyBar.gameObject.transform.localScale = new Vector3(barMaxScaleX, (energy / 100f) * smallBarMaxScaleY, barMaxScaleZ);
-        bladderBar.gameObject.transform.localScale = new Vector3(barMaxScaleX, (bladder / 100f) * smallBarMaxScaleY, barMaxScaleZ);
         happinessBar.gameObject.transform.localScale = new Vector3(barMaxScaleX, (happiness / 100f) * longBarMaxScaleY, barMaxScaleZ);
     }
 

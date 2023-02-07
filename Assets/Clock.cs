@@ -6,8 +6,10 @@ using TMPro;
 public class Clock : MonoBehaviour
 {
     public TMP_Text clockText;
+    public float speedUpMultiplier = 2.0f;
+    public float secToMinRatio = 5.0f;
     private float timer;
-    private int hour = 6;
+    private int hour = 8;
     private int minute = 0;
     private bool isAM = true;
 
@@ -22,7 +24,7 @@ public class Clock : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if (timer >= 10)
+        if (timer >= secToMinRatio)
         {
             timer = 0;
             minute++;
@@ -55,5 +57,19 @@ public class Clock : MonoBehaviour
         {
             clockText.text = clockText.text + "PM";
         }
+    }
+    public void PauseTime()
+    {
+        Time.timeScale = 0f;
+    }
+
+    public void ResumeTime()
+    {
+        Time.timeScale = 1f;
+    }
+
+    public void SpeedUpTime()
+    {
+        Time.timeScale = speedUpMultiplier;
     }
 }
