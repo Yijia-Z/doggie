@@ -7,7 +7,7 @@ public class Clock : MonoBehaviour
 {
     public TMP_Text clockText;
     public float speedUpMultiplier = 2.0f;
-    public float secToMinRatio = 5.0f;
+    public float irlSecToGameMinRatio = 5.0f;
     private float timer;
     private int hour = 8;
     private int minute = 0;
@@ -24,7 +24,7 @@ public class Clock : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if (timer >= secToMinRatio)
+        if (timer >= irlSecToGameMinRatio)
         {
             timer = 0;
             minute++;
