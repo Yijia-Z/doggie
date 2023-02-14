@@ -1438,7 +1438,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6156977807766974900, guid: e9eb0b15fd90abe4689d4a17145f5cd3, type: 3}
       propertyPath: irlSecToGameMinRatio
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9eb0b15fd90abe4689d4a17145f5cd3, type: 3}
