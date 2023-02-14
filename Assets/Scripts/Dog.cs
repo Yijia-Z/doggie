@@ -7,11 +7,12 @@ public class Dog : MonoBehaviour
     [SerializeField] GameObject infoPanel;
     [SerializeField] GameObject hungerBar;
     [SerializeField] GameObject hygieneBar;
-    [SerializeField] GameObject happinessBar;
+    [SerializeField] GameObject totalHappinessBar;
 
     public float hunger = 50f;
     public float hygiene = 100f;
-    public float happiness = 100f;
+    public float totalHappiness = 100f;
+    public float happiness = 30f;
 
     private float secToMinRatio;
     private float barMaxScaleY;
@@ -19,7 +20,7 @@ public class Dog : MonoBehaviour
     private float barMaxScaleZ;
     private Vector3 hungerBarPos;
     private Vector3 hygieneBarPos;
-    private Vector3 happinessBarPos;
+    private Vector3 totalHappinessBarPos;
     private float barHalfLength = 288f;
     private float timer;
 
@@ -31,7 +32,7 @@ public class Dog : MonoBehaviour
         barMaxScaleY = hungerBar.transform.localScale.y;
         hungerBarPos = hungerBar.transform.localPosition;
         hygieneBarPos = hygieneBar.transform.localPosition;
-        happinessBarPos = happinessBar.transform.localPosition;
+        totalHappinessBarPos = totalHappinessBar.transform.localPosition;
 
         Clock clock = FindObjectOfType<Clock>();
         secToMinRatio = clock.irlSecToGameMinRatio;
@@ -49,13 +50,14 @@ public class Dog : MonoBehaviour
         {
             hygiene = 100f;
         }
-        if (happiness > 100f)
+        if (happiness > 30f)
         {
-            happiness = 100f;
+            happiness = 30f;
         }
 
         timer += Time.deltaTime;
-        depreciateStats();
+        depreciateTimeStats();
+        updatetotalHappiness();
         updateMeters();
     }
 
@@ -76,17 +78,26 @@ public class Dog : MonoBehaviour
         hungerBar.gameObject.transform.localPosition = new Vector3(hungerBarPos.x + ((1 - (hunger / 100f)) * -barHalfLength), hungerBarPos.y, hungerBarPos.y);
         hygieneBar.gameObject.transform.localScale = new Vector3(barMaxScaleX, (hygiene / 100f) * barMaxScaleY, barMaxScaleZ);
         hygieneBar.gameObject.transform.localPosition = new Vector3(hygieneBarPos.x + ((1 - (hygiene / 100f)) * -barHalfLength), hygieneBarPos.y, hygieneBarPos.y);
-        happinessBar.gameObject.transform.localScale = new Vector3(barMaxScaleX, (happiness / 100f) * barMaxScaleY, barMaxScaleZ);
-        happinessBar.gameObject.transform.localPosition = new Vector3(happinessBarPos.x + ((1 - (happiness / 100f)) * -barHalfLength), happinessBarPos.y, happinessBarPos.y);
+        totalHappinessBar.gameObject.transform.localScale = new Vector3(barMaxScaleX, (totalHappiness / 100f) * barMaxScaleY, barMaxScaleZ);
+        totalHappinessBar.gameObject.transform.localPosition = new Vector3(totalHappinessBarPos.x + ((1 - (totalHappiness / 100f)) * -barHalfLength), totalHappinessBarPos.y, totalHappinessBarPos.y);
     }
 
-    private void depreciateStats()
+    private void updatetotalHappiness()
+    {
+        totalHappiness = ((hunger / 100f) * 40) + ((hygiene / 100f) * 30) + happiness;
+        if (totalHappiness > 100f)
+        {
+            totalHappiness = 100f;
+        }
+    }
+
+    private void depreciateTimeStats()
     {
         if (timer > secToMinRatio * 6)
         {
             hygiene -= 1;
             hunger -= 2;
-            happiness -= 2;
+            totalHappiness -= 2;
             if (hygiene < 0)
             {
                 hygiene = 0;
@@ -95,12 +106,33 @@ public class Dog : MonoBehaviour
             {
                 hunger = 0;
             }
-            if (happiness < 0)
+            if (totalHappiness < 0)
             {
-                happiness = 0;
+                totalHappiness = 0;
             }
 
             timer = 0;
         }
+    }
+
+    public void giveFood()
+    {
+
+    }
+
+    public void giveBath()
+    {
+        hygiene = 100f;
+
+    }
+
+    public void giveWalk()
+    {
+
+    }
+
+    public void giveToy()
+    {
+
     }
 }
