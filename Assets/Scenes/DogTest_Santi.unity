@@ -490,10 +490,6 @@ MonoBehaviour:
   infoPanel: {fileID: 689505270}
   hungerBar: {fileID: 561250602}
   hygieneBar: {fileID: 669046782}
-  happinessBar: {fileID: 730474157}
-  hunger: 100
-  hygiene: 100
-  happiness: 100
   totalHappinessBar: {fileID: 5389329742390450437}
   taskPanel: {fileID: 1178974695}
   hunger: 50
