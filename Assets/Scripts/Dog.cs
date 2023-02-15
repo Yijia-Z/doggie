@@ -8,6 +8,7 @@ public class Dog : MonoBehaviour
     [SerializeField] GameObject hungerBar;
     [SerializeField] GameObject hygieneBar;
     [SerializeField] GameObject totalHappinessBar;
+    [SerializeField] GameObject taskPanel;
 
     public float hunger = 50f;
     public float hygiene = 100f;
@@ -65,11 +66,13 @@ public class Dog : MonoBehaviour
     private void OnMouseDown()
     {
         infoPanel.SetActive(true);
+        taskPanel.SetActive(true);
     }
 
     public void closeInfoPanel()
     {
-        infoPanel.SetActive(false); ;
+        infoPanel.SetActive(false);
+        taskPanel.SetActive(false);
     }
 
     private void updateMeters()
@@ -117,22 +120,32 @@ public class Dog : MonoBehaviour
 
     public void giveFood()
     {
-
+        hunger = 100f;
+        hygiene -= 5f;
+        taskPanel.SetActive(false);
     }
 
     public void giveBath()
     {
         hygiene = 100f;
-
+        happiness -= 15f;
+        taskPanel.SetActive(false);
     }
 
     public void giveWalk()
     {
-
+        happiness += 20f;
+        hygiene -= 10f;
+        hunger -= 15f;
+        taskPanel.SetActive(false);
     }
 
     public void giveToy()
     {
-
+        happiness += 20f;
+        taskPanel.SetActive(false);
     }
+
+
+    //STILL NEED TO ADJUST IN-GAME CLOCK FOR TASKS!!!!!!!!!!!
 }
