@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Dog : MonoBehaviour
 {
@@ -8,6 +9,9 @@ public class Dog : MonoBehaviour
     [SerializeField] GameObject hungerBar;
     [SerializeField] GameObject hygieneBar;
     [SerializeField] GameObject totalHappinessBar;
+    [SerializeField] GameObject taskPanel;
+    [SerializeField] Image panelImage;
+    [SerializeField] Sprite dogImage;
 
     public float hunger = 50f;
     public float hygiene = 100f;
@@ -23,6 +27,7 @@ public class Dog : MonoBehaviour
     private Vector3 totalHappinessBarPos;
     private float barHalfLength = 288f;
     private float timer;
+    private Clock clock;
 
     // Start is called before the first frame update
     void Start()
@@ -34,7 +39,7 @@ public class Dog : MonoBehaviour
         hygieneBarPos = hygieneBar.transform.localPosition;
         totalHappinessBarPos = totalHappinessBar.transform.localPosition;
 
-        Clock clock = FindObjectOfType<Clock>();
+        clock = FindObjectOfType<Clock>();
         secToMinRatio = clock.irlSecToGameMinRatio;
     }
 
@@ -65,11 +70,14 @@ public class Dog : MonoBehaviour
     private void OnMouseDown()
     {
         infoPanel.SetActive(true);
+        taskPanel.SetActive(true);
+        panelImage.GetComponent<Image>().sprite = dogImage;
     }
 
     public void closeInfoPanel()
     {
-        infoPanel.SetActive(false); ;
+        infoPanel.SetActive(false);
+        taskPanel.SetActive(false);
     }
 
     private void updateMeters()
@@ -117,22 +125,34 @@ public class Dog : MonoBehaviour
 
     public void giveFood()
     {
-
+        hunger = 100f;
+        hygiene -= 5f;
+        taskPanel.SetActive(false);
+        clock.minute += 5;
     }
 
     public void giveBath()
     {
         hygiene = 100f;
-
+        happiness -= 15f;
+        taskPanel.SetActive(false);
+        clock.minute += 20;
     }
 
     public void giveWalk()
     {
-
+        happiness += 20f;
+        hygiene -= 10f;
+        hunger -= 15f;
+        taskPanel.SetActive(false);
+        clock.minute += 20;
     }
 
     public void giveToy()
     {
-
+        happiness += 20f;
+        taskPanel.SetActive(false);
+        clock.minute += 5;
     }
+
 }
