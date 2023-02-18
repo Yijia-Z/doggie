@@ -9,9 +9,10 @@ public class Clock : MonoBehaviour
     public float speedUpMultiplier = 2.0f;
     public float irlSecToGameMinRatio = 5.0f;
     private float timer;
-    private int hour = 8;
-    private int minute = 0;
+    public int hour = 8;
+    public int minute = 0;
     private bool isAM = true;
+    public int day = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -28,19 +29,51 @@ public class Clock : MonoBehaviour
         {
             timer = 0;
             minute++;
-            if (minute == 60)
+            if (minute >= 60)
             {
-                minute = 0;
+                minute = minute - 60;
                 hour++;
-                if (hour == 13)
+                if (hour == 12)
+                {
+                    isAM = false;
+                }
+                if (hour == 13 && !isAM)
                 {
                     hour = 1;
-                    isAM = false;
+                }
+                else if (hour == 6 && !isAM)
+                {
+                    isAM = true;
+                    hour = 8;
+                    minute = 0;
+                    day++;
                 }
             }
         }
 
-        clockText.text = hour.ToString() + ":";
+        if (day % 5 == 1)
+        {
+            clockText.text = "Monday\n";
+        }
+        else if (day % 5 == 2)
+        {
+            clockText.text = "Tuesday\n";
+        }
+        else if (day % 5 == 3)
+        {
+            clockText.text = "Wednesday\n";
+        }
+        else if (day % 5 == 4)
+        {
+            clockText.text = "Thursday\n";
+        }
+        else if (day % 5 == 0)
+        {
+            clockText.text = "Friday\n";
+        }
+
+
+        clockText.text += hour.ToString() + ":";
         if (minute < 10)
         {
             clockText.text = clockText.text + "0" + minute.ToString() + " ";
