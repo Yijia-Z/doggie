@@ -13,12 +13,13 @@ public class Dog : MonoBehaviour
     [SerializeField] Image panelImage;
     [SerializeField] Sprite dogImage;
 
+    public Toy equippedToy = null;
     public float hunger = 50f;
     public float hygiene = 100f;
     public float totalHappiness = 100f;
     public float happiness = 30f;
-
     public bool selected = false;
+
     private float secToMinRatio;
     private float barMaxScaleY;
     private float barMaxScaleX;
@@ -142,7 +143,7 @@ public class Dog : MonoBehaviour
 
     public void giveFood()
     {
-        hunger = 100f;
+        // hunger is added in Food class
         hygiene -= 5f;
         taskPanel.SetActive(false);
         clock.minute += 5;
@@ -167,7 +168,7 @@ public class Dog : MonoBehaviour
 
     public void giveToy()
     {
-        happiness += 20f;
+        // happiness is added in Toy class
         taskPanel.SetActive(false);
         clock.minute += 5;
     }
