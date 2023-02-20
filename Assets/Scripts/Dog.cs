@@ -18,6 +18,7 @@ public class Dog : MonoBehaviour
     public float totalHappiness = 100f;
     public float happiness = 30f;
 
+    public bool selected = false;
     private float secToMinRatio;
     private float barMaxScaleY;
     private float barMaxScaleX;
@@ -46,7 +47,6 @@ public class Dog : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(hygiene);
         if (hunger > 100f)
         {
             hunger = 100f;
@@ -63,21 +63,38 @@ public class Dog : MonoBehaviour
         timer += Time.deltaTime;
         depreciateTimeStats();
         updatetotalHappiness();
-        updateMeters();
+        if (selected)
+        {
+            updateMeters();
+        }
+
     }
 
     // Show dog info panel when mouse CLICKS dog
     private void OnMouseDown()
     {
+        Dog[] dogs = FindObjectsOfType<Dog>();
+        for (int i = 0; i < dogs.Length; i++)
+        {
+            dogs[i].selected = false;
+            dogs[i].infoPanel.SetActive(false);
+            dogs[i].taskPanel.SetActive(false);
+        }
+        selected = true;
+
         infoPanel.SetActive(true);
         taskPanel.SetActive(true);
         panelImage.GetComponent<Image>().sprite = dogImage;
+
+        Vector3 dogPos = gameObject.transform.localPosition;
+        taskPanel.GetComponent<RectTransform>().position = new Vector3( dogPos.x + 2, dogPos.y + 2, dogPos.z );
     }
 
     public void closeInfoPanel()
     {
         infoPanel.SetActive(false);
         taskPanel.SetActive(false);
+        selected = false;
     }
 
     private void updateMeters()
