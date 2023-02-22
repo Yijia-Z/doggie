@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
     public Sprite movingDownSprite;
     public Sprite movingLeftSprite;
     public Sprite movingRightSprite;
+    private Sprite prevSprite;
 
     void Start()
     {
@@ -30,7 +31,7 @@ public class Player : MonoBehaviour
     {
         horizontal = Input.GetAxisRaw("Horizontal"); // -1 is left
         vertical = Input.GetAxisRaw("Vertical"); // -1 is down
-
+        prevSprite = spriteRenderer.sprite;
         // Change sprite based on movement state and direction
         if (horizontal != 0 || vertical != 0)
         {
@@ -53,19 +54,19 @@ public class Player : MonoBehaviour
         }
         else
         {
-            if (horizontal > 0)
+            if (prevSprite = movingRightSprite)
             {
                 spriteRenderer.sprite = restingRightSprite;
             }
-            else if (horizontal < 0)
+            else if (prevSprite = movingLeftSprite)
             {
                 spriteRenderer.sprite = restingLeftSprite;
             }
-            else if (vertical > 0)
+            else if (prevSprite = movingUpSprite)
             {
                 spriteRenderer.sprite = restingUpSprite;
             }
-            else if (vertical < 0)
+            else if (prevSprite = movingDownSprite)
             {
                 spriteRenderer.sprite = restingDownSprite;
             }
