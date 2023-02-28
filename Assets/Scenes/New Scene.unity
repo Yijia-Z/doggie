@@ -207,17 +207,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1611133535 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6789857999918238277, guid: 1b832505f4f1c4c388937cbf7637f17f, type: 3}
+--- !u!1 &1119996691 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6616234226737822894, guid: 1b832505f4f1c4c388937cbf7637f17f, type: 3}
   m_PrefabInstance: {fileID: 2120560220}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+--- !u!1 &1611133533 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8885332138496981560, guid: 1b832505f4f1c4c388937cbf7637f17f, type: 3}
+  m_PrefabInstance: {fileID: 2120560220}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1611133539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611133533}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df316c9895059470baac7d032ff7aba6, type: 3}
+  m_Script: {fileID: 11500000, guid: 4bd9b4f706f3f8b4d8146e4f5ad473e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  panel: {fileID: 1119996691}
 --- !u!1001 &2120560220
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -242,13 +254,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 5216571094581825329, guid: 1b832505f4f1c4c388937cbf7637f17f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5216571094581825329, guid: 1b832505f4f1c4c388937cbf7637f17f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5216571094581825329, guid: 1b832505f4f1c4c388937cbf7637f17f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1611133535}
+      objectReference: {fileID: 1611133539}
     - target: {fileID: 5216571094581825329, guid: 1b832505f4f1c4c388937cbf7637f17f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OpenPanel
@@ -259,7 +275,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5216571094581825329, guid: 1b832505f4f1c4c388937cbf7637f17f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5216571094581825329, guid: 1b832505f4f1c4c388937cbf7637f17f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6616234226737822894, guid: 1b832505f4f1c4c388937cbf7637f17f, type: 3}
       propertyPath: m_IsActive
@@ -321,5 +341,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Inventory
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6789857999918238277, guid: 1b832505f4f1c4c388937cbf7637f17f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1b832505f4f1c4c388937cbf7637f17f, type: 3}
