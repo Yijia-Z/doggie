@@ -206,4 +206,8 @@ public class Dog : MonoBehaviour
         return totalHappiness;
     }
 
+    public Sprite getSprite()
+    {
+        return dogImage;
+    }
 }

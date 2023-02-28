@@ -33,7 +33,11 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
+<<<<<<< HEAD
+    filterMode: 0
+=======
     filterMode: 1
+>>>>>>> 618c7b92ca97f7527fedd21cde17eb96d5492aa1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -48,11 +52,19 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
+<<<<<<< HEAD
+  spriteBorder: {x: 0, y: 294, z: 125, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: 0
+=======
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
+>>>>>>> 618c7b92ca97f7527fedd21cde17eb96d5492aa1
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
@@ -69,7 +81,11 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
+<<<<<<< HEAD
+    textureFormat: 4
+=======
     textureFormat: -1
+>>>>>>> 618c7b92ca97f7527fedd21cde17eb96d5492aa1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -116,11 +132,67 @@ TextureImporter:
   spriteSheet:
     serializedVersion: 2
     sprites: []
+<<<<<<< HEAD
+    outline:
+    - - {x: -238, y: 182}
+      - {x: -238, y: 102}
+      - {x: -235, y: 94}
+      - {x: 118, y: 94}
+      - {x: 118, y: 182}
+    - - {x: -217, y: 108}
+      - {x: -224, y: 115}
+      - {x: -225, y: 115}
+      - {x: -225, y: 121}
+      - {x: -224, y: 121}
+      - {x: -213, y: 132}
+      - {x: -213, y: 140}
+      - {x: -224, y: 151}
+      - {x: -225, y: 151}
+      - {x: -225, y: 161}
+      - {x: -224, y: 161}
+      - {x: -217, y: 168}
+      - {x: -215, y: 168}
+      - {x: -192, y: 145}
+      - {x: 72, y: 145}
+      - {x: 95, y: 168}
+      - {x: 97, y: 169}
+      - {x: 97, y: 168}
+      - {x: 104, y: 161}
+      - {x: 105, y: 161}
+      - {x: 105, y: 151}
+      - {x: 104, y: 151}
+      - {x: 93, y: 140}
+      - {x: 93, y: 132}
+      - {x: 104, y: 121}
+      - {x: 105, y: 121}
+      - {x: 105, y: 115}
+      - {x: 104, y: 115}
+      - {x: 97, y: 108}
+      - {x: 97, y: 107}
+      - {x: 91, y: 107}
+      - {x: 91, y: 108}
+      - {x: 88, y: 111}
+      - {x: 83, y: 111}
+      - {x: 83, y: 112}
+      - {x: 68, y: 127}
+      - {x: -188, y: 127}
+      - {x: -203, y: 112}
+      - {x: -203, y: 111}
+      - {x: -208, y: 111}
+      - {x: -211, y: 108}
+      - {x: -211, y: 107}
+      - {x: -217, y: 107}
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 1537655665
+=======
     outline: []
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
+>>>>>>> 618c7b92ca97f7527fedd21cde17eb96d5492aa1
     vertices: []
     indices: 
     edges: []
