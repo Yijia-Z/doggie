@@ -9,7 +9,7 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
   - 
@@ -44,4 +44,7 @@ TagManager:
     locked: 0
   - name: Grass
     uniqueID: 1458221861
+    locked: 0
+  - name: Characters
+    uniqueID: 3679150113
     locked: 0
