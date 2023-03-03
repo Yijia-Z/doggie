@@ -1,17 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DialogueTrigger : MonoBehaviour
 {
     public Message[] messages;
     public Actor[] actors;
     public Response[] responses;
+    public DialogueTrigger nextDialogue;
 
     public void StartDialogue()
     {
-        FindObjectOfType<DialogueManager>().OpenDialogue(messages, actors);
+        if (nextDialogue != null)
+        {
+            FindObjectOfType<DialogueManager>().nextDialogue = nextDialogue;
+        }
+        FindObjectOfType<DialogueManager>().OpenDialogue(messages, actors, responses);
+        
     }
+
 }
 
 [System.Serializable]
@@ -32,4 +40,5 @@ public class Actor
 public class Response
 {
     public string response;
+    //public DialogueTrigger trigger;
 }
