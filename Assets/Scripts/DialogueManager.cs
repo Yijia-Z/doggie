@@ -13,7 +13,7 @@ public class DialogueManager : MonoBehaviour
 
     public TextMeshProUGUI response1Text;
     public TextMeshProUGUI response2Text;
-    public DialogueTrigger nextDialogue;
+    public DialogueTrigger nextDialogue; // LEAVE EMPTY IN EDITOR
     public RectTransform responseBackgroundBox;
 
     Message[] currentMessages;
@@ -46,7 +46,6 @@ public class DialogueManager : MonoBehaviour
 
     void DisplayMessage()
     {
-        Debug.Log(activeMessage);
         Message messageToDisplay = currentMessages[activeMessage];
         messageText.text = messageToDisplay.message;
 
