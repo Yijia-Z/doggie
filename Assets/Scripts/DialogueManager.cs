@@ -11,15 +11,22 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI messageText;
     public RectTransform backgroundBox;
 
+    public TextMeshProUGUI response1Text;
+    public TextMeshProUGUI response2Text;
+    public DialogueTrigger nextDialogue;
+    public RectTransform responseBackgroundBox;
+
     Message[] currentMessages;
     Actor[] currentActors;
+    Response[] currentResponses;
     int activeMessage = 0;
     public static bool isActive = false;
 
-    public void OpenDialogue(Message[] messages, Actor[] actors)
+    public void OpenDialogue(Message[] messages, Actor[] actors, Response[] responses)
     {
         currentMessages = messages;
         currentActors = actors;
+        currentResponses =  responses;
         activeMessage = 0;
         isActive = true;
         backgroundBox.localScale = Vector3.one;
@@ -27,8 +34,19 @@ public class DialogueManager : MonoBehaviour
         DisplayMessage();
     }
 
+    public void ContinueDialogue()
+    {
+        activeMessage = 0;
+        responseBackgroundBox.localScale = Vector3.zero;
+        isActive = true;
+        backgroundBox.localScale = Vector3.one;
+        Debug.Log("Started conversation! Loaded messages: " + currentMessages.Length);
+        DisplayMessage();
+    }
+
     void DisplayMessage()
     {
+        Debug.Log(activeMessage);
         Message messageToDisplay = currentMessages[activeMessage];
         messageText.text = messageToDisplay.message;
 
@@ -47,15 +65,42 @@ public class DialogueManager : MonoBehaviour
         else
         {
             Debug.Log("Conversation ended!");
-            isActive = false;
             backgroundBox.localScale = Vector3.zero;
+            if (currentResponses.Length > 0)
+            {
+                DisplayResponses();
+                SetNextDialogue();
+            }
+            else
+            {
+                isActive = false;
+                nextDialogue = null;
+            }
         }
     }
+
+    void DisplayResponses()
+    {
+        responseBackgroundBox.localScale = Vector3.one;
+        response1Text.text = currentResponses[0].response;
+        response2Text.text = currentResponses[1].response;
+    }
+
+    void SetNextDialogue()
+    {
+        currentMessages = nextDialogue.messages;
+        currentActors = nextDialogue.actors;
+        currentResponses = nextDialogue.responses;
+        nextDialogue = nextDialogue.nextDialogue;
+    }
+
 
     // Start is called before the first frame update
     void Start()
     {
         backgroundBox.localScale = Vector3.zero;
+
+        responseBackgroundBox.localScale = Vector3.zero;
     }
 
     // Update is called once per frame
