@@ -59,3 +59,19 @@ public class Toy : Item
         Debug.Log("Toy " + name + " equipped on dog " + dog.name);
     }
 }
+public class Accessory : Item
+{
+    // Constructor for accessory class, inheriting from Item
+    public Accessory(int count, int value, string name, Sprite sprite, string description)
+        : base(count, value, name, sprite, description) { }
+
+    // Override Use function to equip the accessory on the dog
+    public override void Use(Dog dog)
+    {
+        dog.equippedAccessory = this;
+        dog.happiness += value;
+        dog.giveAccessory();
+        count--;
+        Debug.Log("Accessory " + name + " equipped on dog " + dog.name);
+    }
+}

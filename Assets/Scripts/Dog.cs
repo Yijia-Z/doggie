@@ -16,6 +16,7 @@ public class Dog : MonoBehaviour
     [SerializeField] Text panelName;
 
     public Toy equippedToy = null;
+    public Accessory equippedAccessory = null;
     public float hunger = 50f;
     public float hygiene = 100f;
     public float totalHappiness = 100f;
@@ -93,7 +94,7 @@ public class Dog : MonoBehaviour
         //panelName.GetComponent<Text>().text = dogName;
 
         Vector3 dogPos = gameObject.transform.localPosition;
-        taskPanel.GetComponent<RectTransform>().position = new Vector3( dogPos.x + 2, dogPos.y + 2, dogPos.z );
+        taskPanel.GetComponent<RectTransform>().position = new Vector3(dogPos.x + 2, dogPos.y + 2, dogPos.z);
     }
 
     //Not used anymore. Panel stuff is handled in panel script
@@ -185,6 +186,12 @@ public class Dog : MonoBehaviour
         taskPanel.SetActive(false);
         clock.minute += 5;
     }
+    public void giveAccessory()
+    {
+        // happiness is added in Accessory class
+        taskPanel.SetActive(false);
+    }
+
 
     public string getName()
     {
