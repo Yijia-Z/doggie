@@ -5,16 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/StartMenu.unity
     guid: a0e0230d53a237a4fb83589d3259a795
-  - enabled: 0
-    path: Assets/Scenes/PauseTest.unity
-    guid: af5679beb9c8c344caf85b5c431c2233
   - enabled: 1
-    path: Assets/Scenes/OLD_DogTest_Santi.unity
-    guid: 0cf3e7b0e5a52a642860a707f7fe6d26
+    path: Assets/Scenes/Tutorial Dialogue.unity
+    guid: f97e63cfb6e676a498d5785503348fd1
+  - enabled: 1
+    path: Assets/Scenes/OwnerIntroDialogue.unity
+    guid: 14f3ed0e7200d7642a4e556a4af0722b
+  - enabled: 1
+    path: Assets/Scenes/mapbuild.unity
+    guid: 655eb91fd6729f444971d78a776aa029
   m_configObjects: {}

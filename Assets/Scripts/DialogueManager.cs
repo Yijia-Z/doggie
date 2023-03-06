@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -21,12 +22,15 @@ public class DialogueManager : MonoBehaviour
     Response[] currentResponses;
     int activeMessage = 0;
     public static bool isActive = false;
+    bool sceneSwitch = false;
+    int sceneID;
 
-    public void OpenDialogue(Message[] messages, Actor[] actors, Response[] responses)
+    public void OpenDialogue(Message[] messages, Actor[] actors, Response[] responses, bool switchScene)
     {
         currentMessages = messages;
         currentActors = actors;
         currentResponses =  responses;
+        sceneSwitch = switchScene;
         activeMessage = 0;
         isActive = true;
         backgroundBox.localScale = Vector3.one;
@@ -74,6 +78,10 @@ public class DialogueManager : MonoBehaviour
             else
             {
                 nextDialogue = null;
+                if (sceneSwitch)
+                {
+                    SwitchScene();
+                }
             }
         }
     }
@@ -90,7 +98,23 @@ public class DialogueManager : MonoBehaviour
         currentMessages = nextDialogue.messages;
         currentActors = nextDialogue.actors;
         currentResponses = nextDialogue.responses;
+        sceneSwitch = nextDialogue.switchScene;
+        if (sceneSwitch)
+        {
+            sceneID = nextDialogue.sceneID;
+        }
         nextDialogue = nextDialogue.nextDialogue;
+        
+    }
+
+    public void SetSceneID(int id)
+    {
+        sceneID = id;
+    }
+
+    public void SwitchScene()
+    {
+        SceneManager.LoadScene(sceneID);
     }
 
 
