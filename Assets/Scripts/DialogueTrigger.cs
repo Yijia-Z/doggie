@@ -9,6 +9,9 @@ public class DialogueTrigger : MonoBehaviour
     public Actor[] actors;
     public Response[] responses;
     public DialogueTrigger nextDialogue;
+    public bool switchScene = false;
+    public int sceneID;
+    public bool startImmediately;
 
     public void StartDialogue()
     {
@@ -16,10 +19,29 @@ public class DialogueTrigger : MonoBehaviour
         {
             FindObjectOfType<DialogueManager>().nextDialogue = nextDialogue;
         }
-        FindObjectOfType<DialogueManager>().OpenDialogue(messages, actors, responses);
+        if (switchScene)
+        {
+            FindObjectOfType<DialogueManager>().SetSceneID(sceneID);
+        }
+        FindObjectOfType<DialogueManager>().OpenDialogue(messages, actors, responses, switchScene);
         
     }
 
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        if (startImmediately)
+        {
+            StartDialogue();
+        }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
 }
 
 [System.Serializable]
@@ -40,5 +62,5 @@ public class Actor
 public class Response
 {
     public string response;
-    //public DialogueTrigger trigger;
 }
+
