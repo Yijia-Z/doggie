@@ -63,6 +63,7 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
+            isActive = false;
             Debug.Log("Conversation ended!");
             backgroundBox.localScale = Vector3.zero;
             if (currentResponses.Length > 0)
@@ -72,7 +73,6 @@ public class DialogueManager : MonoBehaviour
             }
             else
             {
-                isActive = false;
                 nextDialogue = null;
             }
         }
