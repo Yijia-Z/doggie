@@ -5,15 +5,8 @@ using UnityEngine.UI;
 
 public class Dog : MonoBehaviour
 {
-    [SerializeField] GameObject infoPanel;
-    [SerializeField] GameObject hungerBar;
-    [SerializeField] GameObject hygieneBar;
-    [SerializeField] GameObject totalHappinessBar;
-    [SerializeField] GameObject taskPanel;
-    [SerializeField] Image panelImage;
     [SerializeField] Sprite dogImage;
     [SerializeField] string dogName = "default_name";
-    [SerializeField] Text panelName;
 
     public Toy equippedToy = null;
     public Accessory equippedAccessory = null;
@@ -24,28 +17,26 @@ public class Dog : MonoBehaviour
     public bool selected = false;
 
     private float secToMinRatio;
-    private float barMaxScaleY;
-    private float barMaxScaleX;
-    private float barMaxScaleZ;
-    private Vector3 hungerBarPos;
-    private Vector3 hygieneBarPos;
-    private Vector3 totalHappinessBarPos;
-    private float barHalfLength = 288f;
     private float timer;
     private Clock clock;
 
+    public GameObject taskPanel;
+    public Button bathe_button;
+    public Button walk_button;
+    public Button give_item_button;
+    public GameObject inventory_panel;
+    public GameObject stats_panel;
+
     // Start is called before the first frame update
     void Start()
-    {
-        barMaxScaleZ = hungerBar.transform.localScale.z;
-        barMaxScaleX = hungerBar.transform.localScale.x;
-        barMaxScaleY = hungerBar.transform.localScale.y;
-        hungerBarPos = hungerBar.transform.localPosition;
-        hygieneBarPos = hygieneBar.transform.localPosition;
-        totalHappinessBarPos = totalHappinessBar.transform.localPosition;
-
+    { 
         clock = FindObjectOfType<Clock>();
         secToMinRatio = clock.irlSecToGameMinRatio;
+
+        bathe_button.onClick.AddListener(giveBath);
+        walk_button.onClick.AddListener(giveWalk);
+        give_item_button.onClick.AddListener(openInventory);
+
     }
 
     // Update is called once per frame
@@ -68,12 +59,6 @@ public class Dog : MonoBehaviour
         depreciateTimeStats();
         updatetotalHappiness();
 
-        // Below is not used anymore because panel script is handling stat panel and meters.
-        //if (selected)
-        //{
-        //    updateMeters();
-        //}
-
     }
 
     // Show dog info panel when mouse CLICKS dog
@@ -83,37 +68,25 @@ public class Dog : MonoBehaviour
         for (int i = 0; i < dogs.Length; i++)
         {
             dogs[i].selected = false;
-            //dogs[i].infoPanel.SetActive(false);
             dogs[i].taskPanel.SetActive(false);
+            dogs[i].stats_panel.SetActive(false);
         }
+
         selected = true;
 
-        //infoPanel.SetActive(true);
-        taskPanel.SetActive(true);
-        //panelImage.GetComponent<Image>().sprite = dogImage;
-        //panelName.GetComponent<Text>().text = dogName;
+        //show/hide stats and tasks
+        openCloseStats();
+        openCloseTasks();
 
         Vector3 dogPos = gameObject.transform.localPosition;
-        taskPanel.GetComponent<RectTransform>().position = new Vector3(dogPos.x + 2, dogPos.y + 2, dogPos.z);
     }
 
     //Not used anymore. Panel stuff is handled in panel script
     public void closeInfoPanel()
     {
-        infoPanel.SetActive(false);
+        //infoPanel.SetActive(false);
         taskPanel.SetActive(false);
         selected = false;
-    }
-
-    // NOT using update meters anymore. This is handled in panel script
-    private void updateMeters()
-    {
-        hungerBar.gameObject.transform.localScale = new Vector3(barMaxScaleX, (hunger / 100f) * barMaxScaleY, barMaxScaleZ);
-        hungerBar.gameObject.transform.localPosition = new Vector3(hungerBarPos.x + ((1 - (hunger / 100f)) * -barHalfLength), hungerBarPos.y, hungerBarPos.y);
-        hygieneBar.gameObject.transform.localScale = new Vector3(barMaxScaleX, (hygiene / 100f) * barMaxScaleY, barMaxScaleZ);
-        hygieneBar.gameObject.transform.localPosition = new Vector3(hygieneBarPos.x + ((1 - (hygiene / 100f)) * -barHalfLength), hygieneBarPos.y, hygieneBarPos.y);
-        totalHappinessBar.gameObject.transform.localScale = new Vector3(barMaxScaleX, (totalHappiness / 100f) * barMaxScaleY, barMaxScaleZ);
-        totalHappinessBar.gameObject.transform.localPosition = new Vector3(totalHappinessBarPos.x + ((1 - (totalHappiness / 100f)) * -barHalfLength), totalHappinessBarPos.y, totalHappinessBarPos.y);
     }
 
     // Calculates total happiness (what is displayed) from the other stats
@@ -151,6 +124,40 @@ public class Dog : MonoBehaviour
         }
     }
 
+    public void openCloseStats()
+    {
+        //if off, turn on
+        if (stats_panel.activeSelf == false)
+        {
+            stats_panel.SetActive(true);
+        }
+        else
+        {
+            stats_panel.SetActive(false);
+        }
+    }
+
+    public void openCloseTasks()
+    {
+        //if off, turn on
+        if (taskPanel.activeSelf == false)
+        {
+            taskPanel.SetActive(true);
+        }
+        else
+        {
+            taskPanel.SetActive(false);
+        }
+    }
+
+        public void openInventory()
+    {
+        // display inventory
+        inventory_panel.SetActive(true);
+
+        // FIX ME: yijia: select item from inventory
+    }
+
     // Feed task
     public void giveFood()
     {
@@ -167,6 +174,7 @@ public class Dog : MonoBehaviour
         happiness -= 15f;
         taskPanel.SetActive(false);
         clock.minute += 20;
+        Debug.Log("giving bath");
     }
 
     // Walk task
