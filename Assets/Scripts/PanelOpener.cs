@@ -16,7 +16,14 @@ public class PanelOpener : MonoBehaviour
     {
         if (panel != null)
         {
-            panel.SetActive(true);
+            if (panel.activeSelf == false)
+            {
+                panel.SetActive(true);
+            }
+            else
+            {
+                panel.SetActive(false);
+            }
             
         }
         Debug.Log("clicked");
