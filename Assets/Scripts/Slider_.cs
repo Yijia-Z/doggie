@@ -13,7 +13,6 @@ public class Slider_ : MonoBehaviour
     void Start()
     {
         slider = GetComponent<Slider>();
-        //slider_text = GetComponent<TextMeshProUGUI>();
     }
 
     public void setSlider(string s, float val, float max)
