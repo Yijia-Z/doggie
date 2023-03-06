@@ -26,6 +26,6 @@ public class PanelOpener : MonoBehaviour
             }
             
         }
-        Debug.Log("clicked");
+        //Debug.Log("clicked");
     }
 }

@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Numerics;
+using System.Diagnostics;
 
 public class StatsPanel : MonoBehaviour
 {
-    Dog dog;
+    Dog dog = null;
 
     //for selecting dog w/ mouse
     private Camera _camera;
@@ -21,9 +23,9 @@ public class StatsPanel : MonoBehaviour
     float dogHygiene;
     float dogHappiness;
     int maxHealth = 100;
-    public TextMeshProUGUI dogNameTxt;
 
     //public Image ProgressImage;
+    public TextMeshProUGUI dogNameTxt;
     public Slider_ hungerSlider;
     public Slider_ hygieneSlider;
     public Slider_ happinessSlider;
@@ -34,50 +36,47 @@ public class StatsPanel : MonoBehaviour
         dog = null;
         _camera = Camera.main;
         _renderer = GetComponent<Renderer>();
-
-        hungerSlider = GetComponent<Slider_>();
-        hygieneSlider = GetComponent<Slider_>();
-        happinessSlider = GetComponent<Slider_>();
-
-        dogImage = GetComponent<Image>();
-        dogNameTxt = GetComponent<TextMeshProUGUI>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        //if click on Dog
         if (Input.GetMouseButtonDown(0))
         {
-            ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out hit))
+            //UnityEngine.Debug.Log("Finding doggies");
+
+            Dog[] dogs = FindObjectsOfType<Dog>();
+            for (int i = 0; i < dogs.Length; i++)
             {
-                //Select entity    
-                if (hit.transform.tag == "Dog")
+                if (dogs[i].selected)
                 {
-                    //set dog to currently selected dog gameobject
-                    dog = hit.transform.gameObject.GetComponent(typeof(Dog)) as Dog;
-
-                    //Get & set dog info
-
-                    dogName = dog.getName();
-                    dogNameTxt.text = dogName;
-
-                    dogHunger = dog.getHunger();
-                    hungerSlider.setSlider("Hunger", dogHunger, maxHealth);
-
-                    dogHygiene = dog.getHygiene();
-                    hygieneSlider.setSlider("Hygiene", dogHygiene, maxHealth);
-
-                    dogHappiness = dog.getHappiness();
-                    happinessSlider.setSlider("Happiness", dogHappiness, maxHealth);
-
-                    //dogImage.GetComponent<SpriteRenderer>().sprite = dog.getSprite();
-                   
-
-
-                  
+                    dog = dogs[i];
                 }
             }
         }
+
+
+
+
+        //Get & set dog info
+        if (dog != null)
+        {
+            dogNameTxt.text = dog.getName();
+
+            dogHunger = dog.getHunger();
+            hungerSlider.setSlider("Hunger", dogHunger, maxHealth);
+
+            dogHygiene = dog.getHygiene();
+            hygieneSlider.setSlider("Hygiene", dogHygiene, maxHealth);
+
+            //UnityEngine.Debug.Log("Hygiene: " + dogHygiene);
+
+            dogHappiness = dog.getHappiness();
+            happinessSlider.setSlider("Happiness", dogHappiness, maxHealth);
+
+            dogImage.GetComponent<SpriteRenderer>().sprite = dog.getSprite();
+        }
     }
+
 }
