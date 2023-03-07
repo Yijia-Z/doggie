@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     float moveLimiter = 0.7f;
     public float runSpeed = 20.0f;
     public SpriteRenderer spriteRenderer;
+    public Animator playerAnimator;
     public Sprite restingUpSprite;
     public Sprite restingDownSprite;
     public Sprite restingLeftSprite;
@@ -25,6 +26,7 @@ public class Player : MonoBehaviour
     {
         body = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        playerAnimator = GetComponent<Animator>();
     }
 
     void Update()
@@ -37,23 +39,30 @@ public class Player : MonoBehaviour
         {
             if (horizontal > 0)
             {
-                spriteRenderer.sprite = movingRightSprite;
+                //spriteRenderer.sprite = movingRightSprite;
+                playerAnimator.Play("walkright");
             }
             else if (horizontal < 0)
             {
-                spriteRenderer.sprite = movingLeftSprite;
+                //spriteRenderer.sprite = movingLeftSprite;
+                playerAnimator.Play("walkleft");
             }
             else if (vertical > 0)
             {
-                spriteRenderer.sprite = movingUpSprite;
+                //spriteRenderer.sprite = movingUpSprite;
+                playerAnimator.Play("walkup");
+
             }
             else if (vertical < 0)
             {
-                spriteRenderer.sprite = movingDownSprite;
+                //spriteRenderer.sprite = movingDownSprite;
+                playerAnimator.Play("walkdown");
             }
         }
         else
         {
+          playerAnimator.Play("idlefront");
+          /*
             if (prevSprite = movingRightSprite)
             {
                 spriteRenderer.sprite = restingRightSprite;
@@ -70,6 +79,7 @@ public class Player : MonoBehaviour
             {
                 spriteRenderer.sprite = restingDownSprite;
             }
+            */
         }
     }
 

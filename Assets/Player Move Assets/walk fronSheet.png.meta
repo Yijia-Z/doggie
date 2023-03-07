@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+guid: 52c36559563a09247a7e8f4950c78ef0
+=======
 guid: 90098e324e111bd4fb4d5bb1c494f345
+>>>>>>> 65bbb3397baef1af9ecad5a19ec4e57a4c5021a8
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -33,7 +37,11 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
+<<<<<<< HEAD
+    filterMode: 0
+=======
     filterMode: 1
+>>>>>>> 65bbb3397baef1af9ecad5a19ec4e57a4c5021a8
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -42,7 +50,11 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
+<<<<<<< HEAD
+  spriteMode: 2
+=======
   spriteMode: 1
+>>>>>>> 65bbb3397baef1af9ecad5a19ec4e57a4c5021a8
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -101,6 +113,116 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+<<<<<<< HEAD
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: walk fronSheet_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 0
+        width: 33
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46d2142805eb7c540bbfb8fc1c70b444
+      internalID: 252422197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk fronSheet_1
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 0
+        width: 39
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e689a941c60e04042bfd59164764c711
+      internalID: 1752996980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk fronSheet_2
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 0
+        width: 33
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc7643f77bc7b0b4eadf999b1aa02f4f
+      internalID: -216632340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk fronSheet_3
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 0
+        width: 39
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54e4f1b768cca2a43a62cfaf593800ed
+      internalID: 1220087565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk fronSheet_4
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 0
+        width: 33
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56b607d8a8a87a54d97f0e43412df1c3
+      internalID: -1123879010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+=======
   - serializedVersion: 3
     buildTarget: WebGL
     maxTextureSize: 2048
@@ -116,6 +238,7 @@ TextureImporter:
   spriteSheet:
     serializedVersion: 2
     sprites: []
+>>>>>>> 65bbb3397baef1af9ecad5a19ec4e57a4c5021a8
     outline: []
     physicsShape: []
     bones: []
@@ -126,7 +249,16 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+<<<<<<< HEAD
+    nameFileIdTable:
+      walk fronSheet_3: 1220087565
+      walk fronSheet_4: -1123879010
+      walk fronSheet_0: 252422197
+      walk fronSheet_2: -216632340
+      walk fronSheet_1: 1752996980
+=======
     nameFileIdTable: {}
+>>>>>>> 65bbb3397baef1af9ecad5a19ec4e57a4c5021a8
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

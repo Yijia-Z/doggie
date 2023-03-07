@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+guid: a01ba14907293bb4d84975211f00c280
+=======
 guid: 0cc22d9df46233c4ba4fbaee57484106
+>>>>>>> 65bbb3397baef1af9ecad5a19ec4e57a4c5021a8
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -33,7 +37,11 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
+<<<<<<< HEAD
+    filterMode: 0
+=======
     filterMode: 1
+>>>>>>> 65bbb3397baef1af9ecad5a19ec4e57a4c5021a8
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -42,7 +50,11 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
+<<<<<<< HEAD
+  spriteMode: 2
+=======
   spriteMode: 1
+>>>>>>> 65bbb3397baef1af9ecad5a19ec4e57a4c5021a8
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -101,6 +113,137 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+<<<<<<< HEAD
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: idle back-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 0
+        width: 33
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 654aff41522b34341882d9b0d3b76ef9
+      internalID: -588129765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle back-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 1
+        width: 37
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fbec3d04896e1a4f989f9ab4f24937b
+      internalID: -2065961896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle back-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 1
+        width: 38
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d9dc7449985d9a48b7704ce610c2867
+      internalID: 1476993663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle back-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 0
+        width: 34
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae7d4a02df852ba49b4540ee15ca1360
+      internalID: -998236941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle back-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 1
+        width: 39
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb1fa012b2ab5b042bf4a84d8fa86b57
+      internalID: 87225127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle back-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 1
+        width: 39
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 796f299637790294392a4787827dfd0f
+      internalID: -1577474489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+=======
   - serializedVersion: 3
     buildTarget: WebGL
     maxTextureSize: 2048
@@ -116,6 +259,7 @@ TextureImporter:
   spriteSheet:
     serializedVersion: 2
     sprites: []
+>>>>>>> 65bbb3397baef1af9ecad5a19ec4e57a4c5021a8
     outline: []
     physicsShape: []
     bones: []
@@ -126,7 +270,17 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+<<<<<<< HEAD
+    nameFileIdTable:
+      idle back-Sheet_5: -1577474489
+      idle back-Sheet_1: -2065961896
+      idle back-Sheet_0: -588129765
+      idle back-Sheet_4: 87225127
+      idle back-Sheet_2: 1476993663
+      idle back-Sheet_3: -998236941
+=======
     nameFileIdTable: {}
+>>>>>>> 65bbb3397baef1af9ecad5a19ec4e57a4c5021a8
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

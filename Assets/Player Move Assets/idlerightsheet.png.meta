@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-guid: ed2337a504920404687bc8b9b7c77a98
-=======
-guid: 45b1365dc78d3cd4ab2b4641c01fe5fc
->>>>>>> 65bbb3397baef1af9ecad5a19ec4e57a4c5021a8
+guid: 9138eb04106eeb743b58f8e35e2ec48e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -37,11 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-<<<<<<< HEAD
     filterMode: 0
-=======
-    filterMode: 1
->>>>>>> 65bbb3397baef1af9ecad5a19ec4e57a4c5021a8
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -50,11 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-<<<<<<< HEAD
   spriteMode: 2
-=======
-  spriteMode: 1
->>>>>>> 65bbb3397baef1af9ecad5a19ec4e57a4c5021a8
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -81,11 +69,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-<<<<<<< HEAD
-    textureFormat: 4
-=======
     textureFormat: -1
->>>>>>> 65bbb3397baef1af9ecad5a19ec4e57a4c5021a8
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -117,18 +101,17 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-<<<<<<< HEAD
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: stbernardSheet_0
+      name: idlerightsheet_0
       rect:
         serializedVersion: 2
         x: 11
-        y: 5
-        width: 43
-        height: 55
+        y: 0
+        width: 27
+        height: 69
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -136,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f4761efc8919cc4408744dbb0c6dc6dd
-      internalID: 385962899
+      spriteID: a64366d3d44769a48977c10243a7f4df
+      internalID: -180191349
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: stbernardSheet_1
+      name: idlerightsheet_1
       rect:
         serializedVersion: 2
         x: 75
-        y: 5
-        width: 43
-        height: 55
+        y: 0
+        width: 27
+        height: 69
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -157,20 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d185fbeff15e65941a00593bac460bfe
-      internalID: -842108791
+      spriteID: d328d94322e515241b21391a02bb1758
+      internalID: -844870954
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: stbernardSheet_2
+      name: idlerightsheet_2
       rect:
         serializedVersion: 2
         x: 139
-        y: 5
-        width: 43
-        height: 55
+        y: 0
+        width: 31
+        height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,20 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ba8c72ab99f7b34082f100e65500ff9
-      internalID: 836811117
+      spriteID: 56a572b59d194bf47a8594658b280bf4
+      internalID: 1378311051
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: stbernardSheet_3
+      name: idlerightsheet_3
       rect:
         serializedVersion: 2
         x: 203
-        y: 5
-        width: 43
-        height: 51
+        y: 0
+        width: 31
+        height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -199,20 +182,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb42f5ddcb9af4e4fbdf6413fe58d7a6
-      internalID: -2142416916
+      spriteID: b4d583a1c4fc1b74d916d6e3d2bc3757
+      internalID: -1069537313
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: stbernardSheet_4
+      name: idlerightsheet_4
       rect:
         serializedVersion: 2
         x: 267
-        y: 5
-        width: 43
-        height: 51
+        y: 0
+        width: 27
+        height: 69
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -220,29 +203,54 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d428733f73b79b46bbbafc7bb13f7c8
-      internalID: 1238118706
+      spriteID: ac12760a419fbcd4b8a4ee648012d85c
+      internalID: -395553447
       vertices: []
       indices: 
       edges: []
       weights: []
-=======
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  spriteSheet:
-    serializedVersion: 2
-    sprites: []
->>>>>>> 65bbb3397baef1af9ecad5a19ec4e57a4c5021a8
+    - serializedVersion: 2
+      name: idlerightsheet_5
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 0
+        width: 31
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a480b745dcdcea34fa1c2d6d0eafff9e
+      internalID: -1126437348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idlerightsheet_6
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 0
+        width: 31
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bcb5d35ab52a8d4192677074c3b2795
+      internalID: 342497195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -253,16 +261,14 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-<<<<<<< HEAD
     nameFileIdTable:
-      stbernardSheet_2: 836811117
-      stbernardSheet_0: 385962899
-      stbernardSheet_3: -2142416916
-      stbernardSheet_1: -842108791
-      stbernardSheet_4: 1238118706
-=======
-    nameFileIdTable: {}
->>>>>>> 65bbb3397baef1af9ecad5a19ec4e57a4c5021a8
+      idlerightsheet_2: 1378311051
+      idlerightsheet_3: -1069537313
+      idlerightsheet_6: 342497195
+      idlerightsheet_4: -395553447
+      idlerightsheet_5: -1126437348
+      idlerightsheet_0: -180191349
+      idlerightsheet_1: -844870954
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
