@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: ed2337a504920404687bc8b9b7c77a98
-=======
-guid: 45b1365dc78d3cd4ab2b4641c01fe5fc
->>>>>>> 65bbb3397baef1af9ecad5a19ec4e57a4c5021a8
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -37,11 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-<<<<<<< HEAD
     filterMode: 0
-=======
-    filterMode: 1
->>>>>>> 65bbb3397baef1af9ecad5a19ec4e57a4c5021a8
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -50,11 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-<<<<<<< HEAD
   spriteMode: 2
-=======
-  spriteMode: 1
->>>>>>> 65bbb3397baef1af9ecad5a19ec4e57a4c5021a8
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -81,11 +69,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-<<<<<<< HEAD
     textureFormat: 4
-=======
-    textureFormat: -1
->>>>>>> 65bbb3397baef1af9ecad5a19ec4e57a4c5021a8
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -117,7 +101,6 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-<<<<<<< HEAD
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -136,8 +119,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f4761efc8919cc4408744dbb0c6dc6dd
-      internalID: 385962899
+      spriteID: e8398dab3e114374b812585b32ae6bde
+      internalID: 886503729
       vertices: []
       indices: 
       edges: []
@@ -157,8 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d185fbeff15e65941a00593bac460bfe
-      internalID: -842108791
+      spriteID: c6949b2ed5a7f7b47bd44d2113365132
+      internalID: -589461021
       vertices: []
       indices: 
       edges: []
@@ -178,8 +161,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ba8c72ab99f7b34082f100e65500ff9
-      internalID: 836811117
+      spriteID: 2bdf396d19333ec41b0697b12b2e2441
+      internalID: 812625316
       vertices: []
       indices: 
       edges: []
@@ -199,8 +182,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb42f5ddcb9af4e4fbdf6413fe58d7a6
-      internalID: -2142416916
+      spriteID: db3abb4f51b6de94f99c68b6f118e97a
+      internalID: -786900552
       vertices: []
       indices: 
       edges: []
@@ -220,29 +203,12 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d428733f73b79b46bbbafc7bb13f7c8
-      internalID: 1238118706
+      spriteID: 534a188d7974de248949a49cdd83c0a1
+      internalID: -1014523997
       vertices: []
       indices: 
       edges: []
       weights: []
-=======
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  spriteSheet:
-    serializedVersion: 2
-    sprites: []
->>>>>>> 65bbb3397baef1af9ecad5a19ec4e57a4c5021a8
     outline: []
     physicsShape: []
     bones: []
@@ -253,16 +219,12 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-<<<<<<< HEAD
     nameFileIdTable:
-      stbernardSheet_2: 836811117
-      stbernardSheet_0: 385962899
-      stbernardSheet_3: -2142416916
-      stbernardSheet_1: -842108791
-      stbernardSheet_4: 1238118706
-=======
-    nameFileIdTable: {}
->>>>>>> 65bbb3397baef1af9ecad5a19ec4e57a4c5021a8
+      stbernardSheet_2: 812625316
+      stbernardSheet_0: 886503729
+      stbernardSheet_3: -786900552
+      stbernardSheet_1: -589461021
+      stbernardSheet_4: -1014523997
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

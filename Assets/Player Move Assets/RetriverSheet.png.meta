@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: f5f0a5db89c0b594a98a21f7d0891269
-=======
-guid: cee126e8b5a21ef44b3b6ead21548202
->>>>>>> 65bbb3397baef1af9ecad5a19ec4e57a4c5021a8
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -73,7 +69,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 4
+    textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -105,21 +101,6 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-<<<<<<< HEAD
-=======
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
->>>>>>> 65bbb3397baef1af9ecad5a19ec4e57a4c5021a8
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -127,17 +108,10 @@ TextureImporter:
       name: RetriverSheet_0
       rect:
         serializedVersion: 2
-<<<<<<< HEAD
         x: 16
         y: 8
         width: 32
         height: 49
-=======
-        x: 0
-        y: 0
-        width: 64
-        height: 64
->>>>>>> 65bbb3397baef1af9ecad5a19ec4e57a4c5021a8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,13 +119,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-<<<<<<< HEAD
-      spriteID: 4da38e79270732840b57605fd565fa5f
-      internalID: -304568469
-=======
-      spriteID: 8f8a08b6e81ff40eb9c4923b28086e5a
-      internalID: -1485742653
->>>>>>> 65bbb3397baef1af9ecad5a19ec4e57a4c5021a8
+      spriteID: 8d226a867865864499d7789d1a879d34
+      internalID: 1938675651
       vertices: []
       indices: 
       edges: []
@@ -160,17 +129,10 @@ TextureImporter:
       name: RetriverSheet_1
       rect:
         serializedVersion: 2
-<<<<<<< HEAD
         x: 80
         y: 8
         width: 33
         height: 47
-=======
-        x: 64
-        y: 0
-        width: 64
-        height: 64
->>>>>>> 65bbb3397baef1af9ecad5a19ec4e57a4c5021a8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,13 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-<<<<<<< HEAD
-      spriteID: fb9303ef7b5204748b9ce330398ac1a6
-      internalID: -1686428913
-=======
-      spriteID: dae299d58521a463b87d1523cc57f6fd
-      internalID: -1365495534
->>>>>>> 65bbb3397baef1af9ecad5a19ec4e57a4c5021a8
+      spriteID: eaddc8e4edfe83f4f9c2ea174cc2bd7a
+      internalID: -1750661937
       vertices: []
       indices: 
       edges: []
@@ -193,17 +150,10 @@ TextureImporter:
       name: RetriverSheet_2
       rect:
         serializedVersion: 2
-<<<<<<< HEAD
         x: 144
         y: 8
         width: 32
         height: 49
-=======
-        x: 128
-        y: 0
-        width: 64
-        height: 64
->>>>>>> 65bbb3397baef1af9ecad5a19ec4e57a4c5021a8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -211,13 +161,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-<<<<<<< HEAD
-      spriteID: 2fa18553c6b2ef443ad780a33f853013
-      internalID: -1172409190
-=======
-      spriteID: 8c189a32905d847b288d63b03a5b9eb6
-      internalID: 186036672
->>>>>>> 65bbb3397baef1af9ecad5a19ec4e57a4c5021a8
+      spriteID: e2b2d3edca209ae4d8606e10aaf83f38
+      internalID: -1932017383
       vertices: []
       indices: 
       edges: []
@@ -226,17 +171,10 @@ TextureImporter:
       name: RetriverSheet_3
       rect:
         serializedVersion: 2
-<<<<<<< HEAD
         x: 208
         y: 8
         width: 32
         height: 47
-=======
-        x: 192
-        y: 0
-        width: 64
-        height: 64
->>>>>>> 65bbb3397baef1af9ecad5a19ec4e57a4c5021a8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,13 +182,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-<<<<<<< HEAD
-      spriteID: df53f6ed24b4fb84fbb477827fb57a45
-      internalID: -523159785
-=======
-      spriteID: 4ee539e6b49a1419494df2f72904db83
-      internalID: 604622217
->>>>>>> 65bbb3397baef1af9ecad5a19ec4e57a4c5021a8
+      spriteID: 40347cebfe3933947b1756402fcf88a4
+      internalID: 1124244218
       vertices: []
       indices: 
       edges: []
@@ -259,17 +192,10 @@ TextureImporter:
       name: RetriverSheet_4
       rect:
         serializedVersion: 2
-<<<<<<< HEAD
         x: 272
         y: 8
         width: 33
         height: 49
-=======
-        x: 256
-        y: 0
-        width: 64
-        height: 64
->>>>>>> 65bbb3397baef1af9ecad5a19ec4e57a4c5021a8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -277,13 +203,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-<<<<<<< HEAD
-      spriteID: 0e778ebdd4a85ef47a0e240e5771a192
-      internalID: 1614987491
-=======
-      spriteID: 5e517b614893d45b6a6cb3e09510a13b
-      internalID: -909261502
->>>>>>> 65bbb3397baef1af9ecad5a19ec4e57a4c5021a8
+      spriteID: 3b873c3ddc9cc164f8dd6853e90a1f0b
+      internalID: 168994407
       vertices: []
       indices: 
       edges: []
@@ -299,19 +220,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-<<<<<<< HEAD
-      RetriverSheet_3: -523159785
-      RetriverSheet_1: -1686428913
-      RetriverSheet_2: -1172409190
-      RetriverSheet_0: -304568469
-      RetriverSheet_4: 1614987491
-=======
-      RetriverSheet_3: 604622217
-      RetriverSheet_1: -1365495534
-      RetriverSheet_2: 186036672
-      RetriverSheet_0: -1485742653
-      RetriverSheet_4: -909261502
->>>>>>> 65bbb3397baef1af9ecad5a19ec4e57a4c5021a8
+      RetriverSheet_3: 1124244218
+      RetriverSheet_1: -1750661937
+      RetriverSheet_2: -1932017383
+      RetriverSheet_0: 1938675651
+      RetriverSheet_4: 168994407
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
