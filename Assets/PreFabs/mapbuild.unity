@@ -123,11 +123,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
-<<<<<<< HEAD:Assets/Scenes/mapbuild.unity
 --- !u!1 &68579733
-=======
---- !u!1 &129097020
->>>>>>> 65bbb3397baef1af9ecad5a19ec4e57a4c5021a8:Assets/PreFabs/mapbuild.unity
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -135,86 +131,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< HEAD:Assets/Scenes/mapbuild.unity
   - component: {fileID: 68579734}
   - component: {fileID: 68579736}
   - component: {fileID: 68579735}
   m_Layer: 0
   m_Name: StBernard
-=======
-  - component: {fileID: 129097022}
-  - component: {fileID: 129097021}
-  m_Layer: 0
-  m_Name: dog2
->>>>>>> 65bbb3397baef1af9ecad5a19ec4e57a4c5021a8:Assets/PreFabs/mapbuild.unity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD:Assets/Scenes/mapbuild.unity
 --- !u!4 &68579734
-=======
---- !u!212 &129097021
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 129097020}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 4
-  m_Sprite: {fileID: 21300000, guid: b2fcbeb0af6f51a449c3208cd034d2ee, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 0.64, y: 0.64}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &129097022
->>>>>>> 65bbb3397baef1af9ecad5a19ec4e57a4c5021a8:Assets/PreFabs/mapbuild.unity
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD:Assets/Scenes/mapbuild.unity
   m_GameObject: {fileID: 68579733}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 5.385, y: 1.0441, z: -0.112642616}
@@ -297,18 +229,6 @@ SpriteRenderer:
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &209106473
-=======
-  m_GameObject: {fileID: 129097020}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.8, y: 0.45, z: 0}
-  m_LocalScale: {x: 6.167834, y: 6.167834, z: 6.167834}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &160525224
->>>>>>> 65bbb3397baef1af9ecad5a19ec4e57a4c5021a8:Assets/PreFabs/mapbuild.unity
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -316,7 +236,6 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< HEAD:Assets/Scenes/mapbuild.unity
   - component: {fileID: 209106474}
   - component: {fileID: 209106476}
   - component: {fileID: 209106475}
@@ -325,18 +244,11 @@ GameObject:
   - component: {fileID: 209106479}
   m_Layer: 3
   m_Name: PlayerSprite
-=======
-  - component: {fileID: 160525226}
-  - component: {fileID: 160525225}
-  m_Layer: 0
-  m_Name: idle
->>>>>>> 65bbb3397baef1af9ecad5a19ec4e57a4c5021a8:Assets/PreFabs/mapbuild.unity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD:Assets/Scenes/mapbuild.unity
 --- !u!4 &209106474
 Transform:
   m_ObjectHideFlags: 0
@@ -374,19 +286,12 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
 --- !u!212 &209106476
-=======
---- !u!212 &160525225
->>>>>>> 65bbb3397baef1af9ecad5a19ec4e57a4c5021a8:Assets/PreFabs/mapbuild.unity
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD:Assets/Scenes/mapbuild.unity
   m_GameObject: {fileID: 209106473}
-=======
-  m_GameObject: {fileID: 160525224}
->>>>>>> 65bbb3397baef1af9ecad5a19ec4e57a4c5021a8:Assets/PreFabs/mapbuild.unity
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -420,39 +325,24 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-<<<<<<< HEAD:Assets/Scenes/mapbuild.unity
   m_SortingOrder: 3
   m_Sprite: {fileID: -1611173852, guid: 6390556ff95511f4f96972664d765b67, type: 3}
-=======
-  m_SortingOrder: 4
-  m_Sprite: {fileID: 21300000, guid: 9882abdffc771fe468a63a8483a7d602, type: 3}
->>>>>>> 65bbb3397baef1af9ecad5a19ec4e57a4c5021a8:Assets/PreFabs/mapbuild.unity
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-<<<<<<< HEAD:Assets/Scenes/mapbuild.unity
   m_Size: {x: 0.33, y: 0.69}
-=======
-  m_Size: {x: 0.64, y: 0.7}
->>>>>>> 65bbb3397baef1af9ecad5a19ec4e57a4c5021a8:Assets/PreFabs/mapbuild.unity
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
-<<<<<<< HEAD:Assets/Scenes/mapbuild.unity
 --- !u!114 &209106477
 MonoBehaviour:
-=======
---- !u!4 &160525226
-Transform:
->>>>>>> 65bbb3397baef1af9ecad5a19ec4e57a4c5021a8:Assets/PreFabs/mapbuild.unity
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD:Assets/Scenes/mapbuild.unity
   m_GameObject: {fileID: 209106473}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -507,17 +397,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0.000000059604645, y: 0}
   m_Size: {x: 0.33, y: 0.69}
   m_Direction: 0
-=======
-  m_GameObject: {fileID: 160525224}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.12, y: -4.17, z: 0}
-  m_LocalScale: {x: 6.4584312, y: 6.4584312, z: 6.4584312}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
->>>>>>> 65bbb3397baef1af9ecad5a19ec4e57a4c5021a8:Assets/PreFabs/mapbuild.unity
 --- !u!1 &329609722
 GameObject:
   m_ObjectHideFlags: 0
@@ -1059,13 +938,8 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-<<<<<<< HEAD:Assets/Scenes/mapbuild.unity
   m_IsActive: 0
 --- !u!212 &1363626884
-=======
-  m_IsActive: 1
---- !u!212 &1363273282
->>>>>>> 65bbb3397baef1af9ecad5a19ec4e57a4c5021a8:Assets/PreFabs/mapbuild.unity
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1130,11 +1004,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-<<<<<<< HEAD:Assets/Scenes/mapbuild.unity
   m_RootOrder: 0
-=======
-  m_RootOrder: 9
->>>>>>> 65bbb3397baef1af9ecad5a19ec4e57a4c5021a8:Assets/PreFabs/mapbuild.unity
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1411026298
 GameObject:
@@ -1195,11 +1065,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-<<<<<<< HEAD:Assets/Scenes/mapbuild.unity
   - {fileID: 2100000, guid: d590a73baa8ecce47a1ad0c138fee666, type: 2}
-=======
-  - {fileID: 2100000, guid: 8e856abb7623ea543917efa5bb48ddac, type: 2}
->>>>>>> 65bbb3397baef1af9ecad5a19ec4e57a4c5021a8:Assets/PreFabs/mapbuild.unity
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8193,11 +8059,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-<<<<<<< HEAD:Assets/Scenes/mapbuild.unity
   m_SortingOrder: 2
-=======
-  m_SortingOrder: 4
->>>>>>> 65bbb3397baef1af9ecad5a19ec4e57a4c5021a8:Assets/PreFabs/mapbuild.unity
   m_Sprite: {fileID: -2040448727, guid: aee1b56504a9be74ea21a8dec5b4be80, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
