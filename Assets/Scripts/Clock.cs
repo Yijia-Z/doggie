@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class Clock : MonoBehaviour
@@ -17,7 +18,7 @@ public class Clock : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -47,6 +48,7 @@ public class Clock : MonoBehaviour
                     hour = 8;
                     minute = 0;
                     day++;
+                    SceneManager.LoadScene(4);
                 }
             }
         }

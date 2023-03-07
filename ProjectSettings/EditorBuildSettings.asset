@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/PreFabs/mapbuild.unity
     guid: 655eb91fd6729f444971d78a776aa029
+  - enabled: 1
+    path: Assets/Scenes/LoganDate1.unity
+    guid: 072423155157940488b8c1f5d35d75a6
   m_configObjects: {}
