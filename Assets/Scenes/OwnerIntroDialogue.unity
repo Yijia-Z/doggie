@@ -2023,7 +2023,7 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 17035c204825f6340a252046ab6476fd, type: 3}
   responses: []
   nextDialogue: {fileID: 0}
-  switchScene: 0
+  switchScene: 1
   sceneID: 3
   startImmediately: 1
 --- !u!114 &1948815299
