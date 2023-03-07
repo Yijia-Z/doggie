@@ -23,7 +23,7 @@ public class Item
     // Function to spend the item on a dog class instance
     public virtual void Use(Dog dog)
     {
-        Debug.Log("Item " + name + " used on dog " + dog.name);
+        Debug.Log("Item " + name + " used on dog " + dog.getName());
     }
 }
 
@@ -38,8 +38,8 @@ public class Food : Item
     {
         dog.hunger += value; // or value of the item
         dog.giveFood();
-        count--;
-        Debug.Log("Food " + name + " used on dog " + dog.name);
+        //count--;
+        Debug.Log("Food " + name + value + " used on dog " + dog.getName());
     }
 }
 
@@ -55,7 +55,23 @@ public class Toy : Item
         dog.equippedToy = this;
         dog.happiness += value;
         dog.giveToy();
-        count--;
-        Debug.Log("Toy " + name + " equipped on dog " + dog.name);
+        //count--;
+        Debug.Log("Toy " + name + value + " equipped on dog " + dog.getName());
+    }
+}
+public class Apparel : Item
+{
+    // Constructor for Apparel class, inheriting from Item
+    public Apparel(int count, int value, string name, Sprite sprite, string description)
+        : base(count, value, name, sprite, description) { }
+
+    // Override Use function to equip the Apparel on the dog
+    public override void Use(Dog dog)
+    {
+        dog.equippedApparel = this;
+        dog.happiness += value;
+        dog.giveApparel();
+        //count--;
+        Debug.Log("Apparel " + name + value + " equipped on dog " + dog.getName());
     }
 }
