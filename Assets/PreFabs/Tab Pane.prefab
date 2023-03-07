@@ -509,7 +509,7 @@ GameObject:
   - component: {fileID: 5928174186477201432}
   m_Layer: 5
   m_Name: Pane
-  m_TagString: Untagged
+  m_TagString: Tab
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -664,6 +664,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2501652568772598095}
   - component: {fileID: 6321285888850182361}
+  - component: {fileID: 2477750621327216802}
   m_Layer: 5
   m_Name: Tab Pane
   m_TagString: Untagged
@@ -701,6 +702,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3595464343518831056}
   m_CullTransparentMesh: 1
+--- !u!114 &2477750621327216802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3595464343518831056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f65af71a0525dd84a970ff4ac0a783ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemSlotPrefab: {fileID: 9143085252850524155}
+  content: {fileID: 0}
+  itemNameText: {fileID: 0}
+  itemDescriptionText: {fileID: 0}
+  itemImage: {fileID: 0}
+  itemCountText: {fileID: 0}
+  useButton: {fileID: 0}
 --- !u!1 &3610227315506614808
 GameObject:
   m_ObjectHideFlags: 0

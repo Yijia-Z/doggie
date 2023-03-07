@@ -443,7 +443,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4091239783692266098}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4091239783288199061}
+        m_TargetAssemblyTypeName: Dog, Assembly-CSharp
+        m_MethodName: giveBath
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4091239783699278244
 GameObject:
   m_ObjectHideFlags: 0
@@ -835,7 +847,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4091239784780186548}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4091239783288199061}
+        m_TargetAssemblyTypeName: Dog, Assembly-CSharp
+        m_MethodName: openInventory
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4091239784877716695
 GameObject:
   m_ObjectHideFlags: 0
@@ -957,7 +981,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4091239784877716690}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4091239783288199061}
+        m_TargetAssemblyTypeName: Dog, Assembly-CSharp
+        m_MethodName: giveWalk
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4091239784964232560
 GameObject:
   m_ObjectHideFlags: 0

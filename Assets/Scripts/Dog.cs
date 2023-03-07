@@ -7,9 +7,9 @@ public class Dog : MonoBehaviour
 {
     [SerializeField] Sprite dogImage;
     [SerializeField] string dogName = "default_name";
-
+    public Item item;
     public Toy equippedToy = null;
-    public Accessory equippedAccessory = null;
+    public Apparel equippedApparel = null;
     public float hunger = 50f;
     public float hygiene = 100f;
     public float totalHappiness = 100f;
@@ -26,17 +26,32 @@ public class Dog : MonoBehaviour
     public Button give_item_button;
     public GameObject inventory_panel;
     public GameObject stats_panel;
+    Button[] buttons;
 
     // Start is called before the first frame update
     void Start()
-    { 
+    {
         clock = FindObjectOfType<Clock>();
         secToMinRatio = clock.irlSecToGameMinRatio;
 
         bathe_button.onClick.AddListener(giveBath);
         walk_button.onClick.AddListener(giveWalk);
         give_item_button.onClick.AddListener(openInventory);
+        buttons = inventory_panel.GetComponentsInChildren<Button>(true);
 
+        // add listener to all buttons in the inventory panel
+        foreach (Button button in buttons)
+        {
+            if (button.tag == "Food" || button.tag == "Toy" || button.tag == "Apparel")
+            {
+                button.onClick.AddListener(() =>
+                {
+                    Debug.Log(button.tag);
+                    item = CreateInstanceFromTag(button.tag);
+                });
+                button.onClick.AddListener(OnClick);
+            }
+        }
     }
 
     // Update is called once per frame
@@ -150,12 +165,40 @@ public class Dog : MonoBehaviour
         }
     }
 
-        public void openInventory()
+    public void openInventory()
     {
         // display inventory
         inventory_panel.SetActive(true);
 
-        // FIX ME: yijia: select item from inventory
+    }
+    private void OnClick()
+    {
+        if (selected)
+        {
+            item.Use(this);
+        }
+    }
+
+    public static Item CreateInstanceFromTag(string tag)
+    {
+        Item item = null;
+
+        switch (tag)
+        {
+            case "Food":
+                item = new Food(100, 30, tag, null, "Delicious food for dogs");
+                break;
+            case "Toy":
+                item = new Toy(100, 30, tag, null, "A toy for dogs to catch");
+                break;
+            case "Apparel":
+                item = new Apparel(100, 30, tag, null, "Cloth for dogs to wear");
+                break;
+            default:
+                Debug.Log("Invalid item tag: " + tag);
+                break;
+        }
+        return item;
     }
 
     // Feed task
@@ -194,9 +237,9 @@ public class Dog : MonoBehaviour
         taskPanel.SetActive(false);
         clock.minute += 5;
     }
-    public void giveAccessory()
+    public void giveApparel()
     {
-        // happiness is added in Accessory class
+        // happiness is added in Apparel class
         taskPanel.SetActive(false);
     }
 
