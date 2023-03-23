@@ -5,16 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/StartScreen.unity
     guid: 9b75cc17cbea24c4cacd791bcd987647
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Dialogue/Tutorial Dialogue.unity
     guid: f97e63cfb6e676a498d5785503348fd1
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Dialogue/OwnerIntroDialogue.unity
     guid: 14f3ed0e7200d7642a4e556a4af0722b
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/DaycareGame.unity
     guid: 655eb91fd6729f444971d78a776aa029
   - enabled: 1
