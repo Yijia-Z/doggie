@@ -7,24 +7,25 @@ using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
-    public Image actorImage;
-    public TextMeshProUGUI actorName;
-    public TextMeshProUGUI messageText;
-    public RectTransform backgroundBox;
+    public Image actorImage; // Portrait image in dialogue box
+    public TextMeshProUGUI actorName; // Name text
+    public TextMeshProUGUI messageText; // Dialogue text
+    public RectTransform backgroundBox; // Dialogue box
 
-    public TextMeshProUGUI response1Text;
-    public TextMeshProUGUI response2Text;
-    public DialogueTrigger nextDialogue; // LEAVE EMPTY IN EDITOR
-    public RectTransform responseBackgroundBox;
+    public TextMeshProUGUI response1Text; // Response option 1
+    public TextMeshProUGUI response2Text; // Response option 2
+    public DialogueTrigger nextDialogue; // LEAVE EMPTY IN EDITOR!
+    public RectTransform responseBackgroundBox; // Different dialogue box for responses
 
     Message[] currentMessages;
     Actor[] currentActors;
     Response[] currentResponses;
-    int activeMessage = 0;
-    public static bool isActive = false;
+    int activeMessage = 0; // index for current dialogue text
+    public static bool isActive = false; // Dialogue is happening
     bool sceneSwitch = false;
     int sceneID;
 
+    // Called by Dialogue Trigger
     public void OpenDialogue(Message[] messages, Actor[] actors, Response[] responses, bool switchScene)
     {
         currentMessages = messages;
@@ -38,6 +39,7 @@ public class DialogueManager : MonoBehaviour
         DisplayMessage();
     }
 
+    // Called when player selects a response 
     public void ContinueDialogue()
     {
         activeMessage = 0;
@@ -48,6 +50,7 @@ public class DialogueManager : MonoBehaviour
         DisplayMessage();
     }
 
+    // Updates dialogue displayed
     void DisplayMessage()
     {
         Message messageToDisplay = currentMessages[activeMessage];
@@ -58,6 +61,7 @@ public class DialogueManager : MonoBehaviour
         actorImage.sprite = actorToDisplay.sprite;
     }
 
+    // Continues in dialogue
     public void NextMessage()
     {
         activeMessage++;
@@ -93,6 +97,7 @@ public class DialogueManager : MonoBehaviour
         response2Text.text = currentResponses[1].response;
     }
 
+    // Sets up next section of dialogue after a response
     void SetNextDialogue()
     {
         currentMessages = nextDialogue.messages;

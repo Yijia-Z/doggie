@@ -5,14 +5,15 @@ using UnityEngine.UI;
 
 public class DialogueTrigger : MonoBehaviour
 {
-    public Message[] messages;
-    public Actor[] actors;
-    public Response[] responses;
-    public DialogueTrigger nextDialogue;
-    public bool switchScene = false;
+    public Message[] messages; // dialogue text
+    public Actor[] actors; // characters in this dialogue
+    public Response[] responses; // response choices
+    public DialogueTrigger nextDialogue; // next set of dialogue after choice
+    public bool switchScene = false; 
     public int sceneID;
     public bool startImmediately;
 
+    // Initiates the dialogue. Set only to first dialogue trigger if player needs to press a button to enter dialogue.
     public void StartDialogue()
     {
         if (nextDialogue != null)
@@ -44,6 +45,7 @@ public class DialogueTrigger : MonoBehaviour
     }
 }
 
+// Classes for parts of dialogue system
 [System.Serializable]
 public class Message
 {
@@ -62,5 +64,6 @@ public class Actor
 public class Response
 {
     public string response;
+    public Message ownerReaction;
 }
 
