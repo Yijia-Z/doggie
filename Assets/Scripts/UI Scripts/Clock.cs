@@ -24,6 +24,7 @@ public class Clock : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Update in-game time
         timer += Time.deltaTime;
 
         if (timer >= irlSecToGameMinRatio)
@@ -53,6 +54,7 @@ public class Clock : MonoBehaviour
             }
         }
 
+        // Update clock text displayed
         if (day % 5 == 1)
         {
             clockText.text = "Monday\n";

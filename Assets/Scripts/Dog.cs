@@ -57,6 +57,7 @@ public class Dog : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Set max values for stats
         if (hunger > 100f)
         {
             hunger = 100f;
@@ -96,7 +97,7 @@ public class Dog : MonoBehaviour
         Vector3 dogPos = gameObject.transform.localPosition;
     }
 
-    //Not used anymore. Panel stuff is handled in panel script
+    // !!!!!!! Not used anymore. Panel stuff is handled in panel script
     public void closeInfoPanel()
     {
         //infoPanel.SetActive(false);
