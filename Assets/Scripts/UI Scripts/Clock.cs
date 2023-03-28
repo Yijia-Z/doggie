@@ -98,11 +98,29 @@ public class Clock : MonoBehaviour
     public void PauseTime()
     {
         Time.timeScale = 0f;
+        // Save current time
+        /*
+        PlayerPrefs.SetInt("savedHour", hour);
+        PlayerPrefs.SetInt("savedMinute", minute);
+        PlayerPrefs.SetInt("savedDay", day);
+        PlayerPrefs.SetInt("isAM", isAM ? 1 : 0);
+        PlayerPrefs.Save();
+        */
     }
 
     public void ResumeTime()
     {
         Time.timeScale = 1f;
+        // Load saved time
+        /*
+        if (PlayerPrefs.HasKey("savedHour"))
+        {
+            hour = PlayerPrefs.GetInt("savedHour");
+            minute = PlayerPrefs.GetInt("savedMinute");
+            day = PlayerPrefs.GetInt("savedDay");
+            isAM = PlayerPrefs.GetInt("isAM") == 1 ? true : false;
+        }
+        */
     }
 
     public void SpeedUpTime()
