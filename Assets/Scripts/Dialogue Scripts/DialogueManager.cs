@@ -26,7 +26,7 @@ public class DialogueManager : MonoBehaviour
     int sceneID;
     private bool isReacting = false;
 
-    // Called by Dialogue Trigger
+    // Called by Start Dialogue Trigger
     public void OpenDialogue(Message[] messages, Actor[] actors, Response[] responses, bool switchScene)
     {
         currentMessages = messages;
@@ -43,24 +43,30 @@ public class DialogueManager : MonoBehaviour
     // Called when player selects a response 
     public void ContinueDialogue0()
     {
-        responseBackgroundBox.localScale = Vector3.zero;
-        isActive = true;
-        backgroundBox.localScale = Vector3.one;
-        DisplayReaction(currentResponses[0].ownerReaction);
-        SetNextDialogue();
-        activeMessage = 0;
-        Debug.Log("Continuing conversation 0! Loaded messages: " + currentMessages.Length);
+        if (!isActive)
+        {
+            responseBackgroundBox.localScale = Vector3.zero;
+            isActive = true;
+            backgroundBox.localScale = Vector3.one;
+            DisplayReaction(currentResponses[0].ownerReaction);
+            SetNextDialogue();
+            activeMessage = 0;
+            Debug.Log("Continuing conversation 0! Loaded messages: " + currentMessages.Length);
+        }
     }
 
     public void ContinueDialogue1()
     {
-        responseBackgroundBox.localScale = Vector3.zero;
-        isActive = true;
-        backgroundBox.localScale = Vector3.one;
-        DisplayReaction(currentResponses[1].ownerReaction);
-        SetNextDialogue();
-        activeMessage = 0;
-        Debug.Log("Continuing conversation 1! Loaded messages: " + currentMessages.Length);
+        if (!isActive)
+        {
+            responseBackgroundBox.localScale = Vector3.zero;
+            isActive = true;
+            backgroundBox.localScale = Vector3.one;
+            DisplayReaction(currentResponses[1].ownerReaction);
+            SetNextDialogue();
+            activeMessage = 0;
+            Debug.Log("Continuing conversation 1! Loaded messages: " + currentMessages.Length);
+        }
     }
 
     // Updates dialogue displayed
@@ -123,6 +129,7 @@ public class DialogueManager : MonoBehaviour
     // Sets up next section of dialogue after a response
     void SetNextDialogue()
     {
+        Debug.Log("Loading dialogue...");
         currentMessages = nextDialogue.messages;
         currentActors = nextDialogue.actors;
         currentResponses = nextDialogue.responses;
@@ -150,7 +157,6 @@ public class DialogueManager : MonoBehaviour
     void Start()
     {
         backgroundBox.localScale = Vector3.zero;
-
         responseBackgroundBox.localScale = Vector3.zero;
     }
 
