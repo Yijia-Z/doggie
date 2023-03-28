@@ -227,7 +227,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 590857438}
         m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
-        m_MethodName: ContinueDialogue
+        m_MethodName: ContinueDialogue0
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1528,12 +1528,12 @@ MonoBehaviour:
   responses:
   - response: "Oh no, it wasn\u2019t bad at all!"
     ownerReaction:
-      actorId: 0
-      message: 
+      actorId: 1
+      message: '[REACTION 1]'
   - response: "\u201CI-huhu- I made it! *sweat streaming down forehead*"
     ownerReaction:
-      actorId: 0
-      message: 
+      actorId: 1
+      message: '[REACTION 2]'
   nextDialogue: {fileID: 1404882515}
   switchScene: 0
   sceneID: 0
@@ -1868,9 +1868,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 590857438}
         m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
-        m_MethodName: ContinueDialogue
+        m_MethodName: ContinueDialogue1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
