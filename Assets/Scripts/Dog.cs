@@ -7,6 +7,7 @@ public class Dog : MonoBehaviour
 {
     [SerializeField] Sprite dogImage;
     [SerializeField] string dogName = "default_name";
+    public GameObject attention;
     public Item item;
     public Toy equippedToy = null;
     public Apparel equippedApparel = null;
@@ -109,6 +110,13 @@ public class Dog : MonoBehaviour
     private void updatetotalHappiness()
     {
         totalHappiness = ((hunger / 100f) * 40) + ((hygiene / 100f) * 30) + happiness;
+        if (totalHappiness < 30f)
+        {
+            attention.SetActive(true);
+        }
+        else {
+            attention.SetActive(false);
+        }
         if (totalHappiness > 100f)
         {
             totalHappiness = 100f;

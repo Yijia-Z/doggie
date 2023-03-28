@@ -766,6 +766,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dogImage: {fileID: 21300000, guid: e9458244954513a44a7cfe3175c19c7c, type: 3}
   dogName: Georgie
+  attention: {fileID: 741205669}
   hunger: 20
   hygiene: 20
   totalHappiness: 100
@@ -1246,6 +1247,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dogImage: {fileID: 21300000, guid: e9458244954513a44a7cfe3175c19c7c, type: 3}
   dogName: Max
+  attention: {fileID: 1911082443}
   hunger: 20
   hygiene: 20
   totalHappiness: 100
@@ -9121,6 +9123,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dogImage: {fileID: 21300000, guid: e9458244954513a44a7cfe3175c19c7c, type: 3}
   dogName: Bella
+  attention: {fileID: 689410425}
   hunger: 20
   hygiene: 20
   totalHappiness: 100
