@@ -21,65 +21,70 @@ public class Player : MonoBehaviour
     public Sprite movingLeftSprite;
     public Sprite movingRightSprite;
     private Sprite prevSprite;
+    private Clock clock;
 
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         playerAnimator = GetComponent<Animator>();
+        clock = FindObjectOfType<Clock>();
     }
 
     void Update()
     {
-        horizontal = Input.GetAxisRaw("Horizontal"); // -1 is left
-        vertical = Input.GetAxisRaw("Vertical"); // -1 is down
-        prevSprite = spriteRenderer.sprite;
-        // Change sprite based on movement state and direction
-        if (horizontal != 0 || vertical != 0)
+        if (!clock.getIsPaused())
         {
-            if (horizontal > 0)
+            horizontal = Input.GetAxisRaw("Horizontal"); // -1 is left
+            vertical = Input.GetAxisRaw("Vertical"); // -1 is down
+            prevSprite = spriteRenderer.sprite;
+            // Change sprite based on movement state and direction
+            if (horizontal != 0 || vertical != 0)
             {
-                //spriteRenderer.sprite = movingRightSprite;
-                playerAnimator.Play("walkright");
-            }
-            else if (horizontal < 0)
-            {
-                //spriteRenderer.sprite = movingLeftSprite;
-                playerAnimator.Play("walkleft");
-            }
-            else if (vertical > 0)
-            {
-                //spriteRenderer.sprite = movingUpSprite;
-                playerAnimator.Play("walkup");
+                if (horizontal > 0)
+                {
+                    //spriteRenderer.sprite = movingRightSprite;
+                    playerAnimator.Play("walkright");
+                }
+                else if (horizontal < 0)
+                {
+                    //spriteRenderer.sprite = movingLeftSprite;
+                    playerAnimator.Play("walkleft");
+                }
+                else if (vertical > 0)
+                {
+                    //spriteRenderer.sprite = movingUpSprite;
+                    playerAnimator.Play("walkup");
 
+                }
+                else if (vertical < 0)
+                {
+                    //spriteRenderer.sprite = movingDownSprite;
+                    playerAnimator.Play("walkdown");
+                }
             }
-            else if (vertical < 0)
+            else
             {
-                //spriteRenderer.sprite = movingDownSprite;
-                playerAnimator.Play("walkdown");
+                playerAnimator.Play("idlefront");
+                /*
+                  if (prevSprite = movingRightSprite)
+                  {
+                      spriteRenderer.sprite = restingRightSprite;
+                  }
+                  else if (prevSprite = movingLeftSprite)
+                  {
+                      spriteRenderer.sprite = restingLeftSprite;
+                  }
+                  else if (prevSprite = movingUpSprite)
+                  {
+                      spriteRenderer.sprite = restingUpSprite;
+                  }
+                  else if (prevSprite = movingDownSprite)
+                  {
+                      spriteRenderer.sprite = restingDownSprite;
+                  }
+                  */
             }
-        }
-        else
-        {
-          playerAnimator.Play("idlefront");
-          /*
-            if (prevSprite = movingRightSprite)
-            {
-                spriteRenderer.sprite = restingRightSprite;
-            }
-            else if (prevSprite = movingLeftSprite)
-            {
-                spriteRenderer.sprite = restingLeftSprite;
-            }
-            else if (prevSprite = movingUpSprite)
-            {
-                spriteRenderer.sprite = restingUpSprite;
-            }
-            else if (prevSprite = movingDownSprite)
-            {
-                spriteRenderer.sprite = restingDownSprite;
-            }
-            */
         }
     }
 
