@@ -8496,7 +8496,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clockText: {fileID: 1503863350}
-  speedUpMultiplier: 5
+  speedUpMultiplier: 50
   irlSecToGameMinRatio: 2
   hour: 8
   minute: 0
