@@ -1009,6 +1009,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ChoiceBox
       objectReference: {fileID: 0}
+    - target: {fileID: 1569017524085341424, guid: bea99aad36b26407d85d3365da646aed, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1569017524497439076, guid: bea99aad36b26407d85d3365da646aed, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

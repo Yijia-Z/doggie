@@ -326,7 +326,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1569017524085341424, guid: bea99aad36b26407d85d3365da646aed, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1569017524497439076, guid: bea99aad36b26407d85d3365da646aed, type: 3}
       propertyPath: m_Pivot.x
@@ -435,28 +435,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1569017524497439076, guid: bea99aad36b26407d85d3365da646aed, type: 3}
   m_PrefabInstance: {fileID: 232329813}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &232329815 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6856633387733867890, guid: bea99aad36b26407d85d3365da646aed, type: 3}
-  m_PrefabInstance: {fileID: 232329813}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &232329816 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6673321335994375106, guid: bea99aad36b26407d85d3365da646aed, type: 3}
-  m_PrefabInstance: {fileID: 232329813}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &270205599
 GameObject:
   m_ObjectHideFlags: 0
@@ -965,18 +943,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7485096572523982095, guid: 406624801202d4f69acea54cad8b303c, type: 3}
-      propertyPath: response1Text
-      value: 
-      objectReference: {fileID: 232329816}
-    - target: {fileID: 7485096572523982095, guid: 406624801202d4f69acea54cad8b303c, type: 3}
-      propertyPath: response2Text
-      value: 
-      objectReference: {fileID: 232329815}
-    - target: {fileID: 7485096572523982095, guid: 406624801202d4f69acea54cad8b303c, type: 3}
-      propertyPath: responseBackgroundBox
-      value: 
-      objectReference: {fileID: 232329814}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 406624801202d4f69acea54cad8b303c, type: 3}
 --- !u!224 &1585707878 stripped
@@ -1433,7 +1399,7 @@ GameObject:
   - component: {fileID: 2135376849}
   - component: {fileID: 2135376848}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Dog Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

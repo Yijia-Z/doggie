@@ -58,7 +58,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6824175632703824163}
   m_Layer: 5
-  m_Name: Inventory2
+  m_Name: Profiles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -242,7 +242,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 16958390179035297, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_text
-      value: Bacon
+      value: Max
       objectReference: {fileID: 0}
     - target: {fileID: 690008325802838209, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_Name
@@ -255,10 +255,12 @@ PrefabInstance:
     - target: {fileID: 1476440704868306126, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 0fd06f9f425f09849b84e35c706bca3c, type: 3}
+      objectReference: {fileID: 21300000, guid: 02b0444e3136ab745b65c906854fc70c, type: 3}
     - target: {fileID: 2300437542768184050, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_text
-      value: Food
+      value: 'Dogs
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 2501652568772598095, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_Pivot.x
@@ -346,11 +348,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3595464343518831056, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_Name
-      value: Tab Pane - Food
+      value: Tab Pane - Dogs
       objectReference: {fileID: 0}
     - target: {fileID: 3806766671039244874, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_text
-      value: Kibble
+      value: '???
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 3887097850117582020, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_Name
@@ -370,23 +374,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5349222055558975959, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_text
-      value: Steak
+      value: Georgie
       objectReference: {fileID: 0}
+    - target: {fileID: 5530349160763134212, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 199ffb85517ec5f40a4b3e0d462f58ca, type: 3}
     - target: {fileID: 6647084480743076391, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_text
-      value: Sushi
+      value: Bella
       objectReference: {fileID: 0}
     - target: {fileID: 7100769928542109737, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: e71c250cbfd6fac42a1a9cbc3bd09b36, type: 3}
+      objectReference: {fileID: 21300000, guid: e88c33fb5813ce04cbbb1a102f516af6, type: 3}
     - target: {fileID: 7327576619001419207, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_text
-      value: Kibble
+      value: ???
       objectReference: {fileID: 0}
     - target: {fileID: 7852782022242872682, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_text
-      value: Wet Food
+      value: ???
       objectReference: {fileID: 0}
     - target: {fileID: 7852782022242872682, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_margin.x
@@ -399,7 +407,7 @@ PrefabInstance:
     - target: {fileID: 7955474030665601702, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 3a676f8a52c6b3c49ab440ba90827102, type: 3}
+      objectReference: {fileID: 21300000, guid: e88c33fb5813ce04cbbb1a102f516af6, type: 3}
     - target: {fileID: 8298043136291381437, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_TagString
       value: Food
@@ -407,11 +415,11 @@ PrefabInstance:
     - target: {fileID: 8562001680757943305, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 36fcc979a51a828498ad41dc166da57d, type: 3}
+      objectReference: {fileID: 21300000, guid: e88c33fb5813ce04cbbb1a102f516af6, type: 3}
     - target: {fileID: 8719630507211874634, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: a5e851f79127a324c84d634466b611d7, type: 3}
+      objectReference: {fileID: 21300000, guid: cb57e5a31307e644583f32d2faa60e1b, type: 3}
     - target: {fileID: 9143085252850524155, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_TagString
       value: Food
@@ -536,7 +544,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3595464343518831056, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3806766671039244874, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_text
@@ -618,7 +626,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 16958390179035297, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_text
-      value: Ice cube
+      value: Logan
       objectReference: {fileID: 0}
     - target: {fileID: 690008325802838209, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_TagString
@@ -627,10 +635,10 @@ PrefabInstance:
     - target: {fileID: 1476440704868306126, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -513537706, guid: 514de94dc07c442c983891dad0205cba, type: 3}
+      objectReference: {fileID: 21300000, guid: e88c33fb5813ce04cbbb1a102f516af6, type: 3}
     - target: {fileID: 2300437542768184050, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_text
-      value: Toys
+      value: Owners
       objectReference: {fileID: 0}
     - target: {fileID: 2501652568772598095, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_Pivot.x
@@ -718,11 +726,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3595464343518831056, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_Name
-      value: Tab Pane - Toys
+      value: Tab Pane - Owners
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595464343518831056, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3806766671039244874, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_text
-      value: Ball
+      value: '???
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 3887097850117582020, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_TagString
@@ -742,7 +756,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5349222055558975959, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_text
-      value: Frisbee
+      value: Jeff
       objectReference: {fileID: 0}
     - target: {fileID: 5530349160763134212, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_Type
@@ -751,7 +765,7 @@ PrefabInstance:
     - target: {fileID: 5530349160763134212, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 494335245, guid: 514de94dc07c442c983891dad0205cba, type: 3}
+      objectReference: {fileID: 21300000, guid: e6e494c202c83de4caa5e81b03af0358, type: 3}
     - target: {fileID: 5530349160763134212, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_Maskable
       value: 1
@@ -806,28 +820,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6647084480743076391, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_text
-      value: Rope
+      value: Elaine
       objectReference: {fileID: 0}
     - target: {fileID: 7100769928542109737, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 608840077, guid: 514de94dc07c442c983891dad0205cba, type: 3}
+      objectReference: {fileID: 21300000, guid: 2984a3932d1784b2385e3d4eb4a53407, type: 3}
     - target: {fileID: 7139661215148206254, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_SizeDelta.x
       value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 7327576619001419207, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_text
-      value: Stick
+      value: ???
       objectReference: {fileID: 0}
     - target: {fileID: 7852782022242872682, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_text
-      value: Plushy
+      value: ???
       objectReference: {fileID: 0}
     - target: {fileID: 7955474030665601702, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -1656145944, guid: 514de94dc07c442c983891dad0205cba, type: 3}
+      objectReference: {fileID: 21300000, guid: 2984a3932d1784b2385e3d4eb4a53407, type: 3}
     - target: {fileID: 8298043136291381437, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_TagString
       value: Toy
@@ -835,11 +849,11 @@ PrefabInstance:
     - target: {fileID: 8562001680757943305, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -538612445, guid: 514de94dc07c442c983891dad0205cba, type: 3}
+      objectReference: {fileID: 21300000, guid: 2984a3932d1784b2385e3d4eb4a53407, type: 3}
     - target: {fileID: 8719630507211874634, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 1386867633, guid: 514de94dc07c442c983891dad0205cba, type: 3}
+      objectReference: {fileID: 21300000, guid: e88c33fb5813ce04cbbb1a102f516af6, type: 3}
     - target: {fileID: 9143085252850524155, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_TagString
       value: Toy
