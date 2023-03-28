@@ -1321,12 +1321,12 @@ MonoBehaviour:
   responses:
   - response: 'Oh no, it was not bad at all! '
     ownerReaction:
-      actorId: 0
-      message: 
+      actorId: 1
+      message: Reaction 1
   - response: 'I-huhu- I made it! *sweat streaming down forehead* '
     ownerReaction:
-      actorId: 0
-      message: 
+      actorId: 1
+      message: Reaction 2
   nextDialogue: {fileID: 1813937270}
   switchScene: 0
   sceneID: 0

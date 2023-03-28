@@ -24,8 +24,9 @@ public class DialogueManager : MonoBehaviour
     public static bool isActive = false; // Dialogue is happening
     bool sceneSwitch = false;
     int sceneID;
+    private bool isReacting = false;
 
-    // Called by Dialogue Trigger
+    // Called by Start Dialogue Trigger
     public void OpenDialogue(Message[] messages, Actor[] actors, Response[] responses, bool switchScene)
     {
         currentMessages = messages;
@@ -40,20 +41,49 @@ public class DialogueManager : MonoBehaviour
     }
 
     // Called when player selects a response 
-    public void ContinueDialogue()
+    public void ContinueDialogue0()
     {
-        activeMessage = 0;
-        responseBackgroundBox.localScale = Vector3.zero;
-        isActive = true;
-        backgroundBox.localScale = Vector3.one;
-        Debug.Log("Started conversation! Loaded messages: " + currentMessages.Length);
-        DisplayMessage();
+        if (!isActive)
+        {
+            responseBackgroundBox.localScale = Vector3.zero;
+            isActive = true;
+            backgroundBox.localScale = Vector3.one;
+            DisplayReaction(currentResponses[0].ownerReaction);
+            SetNextDialogue();
+            activeMessage = 0;
+            Debug.Log("Continuing conversation 0! Loaded messages: " + currentMessages.Length);
+        }
+    }
+
+    public void ContinueDialogue1()
+    {
+        if (!isActive)
+        {
+            responseBackgroundBox.localScale = Vector3.zero;
+            isActive = true;
+            backgroundBox.localScale = Vector3.one;
+            DisplayReaction(currentResponses[1].ownerReaction);
+            SetNextDialogue();
+            activeMessage = 0;
+            Debug.Log("Continuing conversation 1! Loaded messages: " + currentMessages.Length);
+        }
     }
 
     // Updates dialogue displayed
     void DisplayMessage()
     {
         Message messageToDisplay = currentMessages[activeMessage];
+        messageText.text = messageToDisplay.message;
+
+        Actor actorToDisplay = currentActors[messageToDisplay.actorId];
+        actorName.text = actorToDisplay.name;
+        actorImage.sprite = actorToDisplay.sprite;
+    }
+
+    void DisplayReaction(Message reaction)
+    {
+        isReacting = true;
+        Message messageToDisplay = reaction;
         messageText.text = messageToDisplay.message;
 
         Actor actorToDisplay = currentActors[messageToDisplay.actorId];
@@ -77,7 +107,6 @@ public class DialogueManager : MonoBehaviour
             if (currentResponses.Length > 0)
             {
                 DisplayResponses();
-                SetNextDialogue();
             }
             else
             {
@@ -100,6 +129,7 @@ public class DialogueManager : MonoBehaviour
     // Sets up next section of dialogue after a response
     void SetNextDialogue()
     {
+        Debug.Log("Loading dialogue...");
         currentMessages = nextDialogue.messages;
         currentActors = nextDialogue.actors;
         currentResponses = nextDialogue.responses;
@@ -127,7 +157,6 @@ public class DialogueManager : MonoBehaviour
     void Start()
     {
         backgroundBox.localScale = Vector3.zero;
-
         responseBackgroundBox.localScale = Vector3.zero;
     }
 
@@ -136,7 +165,17 @@ public class DialogueManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && isActive)
         {
-            NextMessage();
+            if (isReacting)
+            {
+                isReacting = false;
+                Debug.Log("Entered isReacting!");
+                DisplayMessage();
+            }
+            else
+            {
+                Debug.Log("Entered else!");
+                NextMessage();
+            }
         }
     }
 }
