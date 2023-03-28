@@ -31,26 +31,26 @@ public class Clock : MonoBehaviour
         {
             timer = 0;
             minute++;
-            if (minute >= 60)
+        }
+        if (minute >= 60)
+        {
+            minute = minute - 60;
+            hour++;
+            if (hour == 12)
             {
-                minute = minute - 60;
-                hour++;
-                if (hour == 12)
-                {
-                    isAM = false;
-                }
-                if (hour == 13 && !isAM)
-                {
-                    hour = 1;
-                }
-                else if (hour == 6 && !isAM)
-                {
-                    isAM = true;
-                    hour = 8;
-                    minute = 0;
-                    day++;
-                    SceneManager.LoadScene(4);
-                }
+                isAM = false;
+            }
+            if (hour == 13 && !isAM)
+            {
+                hour = 1;
+            }
+            else if (hour == 6 && !isAM)
+            {
+                isAM = true;
+                hour = 8;
+                minute = 0;
+                day++;
+                SceneManager.LoadScene(4);
             }
         }
 
