@@ -14,6 +14,7 @@ public class Clock : MonoBehaviour
     public int minute = 0;
     private bool isAM = true;
     public int day = 1;
+    private bool isPaused = false;
 
     // Start is called before the first frame update
     void Start()
@@ -97,6 +98,7 @@ public class Clock : MonoBehaviour
     }
     public void PauseTime()
     {
+        isPaused = true;
         Time.timeScale = 0f;
         // Save current time
         /*
@@ -108,8 +110,13 @@ public class Clock : MonoBehaviour
         */
     }
 
+    public bool getIsPaused()
+    {
+        return isPaused;
+    }
     public void ResumeTime()
     {
+        isPaused = false;
         Time.timeScale = 1f;
         // Load saved time
         /*
@@ -125,6 +132,9 @@ public class Clock : MonoBehaviour
 
     public void SpeedUpTime()
     {
-        Time.timeScale = speedUpMultiplier;
+        if (!isPaused)
+        {
+            Time.timeScale = Time.timeScale * speedUpMultiplier;
+        }
     }
 }
