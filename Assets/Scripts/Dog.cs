@@ -34,9 +34,9 @@ public class Dog : MonoBehaviour
         clock = FindObjectOfType<Clock>();
         secToMinRatio = clock.irlSecToGameMinRatio;
 
-        bathe_button.onClick.AddListener(giveBath);
-        walk_button.onClick.AddListener(giveWalk);
-        give_item_button.onClick.AddListener(openInventory);
+        //bathe_button.onClick.AddListener(giveBath);
+        //walk_button.onClick.AddListener(giveWalk);
+        //give_item_button.onClick.AddListener(openInventory);
         buttons = inventory_panel.GetComponentsInChildren<Button>(true);
 
         // add listener to all buttons in the inventory panel
@@ -214,11 +214,13 @@ public class Dog : MonoBehaviour
     // Wash task
     public void giveBath()
     {
+        //Debug.Log("before: " + clock.minute);
         hygiene = 100f;
         happiness -= 15f;
         taskPanel.SetActive(false);
         clock.minute += 20;
         Debug.Log("giving bath");
+        //Debug.Log("after: " + clock.minute);
     }
 
     // Walk task
@@ -229,6 +231,7 @@ public class Dog : MonoBehaviour
         hunger -= 15f;
         taskPanel.SetActive(false);
         clock.minute += 20;
+        Debug.Log("giving walk");
     }
 
     // Give toy task
