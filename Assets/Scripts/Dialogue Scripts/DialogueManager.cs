@@ -30,6 +30,7 @@ public class DialogueManager : MonoBehaviour
     // Called by Start Dialogue Trigger
     public void OpenDialogue(Message[] messages, Actor[] actors, Response[] responses, bool switchScene)
     {
+        StartCoroutine(FadeBlackOut(false));
         currentMessages = messages;
         currentActors = actors;
         currentResponses =  responses;
@@ -114,7 +115,7 @@ public class DialogueManager : MonoBehaviour
                 nextDialogue = null;
                 if (sceneSwitch)
                 {
-                    SwitchScene();
+                    StartCoroutine(SwitchScene());
                 }
             }
         }
@@ -148,13 +149,25 @@ public class DialogueManager : MonoBehaviour
         sceneID = id;
     }
 
-    public void SwitchScene()
+    public IEnumerator SwitchScene()
     {
-        StartCoroutine(FadeBlackOut());
+        Color objectColor = BlackPanel.GetComponent<Image>().color;
+        float fadeAmount;
+
+        while (BlackPanel.GetComponent<Image>().color.a < 1)
+        {
+            fadeAmount = objectColor.a + (1 * Time.deltaTime);
+
+            objectColor = new Color(objectColor.r, objectColor.g, objectColor.b, fadeAmount);
+            BlackPanel.GetComponent<Image>().color = objectColor;
+            yield return null;
+        }
+        //yield return new WaitForSecondsRealtime(2);
+
         SceneManager.LoadScene(sceneID);
     }
 
-    public IEnumerator FadeBlackOut(bool fadeToBlack = true, int fadeSpeed = 5)
+    public IEnumerator FadeBlackOut(bool fadeToBlack = true, int fadeSpeed = 1)
     {
         Color objectColor = BlackPanel.GetComponent<Image>().color;
         float fadeAmount;
