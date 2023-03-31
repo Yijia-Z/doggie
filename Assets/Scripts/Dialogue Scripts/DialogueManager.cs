@@ -25,10 +25,12 @@ public class DialogueManager : MonoBehaviour
     bool sceneSwitch = false;
     int sceneID;
     private bool isReacting = false;
+    public GameObject BlackPanel;
 
     // Called by Start Dialogue Trigger
     public void OpenDialogue(Message[] messages, Actor[] actors, Response[] responses, bool switchScene)
     {
+        StartCoroutine(FadeBlackOut(false));
         currentMessages = messages;
         currentActors = actors;
         currentResponses =  responses;
@@ -113,7 +115,7 @@ public class DialogueManager : MonoBehaviour
                 nextDialogue = null;
                 if (sceneSwitch)
                 {
-                    SwitchScene();
+                    StartCoroutine(SwitchScene());
                 }
             }
         }
@@ -147,9 +149,51 @@ public class DialogueManager : MonoBehaviour
         sceneID = id;
     }
 
-    public void SwitchScene()
+    public IEnumerator SwitchScene()
     {
+        Color objectColor = BlackPanel.GetComponent<Image>().color;
+        float fadeAmount;
+
+        while (BlackPanel.GetComponent<Image>().color.a < 1)
+        {
+            fadeAmount = objectColor.a + (1 * Time.deltaTime);
+
+            objectColor = new Color(objectColor.r, objectColor.g, objectColor.b, fadeAmount);
+            BlackPanel.GetComponent<Image>().color = objectColor;
+            yield return null;
+        }
+        //yield return new WaitForSecondsRealtime(2);
+
         SceneManager.LoadScene(sceneID);
+    }
+
+    public IEnumerator FadeBlackOut(bool fadeToBlack = true, int fadeSpeed = 1)
+    {
+        Color objectColor = BlackPanel.GetComponent<Image>().color;
+        float fadeAmount;
+
+        if (fadeToBlack)
+        {
+            while (BlackPanel.GetComponent<Image>().color.a < 1)
+            {
+                fadeAmount = objectColor.a + (fadeSpeed * Time.deltaTime);
+
+                objectColor = new Color(objectColor.r, objectColor.g, objectColor.b, fadeAmount);
+                BlackPanel.GetComponent<Image>().color = objectColor;
+                yield return null;
+            }
+        }
+        else
+        {
+            while (BlackPanel.GetComponent<Image>().color.a > 0)
+            {
+                fadeAmount = objectColor.a - (fadeSpeed * Time.deltaTime);
+
+                objectColor = new Color(objectColor.r, objectColor.g, objectColor.b, fadeAmount);
+                BlackPanel.GetComponent<Image>().color = objectColor;
+                yield return null;
+            }
+        }
     }
 
 
