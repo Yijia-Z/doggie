@@ -61,7 +61,7 @@ public class Clock : MonoBehaviour
                 {
                     if (dogs[i].getHappiness() >= 100&&DatingProgress.IsOwnerAvailable(i))
                     {
-                        ownerIndex = i();
+                        ownerIndex = dogs[i].getOwnerIndex();
                     }
                 }
                 if (ownerIndex == -1)
