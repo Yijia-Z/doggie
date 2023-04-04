@@ -23,6 +23,7 @@ public class Clock : MonoBehaviour
     }
 
     // Update is called once per frame
+    // Update is called once per frame
     void Update()
     {
         // Update in-game time
@@ -51,7 +52,28 @@ public class Clock : MonoBehaviour
                 hour = 8;
                 minute = 0;
                 day++;
-                SceneManager.LoadScene(4);
+
+                // Select the next available owner
+                int ownerIndex = -1;
+                for (int i = 0; i < NUM_OWNERS; i++)
+                {
+                    if (DatingProgress.IsOwnerAvailable(i))
+                    {
+                        ownerIndex = i;
+                        break;
+                    }
+                }
+                if (ownerIndex == -1)
+                {
+                    Debug.LogError("No available owners found!");
+                }
+                else
+                {
+                    // Save the selected owner and load the corresponding scene
+                    DatingProgress.MarkOwnerAsUnavailable(ownerIndex);
+                    DatingProgress.SaveProgress(ownerIndex, 1);
+                    SceneManager.LoadScene("DatingScene");
+                }
             }
         }
 
@@ -76,7 +98,6 @@ public class Clock : MonoBehaviour
         {
             clockText.text = "Friday\n";
         }
-
 
         clockText.text += hour.ToString() + ":";
         if (minute < 10)
