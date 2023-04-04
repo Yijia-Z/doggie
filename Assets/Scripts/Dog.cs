@@ -7,6 +7,8 @@ public class Dog : MonoBehaviour
 {
     [SerializeField] Sprite dogImage;
     [SerializeField] string dogName = "default_name";
+    [SerializeField] int dogOwnerIndex;
+
     public GameObject attention;
     public Item item;
     public Toy equippedToy = null;
@@ -260,7 +262,10 @@ public class Dog : MonoBehaviour
     {
         return dogName;
     }
-
+    
+    public int getOwnerIndex(){
+        return dogOwnerIndex;
+    }
     public float getHunger()
     {
         return hunger;
