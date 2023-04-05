@@ -56,9 +56,6 @@ public class StatsPanel : MonoBehaviour
             }
         }
 
-
-
-
         //Get & set dog info
         if (dog != null)
         {
@@ -70,12 +67,10 @@ public class StatsPanel : MonoBehaviour
             dogHygiene = dog.getHygiene();
             hygieneSlider.setSlider("Hygiene", dogHygiene, maxHealth);
 
-            //UnityEngine.Debug.Log("Hygiene: " + dogHygiene);
-
             dogHappiness = dog.getHappiness();
             happinessSlider.setSlider("Happiness", dogHappiness, maxHealth);
 
-            dogImage.GetComponent<SpriteRenderer>().sprite = dog.getSprite();
+            //dogImage.GetComponent<SpriteRenderer>().sprite = dog.getSprite();
 
         }
     }
