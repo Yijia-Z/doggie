@@ -35,9 +35,9 @@ public class Dog : MonoBehaviour
         clock = FindObjectOfType<Clock>();
         secToMinRatio = clock.irlSecToGameMinRatio;
 
-        //bathe_button.onClick.AddListener(giveBath);
-        //walk_button.onClick.AddListener(giveWalk);
-        //give_item_button.onClick.AddListener(openInventory);
+        bathe_button.onClick.AddListener(giveBath);
+        walk_button.onClick.AddListener(giveWalk);
+        give_item_button.onClick.AddListener(openInventory);
         buttons = inventory_panel.GetComponentsInChildren<Button>(true);
 
         // add listener to all buttons in the inventory panel
@@ -114,7 +114,12 @@ public class Dog : MonoBehaviour
         {
             attention.SetActive(true);
         }
-        else {
+        else
+        {
+            attention.SetActive(false);
+        }
+        if (selected)
+        {
             attention.SetActive(false);
         }
         if (totalHappiness > 100f)
@@ -186,6 +191,7 @@ public class Dog : MonoBehaviour
         {
             item.Use(this);
         }
+        inventory_panel.SetActive(false);
     }
 
     public static Item CreateInstanceFromTag(string tag)
