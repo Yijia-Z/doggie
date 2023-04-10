@@ -15,7 +15,10 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI response1Text; // Response option 1
     public TextMeshProUGUI response2Text; // Response option 2
     public DialogueTrigger nextDialogue; // LEAVE EMPTY IN EDITOR!
+    public DialogueTrigger goodEnding;
+    public DialogueTrigger badEnding;
     public RectTransform responseBackgroundBox; // Different dialogue box for responses
+    public bool isSuccessful;
 
     Message[] currentMessages;
     Actor[] currentActors;
@@ -31,6 +34,7 @@ public class DialogueManager : MonoBehaviour
     public void OpenDialogue(Message[] messages, Actor[] actors, Response[] responses, bool switchScene)
     {
         StartCoroutine(FadeBlackOut(false));
+        BlackPanel.SetActive(false);
         currentMessages = messages;
         currentActors = actors;
         currentResponses =  responses;
@@ -47,6 +51,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (!isActive)
         {
+            isSuccessful = true;
             responseBackgroundBox.localScale = Vector3.zero;
             isActive = true;
             backgroundBox.localScale = Vector3.one;
@@ -61,6 +66,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (!isActive)
         {
+            isSuccessful = false;
             responseBackgroundBox.localScale = Vector3.zero;
             isActive = true;
             backgroundBox.localScale = Vector3.one;
@@ -131,6 +137,18 @@ public class DialogueManager : MonoBehaviour
     // Sets up next section of dialogue after a response
     void SetNextDialogue()
     {
+        if (nextDialogue is null)
+        {
+            Debug.Log("next diag is null");
+            if (isSuccessful)
+            {
+                nextDialogue = goodEnding;
+            }
+            else
+            {
+                nextDialogue = badEnding;
+            }
+        }
         Debug.Log("Loading dialogue...");
         currentMessages = nextDialogue.messages;
         currentActors = nextDialogue.actors;
@@ -151,6 +169,7 @@ public class DialogueManager : MonoBehaviour
 
     public IEnumerator SwitchScene()
     {
+        BlackPanel.SetActive(true);
         Color objectColor = BlackPanel.GetComponent<Image>().color;
         float fadeAmount;
 

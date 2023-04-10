@@ -12,12 +12,36 @@ EditorBuildSettings:
     path: Assets/Scenes/Dialogue/Tutorial Dialogue.unity
     guid: f97e63cfb6e676a498d5785503348fd1
   - enabled: 1
-    path: Assets/Scenes/Dialogue/NEW OwnerIntros.unity
-    guid: 0df5fd7534886d443a791303cd09e121
+    path: Assets/Scenes/New Dialogue/LoganIntro.unity
+    guid: e90669fa910f3664491ca5f0a2d49bba
   - enabled: 1
     path: Assets/Scenes/DaycareGame.unity
     guid: 655eb91fd6729f444971d78a776aa029
   - enabled: 1
-    path: Assets/Scenes/Dialogue/NEW LoganDate1.unity
-    guid: d7fc154df215bc148bc2fedb82e29c4e
+    path: Assets/Scenes/New Dialogue/LoganDate1.unity
+    guid: 42c431190dedf5c40bc2df0b03032033
+  - enabled: 1
+    path: Assets/Scenes/New Dialogue/LoganDate2.unity
+    guid: 25a34cbe8df64d343a7206d920280ae5
+  - enabled: 1
+    path: Assets/Scenes/New Dialogue/LoganDate3.unity
+    guid: 651780b60e49c234b9250f68aab53453
+  - enabled: 1
+    path: Assets/Scenes/New Dialogue/ElaineDate1.unity
+    guid: 1fc0d63877a52e742bda2436939ff6cc
+  - enabled: 1
+    path: Assets/Scenes/New Dialogue/ElaineDate2.unity
+    guid: 7f6de2fca843a0147baf045554d2bbc4
+  - enabled: 1
+    path: Assets/Scenes/New Dialogue/ElaineDate3.unity
+    guid: 34c727f64e85d6946a1c8c16b49599e9
+  - enabled: 1
+    path: Assets/Scenes/New Dialogue/JeffDate1.unity
+    guid: 704e2102577f0214abfb3c6b864725d9
+  - enabled: 1
+    path: Assets/Scenes/New Dialogue/JeffDate2.unity
+    guid: 597af4bf27ad6ff418dc703750159e4c
+  - enabled: 1
+    path: Assets/Scenes/New Dialogue/JeffDate3.unity
+    guid: bd12c10610ab36f4490e364c1ff32d0f
   m_configObjects: {}
