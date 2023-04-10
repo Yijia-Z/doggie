@@ -29,6 +29,8 @@ public class Dog : MonoBehaviour
     public Button give_item_button;
     public GameObject inventory_panel;
     public GameObject stats_panel;
+    public VideoPlayerScript videoPlayerScript;
+
     Button[] buttons;
 
     // Start is called before the first frame update
@@ -41,6 +43,8 @@ public class Dog : MonoBehaviour
         walk_button.onClick.AddListener(giveWalk);
         give_item_button.onClick.AddListener(openInventory);
         buttons = inventory_panel.GetComponentsInChildren<Button>(true);
+        videoPlayerScript = GameObject.FindObjectOfType<VideoPlayerScript>();
+
 
         // add listener to all buttons in the inventory panel
         foreach (Button button in buttons)
@@ -237,6 +241,7 @@ public class Dog : MonoBehaviour
         clock.minute += 20;
         Debug.Log("giving bath");
         //Debug.Log("after: " + clock.minute);
+        videoPlayerScript.PlayVideo(1);
     }
 
     // Walk task
@@ -248,6 +253,7 @@ public class Dog : MonoBehaviour
         taskPanel.SetActive(false);
         clock.minute += 20;
         Debug.Log("giving walk");
+        videoPlayerScript.PlayVideo(2);
     }
 
     // Give toy task
@@ -268,8 +274,9 @@ public class Dog : MonoBehaviour
     {
         return dogName;
     }
-    
-    public int getOwnerIndex(){
+
+    public int getOwnerIndex()
+    {
         return dogOwnerIndex;
     }
     public float getHunger()
