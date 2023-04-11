@@ -1456,9 +1456,9 @@ MonoBehaviour:
   - name: 
     sprite: {fileID: 0}
   - name: Margie
-    sprite: {fileID: 21300000, guid: 951995f4d95c9b54c8bbf7ceb5b52412, type: 3}
+    sprite: {fileID: 21300000, guid: 84106beb18b9ee046871a6bded0f9ceb, type: 3}
   - name: Olivia
-    sprite: {fileID: 21300000, guid: f9ee45e7104cb824dbe2849eb1fe6de1, type: 3}
+    sprite: {fileID: 21300000, guid: 62144e9602155cb4a8f40cdb7c0e8abe, type: 3}
   responses: []
   nextDialogue: {fileID: 0}
   switchScene: 1
