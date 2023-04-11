@@ -56,7 +56,6 @@ public class Clock : MonoBehaviour
                 // Select the next available owner
                 int ownerIndex = -1;
                 Dog[] dogs = FindObjectsOfType<Dog>();
-                string dogName;
                 for (int i = 0; i < dogs.Length; i++)
                 {
                     if (dogs[i].getHappiness() >= 80 && DatingProgress.IsOwnerAvailable(i))

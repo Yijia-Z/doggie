@@ -17,7 +17,6 @@ public class StatsPanel : MonoBehaviour
     private RaycastHit hit;
 
     //for dog stats
-    string dogName = "";
     public Image dogImage;
     float dogHunger;
     float dogHygiene;

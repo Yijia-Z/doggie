@@ -12,6 +12,7 @@ public class VideoPlayerScript : MonoBehaviour
     public RawImage rawImage;
     private void Start()
     {
+        rawImage.enabled = false;// disable the RawImage component before playing the video
         videoPlayer1.loopPointReached += OnLoopPointReached;
         videoPlayer2.loopPointReached += OnLoopPointReached; // subscribe to the VideoPlayer's loopPointReached event
     }
@@ -23,13 +24,11 @@ public class VideoPlayerScript : MonoBehaviour
             case 1:
                 rawImage.enabled = true; // enable the RawImage component before playing the video
                 rawImage.texture = videoPlayer1.texture;
-                videoPlayer1.gameObject.SetActive(true);
                 videoPlayer1.Play();
                 break;
             case 2:
                 rawImage.enabled = true;
                 rawImage.texture = videoPlayer2.texture;
-                videoPlayer2.gameObject.SetActive(true);
                 videoPlayer2.Play();
                 break;
             default:
@@ -47,7 +46,6 @@ public class VideoPlayerScript : MonoBehaviour
         else
         {
             rawImage.enabled = false; // disable the RawImage component when the video ends
-            vp.gameObject.SetActive(false);
             loopCounter = 0;
         }
     }
