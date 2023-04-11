@@ -1016,8 +1016,78 @@ MonoBehaviour:
   response1Text: {fileID: 5285575894961780979}
   response2Text: {fileID: 5395842991256469059}
   nextDialogue: {fileID: 0}
+  goodEnding: {fileID: 1568991232}
+  badEnding: {fileID: 719593303}
   responseBackgroundBox: {fileID: 1633876565}
+  isSuccessful: 0
   BlackPanel: {fileID: 1692914520}
+--- !u!1 &719593301
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 719593302}
+  - component: {fileID: 719593303}
+  m_Layer: 5
+  m_Name: Bad Dialogue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &719593302
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 719593301}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5923854640419654019}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &719593303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 719593301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6181683074af8994f8e91bc766c87461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  messages:
+  - actorId: 1
+    message: "*Jeff looks away sheepishly. The next thing you know, you\u2019re back
+      on your doggie daycare job, and Jeff has said his farewells before going off
+      to Europe. Georgie is staying temporarily with a relative of his. You\u2019re
+      happy to be an independent woman once again.*"
+  actors:
+  - name: 
+    sprite: {fileID: 0}
+  - name: Jeff
+    sprite: {fileID: 21300000, guid: 77dd0e52f9a33174da1cf4903937223a, type: 3}
+  - name: Olivia
+    sprite: {fileID: 21300000, guid: 62144e9602155cb4a8f40cdb7c0e8abe, type: 3}
+  responses: []
+  nextDialogue: {fileID: 0}
+  switchScene: 1
+  sceneID: 3
+  startImmediately: 0
 --- !u!1 &724388074
 GameObject:
   m_ObjectHideFlags: 0
@@ -1081,15 +1151,15 @@ MonoBehaviour:
   - name: Olivia
     sprite: {fileID: 21300000, guid: f9ee45e7104cb824dbe2849eb1fe6de1, type: 3}
   responses:
-  - response: Keep the bar, but go on a trip every now and then?
-    ownerReaction:
-      actorId: 1
-      message: '*Jeff has a sad look in his eyes. He nods nervously.*'
   - response: Your father would want you to follow your dreams. Sell the place.
     ownerReaction:
       actorId: 1
       message: '*Jeff has a bittersweet look in his eyes. He has something on his
         mind.*'
+  - response: Keep the bar, but go on a trip every now and then?
+    ownerReaction:
+      actorId: 1
+      message: '*Jeff has a sad look in his eyes. He nods nervously.*'
   nextDialogue: {fileID: 342009636}
   switchScene: 0
   sceneID: 0
@@ -1545,6 +1615,74 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1568991230
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1568991231}
+  - component: {fileID: 1568991232}
+  m_Layer: 5
+  m_Name: Good Dialogue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1568991231
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568991230}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5923854640419654019}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1568991232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568991230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6181683074af8994f8e91bc766c87461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  messages:
+  - actorId: 1
+    message: "*Jeff gazes into your eyes. The next thing you know, you\u2019re on
+      a plane to the Scottish highlands, and then to Belgium, Italy, Africa, Korea,
+      and so on\u2026*"
+  - actorId: 2
+    message: '*You and Jeff have a whole future ahead of you!*'
+  actors:
+  - name: 
+    sprite: {fileID: 0}
+  - name: Jeff
+    sprite: {fileID: 21300000, guid: 77dd0e52f9a33174da1cf4903937223a, type: 3}
+  - name: Olivia
+    sprite: {fileID: 21300000, guid: 62144e9602155cb4a8f40cdb7c0e8abe, type: 3}
+  responses: []
+  nextDialogue: {fileID: 0}
+  switchScene: 1
+  sceneID: 0
+  startImmediately: 0
 --- !u!1 &1598408217
 GameObject:
   m_ObjectHideFlags: 0
@@ -1807,15 +1945,15 @@ MonoBehaviour:
   - name: Olivia
     sprite: {fileID: 21300000, guid: f9ee45e7104cb824dbe2849eb1fe6de1, type: 3}
   responses:
-  - response: '*You arrived in your pajamas*'
-    ownerReaction:
-      actorId: 1
-      message: "\u2026like ye just got out of bed. *Jeff raises an eyebrow*"
   - response: '*You wore a beautiful formal outfit*'
     ownerReaction:
       actorId: 1
       message: "\u2026absolutely stunning! Thanks for showin\u2019 up. *Jeff smiles
         warmly*"
+  - response: '*You arrived in your pajamas*'
+    ownerReaction:
+      actorId: 1
+      message: "\u2026like ye just got out of bed. *Jeff raises an eyebrow*"
   nextDialogue: {fileID: 1404882515}
   switchScene: 0
   sceneID: 0
@@ -2552,6 +2690,8 @@ RectTransform:
   - {fileID: 342009635}
   - {fileID: 590857437}
   - {fileID: 1633876565}
+  - {fileID: 1568991231}
+  - {fileID: 719593302}
   m_Father: {fileID: 393333915}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

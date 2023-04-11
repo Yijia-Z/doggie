@@ -1044,7 +1044,10 @@ MonoBehaviour:
   response1Text: {fileID: 350645144}
   response2Text: {fileID: 1024504663}
   nextDialogue: {fileID: 0}
+  goodEnding: {fileID: 0}
+  badEnding: {fileID: 0}
   responseBackgroundBox: {fileID: 1700744683}
+  isSuccessful: 0
   BlackPanel: {fileID: 1345256177}
 --- !u!114 &772679256
 MonoBehaviour:
@@ -2167,7 +2170,7 @@ MonoBehaviour:
   responses: []
   nextDialogue: {fileID: 0}
   switchScene: 1
-  sceneID: 3
+  sceneID: 13
   startImmediately: 1
 --- !u!114 &1988710972
 MonoBehaviour:

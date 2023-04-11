@@ -628,16 +628,16 @@ MonoBehaviour:
   - name: Olivia
     sprite: {fileID: 21300000, guid: 62144e9602155cb4a8f40cdb7c0e8abe, type: 3}
   responses:
-  - response: '*Scrunch your nose up* This place is kinda gross.'
-    ownerReaction:
-      actorId: 1
-      message: "Oh, yeah, I guess the table is kinda sticky\u2026"
   - response: "Yeah it\u2019s alright, but I\u2019d rather be out and about with
       you."
     ownerReaction:
       actorId: 1
       message: "Wait really? Where? I\u2019d love to take you out surfing sometime,
         y\u2019know?"
+  - response: '*Scrunch your nose up* This place is kinda gross.'
+    ownerReaction:
+      actorId: 1
+      message: "Oh, yeah, I guess the table is kinda sticky\u2026"
   nextDialogue: {fileID: 724388076}
   switchScene: 0
   sceneID: 0
@@ -921,6 +921,8 @@ MonoBehaviour:
     message: "Hey, uh, looks like it\u2019s time to split- let\u2019s do this again?"
   - actorId: 1
     message: ' Yeah, totally cool!'
+  - actorId: 2
+    message: '*Your first date with Logan was a success!*'
   actors:
   - name: 
     sprite: {fileID: 0}
@@ -1121,6 +1123,8 @@ MonoBehaviour:
   - actorId: 1
     message: "Hey, uh, looks like it\u2019s time to go. I\u2019ll see you at the
       daycare Olivia."
+  - actorId: 2
+    message: "*Your first date with Logan didn\u2019t go so well\u2026*"
   actors:
   - name: 
     sprite: {fileID: 0}
