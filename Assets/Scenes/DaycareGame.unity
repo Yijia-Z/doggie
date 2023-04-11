@@ -931,7 +931,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dogImage: {fileID: 21300000, guid: e9458244954513a44a7cfe3175c19c7c, type: 3}
   dogName: Georgie
-  dogOwnerIndex: 0
+  dogOwnerIndex: 2
   attention: {fileID: 741205669}
   hunger: 20
   hygiene: 20
@@ -18971,7 +18971,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dogImage: {fileID: 21300000, guid: e9458244954513a44a7cfe3175c19c7c, type: 3}
   dogName: Bella
-  dogOwnerIndex: 0
+  dogOwnerIndex: 1
   attention: {fileID: 689410425}
   hunger: 20
   hygiene: 20
