@@ -59,7 +59,7 @@ public class Clock : MonoBehaviour
                 string dogName;
                 for (int i = 0; i < dogs.Length; i++)
                 {
-                    if (dogs[i].getHappiness() >= 100&&DatingProgress.IsOwnerAvailable(i))
+                    if (dogs[i].getHappiness() >= 80 && DatingProgress.IsOwnerAvailable(i))
                     {
                         ownerIndex = dogs[i].getOwnerIndex();
                     }
@@ -74,7 +74,13 @@ public class Clock : MonoBehaviour
                     DatingProgress.MarkOwnerAsUnavailable(ownerIndex);
                     DatingProgress.SaveProgress(ownerIndex, 1);
                     //load scenes
-                
+                    if (ownerIndex == 0)
+                        SceneManager.LoadScene(4); // Logan Date 1
+                    else if (ownerIndex == 1)
+                        SceneManager.LoadScene(7); // Elaine Date 1
+                    else if (ownerIndex == 2)
+                        SceneManager.LoadScene(10); // Jeff Date 1
+
                 }
             }
         }
