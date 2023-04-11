@@ -209,7 +209,7 @@ public class Dog : MonoBehaviour
     {
         Item item = null;
         int rate = 1;
-        if (itemName==favoriteItem){
+        if (itemName==getFavoriteItem()){
             rate=2;
         }
         switch (tag)
@@ -305,5 +305,8 @@ public class Dog : MonoBehaviour
     public Sprite getSprite()
     {
         return dogImage;
+    }
+    public string getFavoriteItem(){
+        return favoriteItem;
     }
 }
