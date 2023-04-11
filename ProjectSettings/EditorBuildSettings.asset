@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/StartScreen.unity
     guid: 9b75cc17cbea24c4cacd791bcd987647
   - enabled: 1
-    path: Assets/Scenes/Dialogue/Tutorial Dialogue.unity
-    guid: f97e63cfb6e676a498d5785503348fd1
+    path: Assets/Scenes/New Dialogue/Tutorial Dialogue.unity
+    guid: 3f4a70ec4ea8c2443988ada551a1856b
   - enabled: 1
     path: Assets/Scenes/New Dialogue/LoganIntro.unity
     guid: e90669fa910f3664491ca5f0a2d49bba
