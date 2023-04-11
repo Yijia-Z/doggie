@@ -59,7 +59,7 @@ public class Clock : MonoBehaviour
                 string dogName;
                 for (int i = 0; i < dogs.Length; i++)
                 {
-                    if (dogs[i].getHappiness() >= 100 && DatingProgress.IsOwnerAvailable(i))
+                    if (dogs[i].getHappiness() >= 80 && DatingProgress.IsOwnerAvailable(i))
                     {
                         ownerIndex = dogs[i].getOwnerIndex();
                     }
