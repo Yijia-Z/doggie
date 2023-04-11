@@ -74,6 +74,7 @@ public class Clock : MonoBehaviour
                     DatingProgress.MarkOwnerAsUnavailable(ownerIndex);
                     DatingProgress.SaveProgress(ownerIndex, 1);
                     //load scenes
+                
                 }
             }
         }
