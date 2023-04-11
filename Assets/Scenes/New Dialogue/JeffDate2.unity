@@ -704,14 +704,14 @@ MonoBehaviour:
   - name: Olivia
     sprite: {fileID: 21300000, guid: f9ee45e7104cb824dbe2849eb1fe6de1, type: 3}
   responses:
-  - response: Of course, same as every other dog.
-    ownerReaction:
-      actorId: 1
-      message: "Ah yes, can\u2019t have one dog favored over the others can ye?"
   - response: Of course, like one of my own children!
     ownerReaction:
       actorId: 1
       message: Hohoho, should I be jealous? *Jeff looks happy*
+  - response: Of course, same as every other dog.
+    ownerReaction:
+      actorId: 1
+      message: "Ah yes, can\u2019t have one dog favored over the others can ye?"
   nextDialogue: {fileID: 724388076}
   switchScene: 0
   sceneID: 0
@@ -862,7 +862,10 @@ MonoBehaviour:
   response1Text: {fileID: 5285575894961780979}
   response2Text: {fileID: 5395842991256469059}
   nextDialogue: {fileID: 0}
+  goodEnding: {fileID: 1529019529}
+  badEnding: {fileID: 1617089809}
   responseBackgroundBox: {fileID: 1633876565}
+  isSuccessful: 0
   BlackPanel: {fileID: 1692914520}
 --- !u!1 &724388074
 GameObject:
@@ -1538,6 +1541,71 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1529019527
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1529019528}
+  - component: {fileID: 1529019529}
+  m_Layer: 5
+  m_Name: Good Dialogue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1529019528
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529019527}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5923854640419654019}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1529019529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529019527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6181683074af8994f8e91bc766c87461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  messages:
+  - actorId: 2
+    message: "*Your second date with Jeff has gone well. You\u2019re starting to
+      feel a real connection between the two of you. Don\u2019t screw it up!*"
+  actors:
+  - name: 
+    sprite: {fileID: 0}
+  - name: Jeff
+    sprite: {fileID: 21300000, guid: 77dd0e52f9a33174da1cf4903937223a, type: 3}
+  - name: Olivia
+    sprite: {fileID: 21300000, guid: 62144e9602155cb4a8f40cdb7c0e8abe, type: 3}
+  responses: []
+  nextDialogue: {fileID: 0}
+  switchScene: 1
+  sceneID: 12
+  startImmediately: 0
 --- !u!1 &1598408217
 GameObject:
   m_ObjectHideFlags: 0
@@ -1595,6 +1663,71 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1598408217}
   m_CullTransparentMesh: 1
+--- !u!1 &1617089807
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1617089808}
+  - component: {fileID: 1617089809}
+  m_Layer: 5
+  m_Name: Bad Dialogue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1617089808
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1617089807}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5923854640419654019}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1617089809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1617089807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6181683074af8994f8e91bc766c87461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  messages:
+  - actorId: 2
+    message: "*Your second date with Jeff didn\u2019t go so well. Maybe try being
+      more friendly next time.*"
+  actors:
+  - name: 
+    sprite: {fileID: 0}
+  - name: Jeff
+    sprite: {fileID: 21300000, guid: 77dd0e52f9a33174da1cf4903937223a, type: 3}
+  - name: Olivia
+    sprite: {fileID: 21300000, guid: 62144e9602155cb4a8f40cdb7c0e8abe, type: 3}
+  responses: []
+  nextDialogue: {fileID: 0}
+  switchScene: 1
+  sceneID: 3
+  startImmediately: 0
 --- !u!224 &1633876565
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2546,6 +2679,8 @@ RectTransform:
   - {fileID: 342009635}
   - {fileID: 590857437}
   - {fileID: 1633876565}
+  - {fileID: 1529019528}
+  - {fileID: 1617089808}
   m_Father: {fileID: 393333915}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

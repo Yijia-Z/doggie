@@ -632,14 +632,14 @@ MonoBehaviour:
   - name: Olivia
     sprite: {fileID: 21300000, guid: 62144e9602155cb4a8f40cdb7c0e8abe, type: 3}
   responses:
-  - response: Wow, this is amazing! Is that what you meant by talent?
-    ownerReaction:
-      actorId: 1
-      message: Indeed, but this is not just about my brothers...
   - response: "This isn\u2019t just about a birthday, is it Elaine?"
     ownerReaction:
       actorId: 1
       message: No, of course not. You are mindful as always.
+  - response: Wow, this is amazing! Is that what you meant by talent?
+    ownerReaction:
+      actorId: 1
+      message: Indeed, but this is not just about my brothers...
   nextDialogue: {fileID: 724388076}
   switchScene: 0
   sceneID: 0
@@ -790,7 +790,10 @@ MonoBehaviour:
   response1Text: {fileID: 5285575894961780979}
   response2Text: {fileID: 5395842991256469059}
   nextDialogue: {fileID: 0}
+  goodEnding: {fileID: 926193840}
+  badEnding: {fileID: 1839422465}
   responseBackgroundBox: {fileID: 1633876565}
+  isSuccessful: 0
   BlackPanel: {fileID: 1692914520}
 --- !u!1 &617354776
 GameObject:
@@ -1078,6 +1081,76 @@ RectTransform:
   m_AnchoredPosition: {x: 156.00342, y: -55}
   m_SizeDelta: {x: 1582.1569, y: 151.5586}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &926193838
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 926193839}
+  - component: {fileID: 926193840}
+  m_Layer: 5
+  m_Name: Good Dialogue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &926193839
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 926193838}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5923854640419654019}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &926193840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 926193838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6181683074af8994f8e91bc766c87461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  messages:
+  - actorId: 1
+    message: "*Elaine gazes into your eyes. The next thing you know, you and Elaine
+      are walking the beautiful gardens of Marseilles together\u2026*"
+  - actorId: 2
+    message: "*Elaine\u2019s expression remains blank, and she puffs at her cigarette.
+      The next thing you know, you\u2019re back on your doggie daycare job, and Elaine
+      has said her farewells before returning to France. You\u2019re happy to be
+      an independent woman once again.*"
+  actors:
+  - name: 
+    sprite: {fileID: 0}
+  - name: Elaine
+    sprite: {fileID: 21300000, guid: ceb0c46c7fa610248a27b13db3a51138, type: 3}
+  - name: Olivia
+    sprite: {fileID: 21300000, guid: 62144e9602155cb4a8f40cdb7c0e8abe, type: 3}
+  responses: []
+  nextDialogue: {fileID: 0}
+  switchScene: 1
+  sceneID: 0
+  startImmediately: 0
 --- !u!1 &1065265340
 GameObject:
   m_ObjectHideFlags: 0
@@ -1588,6 +1661,73 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1692914520}
   m_CullTransparentMesh: 1
+--- !u!1 &1839422463
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1839422464}
+  - component: {fileID: 1839422465}
+  m_Layer: 5
+  m_Name: Bad Dialogue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1839422464
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1839422463}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5923854640419654019}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1839422465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1839422463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6181683074af8994f8e91bc766c87461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  messages:
+  - actorId: 1
+    message: "*Elaine\u2019s expression remains blank, and she puffs at her cigarette.
+      The next thing you know, you\u2019re back on your doggie daycare job, and Elaine
+      has said her farewells before returning to France. You\u2019re happy to be
+      an independent woman once again.*"
+  actors:
+  - name: 
+    sprite: {fileID: 0}
+  - name: Elaine
+    sprite: {fileID: 21300000, guid: ceb0c46c7fa610248a27b13db3a51138, type: 3}
+  - name: Olivia
+    sprite: {fileID: 21300000, guid: 62144e9602155cb4a8f40cdb7c0e8abe, type: 3}
+  responses: []
+  nextDialogue: {fileID: 0}
+  switchScene: 1
+  sceneID: 3
+  startImmediately: 0
 --- !u!1 &1948815296
 GameObject:
   m_ObjectHideFlags: 0
@@ -1657,15 +1797,15 @@ MonoBehaviour:
   - name: Olivia
     sprite: {fileID: 21300000, guid: 62144e9602155cb4a8f40cdb7c0e8abe, type: 3}
   responses:
+  - response: '*You wore a beautiful formal outfit*'
+    ownerReaction:
+      actorId: 1
+      message: "\u2026absolutely belle! But the formal attire isn\u2019t necessary."
   - response: '*You arrived in your pajamas*'
     ownerReaction:
       actorId: 1
       message: "\u2026very well rested, I would imagine. *Elaine gives a genuine
         chuckle*"
-  - response: '*You wore a beautiful formal outfit*'
-    ownerReaction:
-      actorId: 1
-      message: "\u2026absolutely belle! But the formal attire isn\u2019t necessary."
   nextDialogue: {fileID: 1404882515}
   switchScene: 0
   sceneID: 0
@@ -2554,6 +2694,8 @@ RectTransform:
   - {fileID: 2064901533}
   - {fileID: 590857437}
   - {fileID: 1633876565}
+  - {fileID: 926193839}
+  - {fileID: 1839422464}
   m_Father: {fileID: 393333915}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

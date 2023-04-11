@@ -785,16 +785,16 @@ MonoBehaviour:
   - name: Olivia
     sprite: {fileID: 21300000, guid: 62144e9602155cb4a8f40cdb7c0e8abe, type: 3}
   responses:
-  - response: I already know how to surf.
-    ownerReaction:
-      actorId: 1
-      message: "Oh, well that\u2019s cool, show me your moves sometime. *Logan is
-        definitely stalling for something\u2026*"
   - response: "Yeah that\u2019d be totally rad!"
     ownerReaction:
       actorId: 1
       message: "Aw heck yeah, I\u2019m excited to teach you my young pupil. *Logan
         is definitely stalling for something\u2026*"
+  - response: I already know how to surf.
+    ownerReaction:
+      actorId: 1
+      message: "Oh, well that\u2019s cool, show me your moves sometime. *Logan is
+        definitely stalling for something\u2026*"
   nextDialogue: {fileID: 724388076}
   switchScene: 0
   sceneID: 0
@@ -1011,6 +1011,12 @@ MonoBehaviour:
   - name: Olivia
     sprite: {fileID: 21300000, guid: 62144e9602155cb4a8f40cdb7c0e8abe, type: 3}
   responses:
+  - response: "*Take a more careful approach*  Yeah, haha, so Logan\u2026 you seem
+      a bit nervous today\u2026 I just want you to know, you can tell me anything. "
+    ownerReaction:
+      actorId: 1
+      message: "*Logan looks a little more confident now.* yeah I\u2019m a bit stoked
+        for this, but I wanted to ask if you\u2026"
   - response: '*Take the direct approach*  Logan, what in tarnation is happening?
       Why do you keep bringing random things up, then changing the subject? Is something
       wrong? '
@@ -1018,12 +1024,6 @@ MonoBehaviour:
       actorId: 1
       message: "*Logan looks extra nervous.* Well, uh I was uh, going to ask you
         if, erm\u2026"
-  - response: "*Take a more careful approach*  Yeah, haha, so Logan\u2026 you seem
-      a bit nervous today\u2026 I just want you to know, you can tell me anything. "
-    ownerReaction:
-      actorId: 1
-      message: "*Logan looks a little more confident now.* yeah I\u2019m a bit stoked
-        for this, but I wanted to ask if you\u2026"
   nextDialogue: {fileID: 342009636}
   switchScene: 0
   sceneID: 0
@@ -1955,15 +1955,15 @@ MonoBehaviour:
   - name: Olivia
     sprite: {fileID: 21300000, guid: 62144e9602155cb4a8f40cdb7c0e8abe, type: 3}
   responses:
-  - response: '*You arrived in your pajamas*'
-    ownerReaction:
-      actorId: 1
-      message: "\u2026relaxed! I wish I could be that lax. *Logan loves your pajamas!*"
   - response: '*You wore a beautiful formal outfit*'
     ownerReaction:
       actorId: 1
       message: "\u2026splendiferous my fair maiden! *Logan compliments your formal
         attire as best he can* "
+  - response: '*You arrived in your pajamas*'
+    ownerReaction:
+      actorId: 1
+      message: "\u2026relaxed! I wish I could be that lax. *Logan loves your pajamas!*"
   nextDialogue: {fileID: 1404882515}
   switchScene: 0
   sceneID: 0

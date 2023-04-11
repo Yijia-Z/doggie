@@ -44,4 +44,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/New Dialogue/JeffDate3.unity
     guid: bd12c10610ab36f4490e364c1ff32d0f
+  - enabled: 1
+    path: Assets/Scenes/New Dialogue/JeffIntro.unity
+    guid: 32445c089dfc59c43a118e4cb2658725
+  - enabled: 1
+    path: Assets/Scenes/New Dialogue/ElaineIntro.unity
+    guid: 5702bc00150d7f142a27ea9364006dc4
   m_configObjects: {}

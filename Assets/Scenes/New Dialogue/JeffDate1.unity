@@ -141,6 +141,73 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &59400082
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 59400083}
+  - component: {fileID: 59400084}
+  m_Layer: 5
+  m_Name: Bad Dialogue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &59400083
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 59400082}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5923854640419654019}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &59400084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 59400082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6181683074af8994f8e91bc766c87461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  messages:
+  - actorId: 1
+    message: "Well Olivia, it\u2019s been nice getting to know you better. I\u2019ll
+      see you at the daycare."
+  - actorId: 2
+    message: "*Your first date with Jeff didn\u2019t go so well\u2026*"
+  actors:
+  - name: 
+    sprite: {fileID: 0}
+  - name: Jeff
+    sprite: {fileID: 21300000, guid: 77dd0e52f9a33174da1cf4903937223a, type: 3}
+  - name: Olivia
+    sprite: {fileID: 21300000, guid: 62144e9602155cb4a8f40cdb7c0e8abe, type: 3}
+  responses: []
+  nextDialogue: {fileID: 0}
+  switchScene: 1
+  sceneID: 3
+  startImmediately: 0
 --- !u!1 &74000359
 GameObject:
   m_ObjectHideFlags: 0
@@ -359,6 +426,73 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &136129823
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 136129824}
+  - component: {fileID: 136129825}
+  m_Layer: 5
+  m_Name: Good Dialogue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &136129824
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136129823}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5923854640419654019}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &136129825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136129823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6181683074af8994f8e91bc766c87461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  messages:
+  - actorId: 1
+    message: "Well well Ollie, I haven\u2019t had this much fun in a while! Let\u2019s
+      do this again sometime!"
+  - actorId: 2
+    message: '*Your first date with Jeff was a success!*'
+  actors:
+  - name: 
+    sprite: {fileID: 0}
+  - name: Jeff
+    sprite: {fileID: 21300000, guid: 77dd0e52f9a33174da1cf4903937223a, type: 3}
+  - name: Olivia
+    sprite: {fileID: 21300000, guid: 62144e9602155cb4a8f40cdb7c0e8abe, type: 3}
+  responses: []
+  nextDialogue: {fileID: 0}
+  switchScene: 1
+  sceneID: 11
+  startImmediately: 0
 --- !u!1 &270205599
 GameObject:
   m_ObjectHideFlags: 0
@@ -714,7 +848,10 @@ MonoBehaviour:
   response1Text: {fileID: 5285575894961780979}
   response2Text: {fileID: 5395842991256469059}
   nextDialogue: {fileID: 0}
+  goodEnding: {fileID: 136129825}
+  badEnding: {fileID: 59400084}
   responseBackgroundBox: {fileID: 1633876565}
+  isSuccessful: 0
   BlackPanel: {fileID: 1692914520}
 --- !u!1 &724388074
 GameObject:
@@ -1235,16 +1372,16 @@ MonoBehaviour:
   - name: Olivia
     sprite: {fileID: 21300000, guid: 62144e9602155cb4a8f40cdb7c0e8abe, type: 3}
   responses:
+  - response: The HOT men.
+    ownerReaction:
+      actorId: 1
+      message: "Well well well, looks like ya got what ye were lookin\u2019 for!
+        *smirks*"
   - response: I absolutely love dogs! I wish I WAS a dog!!
     ownerReaction:
       actorId: 1
       message: "Aye me too! Though I\u2019d leave a huge smelly mess everywhere I
         went, so it\u2019s probably for the best."
-  - response: 'GUHUHUHUH *collapse to the ground* '
-    ownerReaction:
-      actorId: 1
-      message: "Well well well, looks like ya got what ye were lookin\u2019 for!
-        *smirks*"
   nextDialogue: {fileID: 360409118}
   switchScene: 0
   sceneID: 0
@@ -2547,6 +2684,8 @@ RectTransform:
   - {fileID: 2064901533}
   - {fileID: 590857437}
   - {fileID: 1633876565}
+  - {fileID: 136129824}
+  - {fileID: 59400083}
   m_Father: {fileID: 393333915}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
