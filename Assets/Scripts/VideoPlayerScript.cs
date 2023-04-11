@@ -23,11 +23,13 @@ public class VideoPlayerScript : MonoBehaviour
             case 1:
                 rawImage.enabled = true; // enable the RawImage component before playing the video
                 rawImage.texture = videoPlayer1.texture;
+                videoPlayer1.SetActive(true);
                 videoPlayer1.Play();
                 break;
             case 2:
                 rawImage.enabled = true;
                 rawImage.texture = videoPlayer2.texture;
+                videoPlayer2.SetActive(true);
                 videoPlayer2.Play();
                 break;
             default:
@@ -45,6 +47,7 @@ public class VideoPlayerScript : MonoBehaviour
         else
         {
             rawImage.enabled = false; // disable the RawImage component when the video ends
+            vp.SetActive(false);
             loopCounter = 0;
         }
     }
