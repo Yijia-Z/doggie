@@ -1568,7 +1568,7 @@ PrefabInstance:
     - target: {fileID: 4091239783288199061, guid: caaba477ae17e44d6adb06adea31227b, type: 3}
       propertyPath: dogImage
       value: 
-      objectReference: {fileID: 21300000, guid: e9458244954513a44a7cfe3175c19c7c, type: 3}
+      objectReference: {fileID: 21300000, guid: cb57e5a31307e644583f32d2faa60e1b, type: 3}
     - target: {fileID: 4091239783288199061, guid: caaba477ae17e44d6adb06adea31227b, type: 3}
       propertyPath: attention
       value: 
@@ -2756,7 +2756,7 @@ PrefabInstance:
     - target: {fileID: 4091239783288199061, guid: caaba477ae17e44d6adb06adea31227b, type: 3}
       propertyPath: dogImage
       value: 
-      objectReference: {fileID: 21300000, guid: e9458244954513a44a7cfe3175c19c7c, type: 3}
+      objectReference: {fileID: 21300000, guid: 02b0444e3136ab745b65c906854fc70c, type: 3}
     - target: {fileID: 4091239783288199061, guid: caaba477ae17e44d6adb06adea31227b, type: 3}
       propertyPath: attention
       value: 
@@ -17982,6 +17982,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Golden - Max
       objectReference: {fileID: 0}
+    - target: {fileID: 4091239783288199061, guid: caaba477ae17e44d6adb06adea31227b, type: 3}
+      propertyPath: dogImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 199ffb85517ec5f40a4b3e0d462f58ca, type: 3}
     - target: {fileID: 4091239783288199061, guid: caaba477ae17e44d6adb06adea31227b, type: 3}
       propertyPath: attention
       value: 
