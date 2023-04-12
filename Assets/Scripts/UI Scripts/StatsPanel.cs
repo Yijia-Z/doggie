@@ -69,7 +69,7 @@ public class StatsPanel : MonoBehaviour
             dogHappiness = dog.getHappiness();
             happinessSlider.setSlider("Happiness", dogHappiness, maxHealth);
 
-            //dogImage.GetComponent<SpriteRenderer>().sprite = dog.getSprite();
+            dogImage.GetComponent<Image>().sprite = dog.getSprite();
 
         }
     }
