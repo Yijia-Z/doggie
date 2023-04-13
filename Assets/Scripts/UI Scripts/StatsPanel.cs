@@ -17,7 +17,6 @@ public class StatsPanel : MonoBehaviour
     private RaycastHit hit;
 
     //for dog stats
-    string dogName = "";
     public Image dogImage;
     float dogHunger;
     float dogHygiene;
@@ -70,7 +69,7 @@ public class StatsPanel : MonoBehaviour
             dogHappiness = dog.getHappiness();
             happinessSlider.setSlider("Happiness", dogHappiness, maxHealth);
 
-            //dogImage.GetComponent<SpriteRenderer>().sprite = dog.getSprite();
+            dogImage.GetComponent<Image>().sprite = dog.getSprite();
 
         }
     }

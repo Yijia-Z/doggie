@@ -12,6 +12,7 @@ public class VideoPlayerScript : MonoBehaviour
     public RawImage rawImage;
     private void Start()
     {
+        rawImage.enabled = false;// disable the RawImage component before playing the video
         videoPlayer1.loopPointReached += OnLoopPointReached;
         videoPlayer2.loopPointReached += OnLoopPointReached; // subscribe to the VideoPlayer's loopPointReached event
     }

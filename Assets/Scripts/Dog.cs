@@ -7,6 +7,7 @@ public class Dog : MonoBehaviour
 {
     [SerializeField] Sprite dogImage;
     [SerializeField] string dogName = "default_name";
+    [SerializeField] string favoriteItem = "default_favorite";
     [SerializeField] int dogOwnerIndex;
 
     public GameObject attention;
@@ -54,9 +55,10 @@ public class Dog : MonoBehaviour
                 button.onClick.AddListener(() =>
                 {
                     Debug.Log(button.tag);
-                    item = CreateInstanceFromTag(button.tag);
+
+                    item = CreateInstanceFromTag(button.tag, button.name);
                 });
-                button.onClick.AddListener(OnClick);
+                button.onClick.AddListener(OnClick);// add listener to all buttons in the inventory panel
             }
         }
     }
@@ -130,7 +132,10 @@ public class Dog : MonoBehaviour
         }
         if (totalHappiness > 100f)
         {
-            totalHappiness = 100f;
+            if (equippedApparel == null)
+            {
+                totalHappiness = 100f;
+            }
         }
     }
 
@@ -200,20 +205,24 @@ public class Dog : MonoBehaviour
         inventory_panel.SetActive(false);
     }
 
-    public static Item CreateInstanceFromTag(string tag)
+    public Item CreateInstanceFromTag(string tag, string itemName)// create an item from the tag
     {
         Item item = null;
-
+        int rate = 1;
+        if (itemName == getName())//if the item is the dog's name
+        {
+            rate = 2;
+        }
         switch (tag)
         {
             case "Food":
-                item = new Food(100, 30, tag, null, "Delicious food for dogs");
+                item = new Food(100, 30 * rate, tag, null, "Delicious food for dogs");
                 break;
             case "Toy":
-                item = new Toy(100, 30, tag, null, "A toy for dogs to catch");
+                item = new Toy(100, 30 * rate, tag, null, "A toy for dogs to catch");
                 break;
             case "Apparel":
-                item = new Apparel(100, 30, tag, null, "Cloth for dogs to wear");
+                item = new Apparel(100, 30 * rate, tag, null, "Cloth for dogs to wear");
                 break;
             default:
                 Debug.Log("Invalid item tag: " + tag);
@@ -297,5 +306,9 @@ public class Dog : MonoBehaviour
     public Sprite getSprite()
     {
         return dogImage;
+    }
+    public string getFavoriteItem()
+    {
+        return favoriteItem;
     }
 }
