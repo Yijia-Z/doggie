@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
+    public int ownerIndex;
     public Image actorImage; // Portrait image in dialogue box
     public TextMeshProUGUI actorName; // Name text
     public TextMeshProUGUI messageText; // Dialogue text
@@ -146,6 +147,7 @@ public class DialogueManager : MonoBehaviour
             }
             else
             {
+                DatingProgress.MarkOwnerAsUnavailable(ownerIndex);
                 nextDialogue = badEnding;
             }
         }

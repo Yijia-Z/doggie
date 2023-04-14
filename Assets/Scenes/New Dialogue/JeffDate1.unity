@@ -841,6 +841,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca3cd6a71e210284eb817b3aaaf7246d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ownerIndex: 2
   actorImage: {fileID: 2124510985}
   actorName: {fileID: 794570039}
   messageText: {fileID: 4008332040707848846}
