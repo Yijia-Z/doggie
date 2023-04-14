@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 
 public class Clock : MonoBehaviour
 {
     public TMP_Text clockText;
+    public GameObject BlackPanel;
     public float speedUpMultiplier = 2.0f;
     public float irlSecToGameMinRatio = 5.0f;
     private float timer;
@@ -19,7 +21,8 @@ public class Clock : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        StartCoroutine(FadeBlackOut(false));
+        BlackPanel.SetActive(false);
     }
 
     // Update is called once per frame
@@ -48,6 +51,7 @@ public class Clock : MonoBehaviour
             }
             else if (hour == 6 && !isAM)
             {
+                StartCoroutine(fadeBlack());
                 isAM = true;
                 hour = 8;
                 minute = 0;
@@ -55,30 +59,44 @@ public class Clock : MonoBehaviour
 
                 // Select the next available owner
                 int ownerIndex = -1;
+                bool ownerAvailable = false;
                 Dog[] dogs = FindObjectsOfType<Dog>();
                 for (int i = 0; i < dogs.Length; i++)
                 {
+                    if (DatingProgress.IsOwnerAvailable(i))
+                    {
+                        ownerAvailable = true;
+                    }
                     if (dogs[i].getHappiness() >= 80 && DatingProgress.IsOwnerAvailable(i))
                     {
                         ownerIndex = dogs[i].getOwnerIndex();
                     }
                 }
-                if (ownerIndex == -1)
+                if (!ownerAvailable)
+                {
+                    // switch to alone ending scene
+                    SceneManager.LoadScene(20); // LoganAskOut
+
+                }
+                else if (ownerIndex == -1)
                 {
                     Debug.LogError("No available owners found!");
+                    StartCoroutine(FadeBlackOut(false));
+                    BlackPanel.SetActive(false);
                 }
                 else
                 {
+
                     // Save the selected owner and load the corresponding scene
                     DatingProgress.MarkOwnerAsUnavailable(ownerIndex);
                     DatingProgress.SaveProgress(ownerIndex, 1);
                     //load scenes
                     if (ownerIndex == 0)
-                        SceneManager.LoadScene(4); // Logan Date 1
+                        SceneManager.LoadScene(15); // LoganAskOut
                     else if (ownerIndex == 1)
-                        SceneManager.LoadScene(7); // Elaine Date 1
+                        SceneManager.LoadScene(16); // ElaineAskOut
                     else if (ownerIndex == 2)
-                        SceneManager.LoadScene(10); // Jeff Date 1
+                        SceneManager.LoadScene(17); // JeffAskOut
 
                 }
             }
@@ -163,6 +181,51 @@ public class Clock : MonoBehaviour
         if (!isPaused)
         {
             Time.timeScale = Time.timeScale * speedUpMultiplier;
+        }
+    }
+
+    public IEnumerator FadeBlackOut(bool fadeToBlack = true, int fadeSpeed = 1)
+    {
+        Color objectColor = BlackPanel.GetComponent<Image>().color;
+        float fadeAmount;
+
+        if (fadeToBlack)
+        {
+            while (BlackPanel.GetComponent<Image>().color.a < 1)
+            {
+                fadeAmount = objectColor.a + (fadeSpeed * Time.deltaTime);
+
+                objectColor = new Color(objectColor.r, objectColor.g, objectColor.b, fadeAmount);
+                BlackPanel.GetComponent<Image>().color = objectColor;
+                yield return null;
+            }
+        }
+        else
+        {
+            while (BlackPanel.GetComponent<Image>().color.a > 0)
+            {
+                fadeAmount = objectColor.a - (fadeSpeed * Time.deltaTime);
+
+                objectColor = new Color(objectColor.r, objectColor.g, objectColor.b, fadeAmount);
+                BlackPanel.GetComponent<Image>().color = objectColor;
+                yield return null;
+            }
+        }
+    }
+
+    public IEnumerator fadeBlack()
+    {
+        BlackPanel.SetActive(true);
+        Color objectColor = BlackPanel.GetComponent<Image>().color;
+        float fadeAmount;
+
+        while (BlackPanel.GetComponent<Image>().color.a < 1)
+        {
+            fadeAmount = objectColor.a + (1 * Time.deltaTime);
+
+            objectColor = new Color(objectColor.r, objectColor.g, objectColor.b, fadeAmount);
+            BlackPanel.GetComponent<Image>().color = objectColor;
+            yield return null;
         }
     }
 }

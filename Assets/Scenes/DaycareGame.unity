@@ -2602,7 +2602,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &666629113
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18896,6 +18896,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clockText: {fileID: 1503863350}
+  BlackPanel: {fileID: 0}
   speedUpMultiplier: 50
   irlSecToGameMinRatio: 2
   hour: 8

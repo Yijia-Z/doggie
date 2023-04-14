@@ -50,4 +50,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/New Dialogue/ElaineIntro.unity
     guid: 5702bc00150d7f142a27ea9364006dc4
+  - enabled: 1
+    path: Assets/Scenes/New Dialogue/LoganAskOut.unity
+    guid: 45b99b8ffce58d64692a79c0c1ad1341
+  - enabled: 1
+    path: Assets/Scenes/New Dialogue/ElaineAskOut.unity
+    guid: 9a768229247aa1c4fa7d63a9d9dc538c
+  - enabled: 1
+    path: Assets/Scenes/New Dialogue/JeffAskOut.unity
+    guid: cec20f16f89756f42a533619bf2fb3b4
+  - enabled: 1
+    path: Assets/Scenes/New Dialogue/PlaneEnding.unity
+    guid: 4b43e2824f3306944be57deccc59c63c
+  - enabled: 1
+    path: Assets/Scenes/New Dialogue/WeddingEnding.unity
+    guid: de760c6e6f7223d4ca2fa9641fbeca57
+  - enabled: 1
+    path: Assets/Scenes/New Dialogue/AloneEnding.unity
+    guid: 95f532a7ab6b7e94f8f020278b893e55
   m_configObjects: {}

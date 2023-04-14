@@ -783,6 +783,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca3cd6a71e210284eb817b3aaaf7246d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ownerIndex: 1
   actorImage: {fileID: 2124510985}
   actorName: {fileID: 794570039}
   messageText: {fileID: 4008332040707848846}
@@ -1134,11 +1135,6 @@ MonoBehaviour:
   - actorId: 1
     message: "*Elaine gazes into your eyes. The next thing you know, you and Elaine
       are walking the beautiful gardens of Marseilles together\u2026*"
-  - actorId: 2
-    message: "*Elaine\u2019s expression remains blank, and she puffs at her cigarette.
-      The next thing you know, you\u2019re back on your doggie daycare job, and Elaine
-      has said her farewells before returning to France. You\u2019re happy to be
-      an independent woman once again.*"
   actors:
   - name: 
     sprite: {fileID: 0}
@@ -1149,7 +1145,7 @@ MonoBehaviour:
   responses: []
   nextDialogue: {fileID: 0}
   switchScene: 1
-  sceneID: 0
+  sceneID: 18
   startImmediately: 0
 --- !u!1 &1065265340
 GameObject:
