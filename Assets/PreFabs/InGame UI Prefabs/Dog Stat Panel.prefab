@@ -36,7 +36,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -70, y: -75}
-  m_SizeDelta: {x: 200, y: 50}
+  m_SizeDelta: {x: 200, y: 38.368}
   m_Pivot: {x: 1, y: 1}
 --- !u!222 &5100545893826474142
 CanvasRenderer:
@@ -68,8 +68,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Dog Name
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c61df27e88e434a2ca69e5af1341f5f4, type: 2}
+  m_sharedMaterial: {fileID: 1106732833682405660, guid: c61df27e88e434a2ca69e5af1341f5f4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -93,8 +93,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -509,13 +509,33 @@ PrefabInstance:
       value: Happiness
       objectReference: {fileID: 0}
     - target: {fileID: 1043999048782961356, guid: 387151f1d374d4af9b3b751037ded077, type: 3}
+      propertyPath: m_fontSize
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1043999048782961356, guid: 387151f1d374d4af9b3b751037ded077, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+      objectReference: {fileID: 11400000, guid: c61df27e88e434a2ca69e5af1341f5f4, type: 2}
+    - target: {fileID: 1043999048782961356, guid: 387151f1d374d4af9b3b751037ded077, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 1043999048782961356, guid: 387151f1d374d4af9b3b751037ded077, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+      objectReference: {fileID: 1106732833682405660, guid: c61df27e88e434a2ca69e5af1341f5f4, type: 2}
+    - target: {fileID: 1043999048782961356, guid: 387151f1d374d4af9b3b751037ded077, type: 3}
+      propertyPath: m_characterSpacing
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1043999048782961356, guid: 387151f1d374d4af9b3b751037ded077, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1043999048782961356, guid: 387151f1d374d4af9b3b751037ded077, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
     - target: {fileID: 5172444780702698791, guid: 387151f1d374d4af9b3b751037ded077, type: 3}
       propertyPath: m_TargetGraphic
       value: 
@@ -676,13 +696,33 @@ PrefabInstance:
       value: Hygiene
       objectReference: {fileID: 0}
     - target: {fileID: 1043999048782961356, guid: 387151f1d374d4af9b3b751037ded077, type: 3}
+      propertyPath: m_fontSize
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1043999048782961356, guid: 387151f1d374d4af9b3b751037ded077, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+      objectReference: {fileID: 11400000, guid: c61df27e88e434a2ca69e5af1341f5f4, type: 2}
+    - target: {fileID: 1043999048782961356, guid: 387151f1d374d4af9b3b751037ded077, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 1043999048782961356, guid: 387151f1d374d4af9b3b751037ded077, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+      objectReference: {fileID: 1106732833682405660, guid: c61df27e88e434a2ca69e5af1341f5f4, type: 2}
+    - target: {fileID: 1043999048782961356, guid: 387151f1d374d4af9b3b751037ded077, type: 3}
+      propertyPath: m_characterSpacing
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1043999048782961356, guid: 387151f1d374d4af9b3b751037ded077, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1043999048782961356, guid: 387151f1d374d4af9b3b751037ded077, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
     - target: {fileID: 5172444780702698791, guid: 387151f1d374d4af9b3b751037ded077, type: 3}
       propertyPath: m_TargetGraphic
       value: 
@@ -839,13 +879,33 @@ PrefabInstance:
     m_TransformParent: {fileID: 5389329742811388659}
     m_Modifications:
     - target: {fileID: 1043999048782961356, guid: 387151f1d374d4af9b3b751037ded077, type: 3}
+      propertyPath: m_fontSize
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1043999048782961356, guid: 387151f1d374d4af9b3b751037ded077, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+      objectReference: {fileID: 11400000, guid: c61df27e88e434a2ca69e5af1341f5f4, type: 2}
+    - target: {fileID: 1043999048782961356, guid: 387151f1d374d4af9b3b751037ded077, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 1043999048782961356, guid: 387151f1d374d4af9b3b751037ded077, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+      objectReference: {fileID: 1106732833682405660, guid: c61df27e88e434a2ca69e5af1341f5f4, type: 2}
+    - target: {fileID: 1043999048782961356, guid: 387151f1d374d4af9b3b751037ded077, type: 3}
+      propertyPath: m_characterSpacing
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1043999048782961356, guid: 387151f1d374d4af9b3b751037ded077, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1043999048782961356, guid: 387151f1d374d4af9b3b751037ded077, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
     - target: {fileID: 5494619989913817472, guid: 387151f1d374d4af9b3b751037ded077, type: 3}
       propertyPath: m_Pivot.x
       value: 1.0000001

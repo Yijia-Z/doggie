@@ -260,6 +260,18 @@ PrefabInstance:
       propertyPath: m_text
       value: Food
       objectReference: {fileID: 0}
+    - target: {fileID: 2300437542768184050, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_fontSize
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300437542768184050, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300437542768184050, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_characterSpacing
+      value: -15
+      objectReference: {fileID: 0}
     - target: {fileID: 2501652568772598095, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -434,6 +446,10 @@ PrefabInstance:
       propertyPath: m_text
       value: Tiara
       objectReference: {fileID: 0}
+    - target: {fileID: 336433829628104320, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 690008325802838209, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_TagString
       value: Apparel
@@ -445,6 +461,34 @@ PrefabInstance:
     - target: {fileID: 2300437542768184050, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_text
       value: Apparel
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300437542768184050, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_fontSize
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300437542768184050, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_margin.x
+      value: 27.861267
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300437542768184050, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_margin.z
+      value: 26.090229
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300437542768184050, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300437542768184050, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_characterSpacing
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300437542768184050, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300437542768184050, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2501652568772598095, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_Pivot.x
@@ -627,6 +671,18 @@ PrefabInstance:
     - target: {fileID: 2300437542768184050, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_text
       value: Toys
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300437542768184050, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_fontSize
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300437542768184050, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300437542768184050, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_characterSpacing
+      value: -15
       objectReference: {fileID: 0}
     - target: {fileID: 2501652568772598095, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_Pivot.x
