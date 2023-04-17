@@ -360,6 +360,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tab Pane - Food
       objectReference: {fileID: 0}
+    - target: {fileID: 3595464343518831056, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3806766671039244874, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_text
       value: Kibble
@@ -484,7 +488,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2300437542768184050, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_VerticalAlignment
-      value: 256
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 2300437542768184050, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_HorizontalAlignment
@@ -660,6 +664,14 @@ PrefabInstance:
       propertyPath: m_text
       value: Ice Cube
       objectReference: {fileID: 0}
+    - target: {fileID: 16958390179035297, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_margin.x
+      value: -20.184786
+      objectReference: {fileID: 0}
+    - target: {fileID: 16958390179035297, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_margin.z
+      value: -21.062223
+      objectReference: {fileID: 0}
     - target: {fileID: 690008325802838209, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_TagString
       value: Toy
@@ -772,6 +784,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tab Pane - Toys
       objectReference: {fileID: 0}
+    - target: {fileID: 3595464343518831056, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3806766671039244874, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_text
       value: Ball
@@ -842,11 +858,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5949909785868170500, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 45
+      value: 67.5
       objectReference: {fileID: 0}
     - target: {fileID: 5949909785868170500, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 45
+      value: 67.5
       objectReference: {fileID: 0}
     - target: {fileID: 5949909785868170500, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -854,7 +870,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5949909785868170500, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -34
+      value: -52.8
       objectReference: {fileID: 0}
     - target: {fileID: 6647084480743076391, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_text
