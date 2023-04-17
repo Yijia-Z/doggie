@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 
 public class Clock : MonoBehaviour
 {
     public TMP_Text clockText;
+    public TMP_Text dayText;
+    public GameObject BlackPanel;
     public float speedUpMultiplier = 2.0f;
     public float irlSecToGameMinRatio = 5.0f;
     private float timer;
@@ -15,11 +18,12 @@ public class Clock : MonoBehaviour
     private bool isAM = true;
     public int day = 1;
     private bool isPaused = false;
+    private bool isFading = false;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        StartCoroutine(FadeBlackOut(false));
     }
 
     // Update is called once per frame
@@ -48,39 +52,12 @@ public class Clock : MonoBehaviour
             }
             else if (hour == 6 && !isAM)
             {
+                StartCoroutine(fadeBlack());
                 isAM = true;
                 hour = 8;
                 minute = 0;
                 day++;
 
-                // Select the next available owner
-                int ownerIndex = -1;
-                Dog[] dogs = FindObjectsOfType<Dog>();
-                for (int i = 0; i < dogs.Length; i++)
-                {
-                    if (dogs[i].getHappiness() >= 80 && DatingProgress.IsOwnerAvailable(i))
-                    {
-                        ownerIndex = dogs[i].getOwnerIndex();
-                    }
-                }
-                if (ownerIndex == -1)
-                {
-                    Debug.LogError("No available owners found!");
-                }
-                else
-                {
-                    // Save the selected owner and load the corresponding scene
-                    DatingProgress.MarkOwnerAsUnavailable(ownerIndex);
-                    DatingProgress.SaveProgress(ownerIndex, 1);
-                    //load scenes
-                    if (ownerIndex == 0)
-                        SceneManager.LoadScene(4); // Logan Date 1
-                    else if (ownerIndex == 1)
-                        SceneManager.LoadScene(7); // Elaine Date 1
-                    else if (ownerIndex == 2)
-                        SceneManager.LoadScene(10); // Jeff Date 1
-
-                }
             }
         }
 
@@ -163,6 +140,128 @@ public class Clock : MonoBehaviour
         if (!isPaused)
         {
             Time.timeScale = Time.timeScale * speedUpMultiplier;
+        }
+    }
+
+    public IEnumerator FadeBlackOut(bool fadeToBlack = true, int fadeSpeed = 1)
+    {
+        dayText.gameObject.SetActive(true);
+        dayText.text = "Day " + day.ToString();
+
+        Color objectColor = BlackPanel.GetComponent<Image>().color;
+        Color textColor = dayText.color;
+        float fadeAmount;
+        float fadeAmount2;
+        while (isFading)
+        {
+            yield return new WaitForSecondsRealtime(1);
+        }
+
+        if (fadeToBlack)
+        {
+            while (BlackPanel.GetComponent<Image>().color.a < 1)
+            {
+                fadeAmount = objectColor.a + (fadeSpeed * Time.deltaTime);
+
+                objectColor = new Color(objectColor.r, objectColor.g, objectColor.b, fadeAmount);
+                BlackPanel.GetComponent<Image>().color = objectColor;
+                yield return null;
+            }
+        }
+        else
+        {
+            while (BlackPanel.GetComponent<Image>().color.a > 0)
+            {
+                fadeAmount = objectColor.a - (fadeSpeed * Time.deltaTime);
+                fadeAmount2 = textColor.a - (fadeSpeed * Time.deltaTime);
+
+                objectColor = new Color(objectColor.r, objectColor.g, objectColor.b, fadeAmount);
+                textColor = new Color(textColor.r, textColor.g, textColor.b, fadeAmount2);
+
+                BlackPanel.GetComponent<Image>().color = objectColor;
+                dayText.color = textColor;
+                yield return null;
+            }
+        }
+
+        BlackPanel.SetActive(false);
+        dayText.gameObject.SetActive(false);
+    }
+
+    public IEnumerator fadeBlack()
+    {
+        isFading = true;
+        BlackPanel.SetActive(true);
+        dayText.gameObject.SetActive(true);
+        Color objectColor = BlackPanel.GetComponent<Image>().color;
+        Color textColor = dayText.color;
+        float fadeAmount;
+        float fadeAmount2;
+
+        while (BlackPanel.GetComponent<Image>().color.a < 1)
+        {
+            fadeAmount = objectColor.a + (1 * Time.deltaTime);
+            fadeAmount2 = textColor.a + (1 * Time.deltaTime);
+
+            objectColor = new Color(objectColor.r, objectColor.g, objectColor.b, fadeAmount);
+            textColor = new Color(textColor.r, textColor.g, textColor.b, fadeAmount2);
+            BlackPanel.GetComponent<Image>().color = objectColor;
+            dayText.color = textColor;
+            yield return null;
+        }
+        yield return new WaitForSecondsRealtime(2);
+        isFading = false;
+
+        ownerCheck();
+
+        isAM = true;
+        hour = 8;
+        minute = 0;
+        StartCoroutine(FadeBlackOut(false));
+        
+    }
+
+    private void ownerCheck()
+    {
+        // Select the next available owner
+        int ownerIndex = -1;
+        bool ownerAvailable = false;
+        Dog[] dogs = FindObjectsOfType<Dog>();
+        for (int i = 0; i < dogs.Length; i++)
+        {
+            if (DatingProgress.IsOwnerAvailable(i))
+            {
+                ownerAvailable = true;
+            }
+            if (dogs[i].getHappiness() >= 80 && DatingProgress.IsOwnerAvailable(i))
+            {
+                ownerIndex = dogs[i].getOwnerIndex();
+            }
+        }
+        if (!ownerAvailable)
+        {
+            // switch to alone ending scene
+            SceneManager.LoadScene(20); // 
+
+        }
+        else if (ownerIndex == -1)
+        {
+            Debug.LogError("No available owners found!");
+        }
+        else
+        {
+
+            // Save the selected owner and load the corresponding scene
+            DatingProgress.MarkOwnerAsUnavailable(ownerIndex);
+            DatingProgress.SaveProgress(ownerIndex, 1);
+            //load scenes
+            if (ownerIndex == 0)
+                SceneManager.LoadScene(15); // LoganAskOut
+            else if (ownerIndex == 1)
+                SceneManager.LoadScene(16); // ElaineAskOut
+            else if (ownerIndex == 2)
+                SceneManager.LoadScene(17); // JeffAskOut
+
         }
     }
 }
