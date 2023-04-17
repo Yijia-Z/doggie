@@ -8,6 +8,7 @@ using TMPro;
 public class Clock : MonoBehaviour
 {
     public TMP_Text clockText;
+    public TMP_Text dayText;
     public GameObject BlackPanel;
     public float speedUpMultiplier = 2.0f;
     public float irlSecToGameMinRatio = 5.0f;
@@ -144,8 +145,13 @@ public class Clock : MonoBehaviour
 
     public IEnumerator FadeBlackOut(bool fadeToBlack = true, int fadeSpeed = 1)
     {
+        dayText.gameObject.SetActive(true);
+        dayText.text = "Day " + day.ToString();
+
         Color objectColor = BlackPanel.GetComponent<Image>().color;
+        Color textColor = dayText.color;
         float fadeAmount;
+        float fadeAmount2;
         while (isFading)
         {
             yield return new WaitForSecondsRealtime(1);
@@ -167,29 +173,40 @@ public class Clock : MonoBehaviour
             while (BlackPanel.GetComponent<Image>().color.a > 0)
             {
                 fadeAmount = objectColor.a - (fadeSpeed * Time.deltaTime);
+                fadeAmount2 = textColor.a - (fadeSpeed * Time.deltaTime);
 
                 objectColor = new Color(objectColor.r, objectColor.g, objectColor.b, fadeAmount);
+                textColor = new Color(textColor.r, textColor.g, textColor.b, fadeAmount2);
+
                 BlackPanel.GetComponent<Image>().color = objectColor;
+                dayText.color = textColor;
                 yield return null;
             }
         }
 
         BlackPanel.SetActive(false);
+        dayText.gameObject.SetActive(false);
     }
 
     public IEnumerator fadeBlack()
     {
         isFading = true;
         BlackPanel.SetActive(true);
+        dayText.gameObject.SetActive(true);
         Color objectColor = BlackPanel.GetComponent<Image>().color;
+        Color textColor = dayText.color;
         float fadeAmount;
+        float fadeAmount2;
 
         while (BlackPanel.GetComponent<Image>().color.a < 1)
         {
             fadeAmount = objectColor.a + (1 * Time.deltaTime);
+            fadeAmount2 = textColor.a + (1 * Time.deltaTime);
 
             objectColor = new Color(objectColor.r, objectColor.g, objectColor.b, fadeAmount);
+            textColor = new Color(textColor.r, textColor.g, textColor.b, fadeAmount2);
             BlackPanel.GetComponent<Image>().color = objectColor;
+            dayText.color = textColor;
             yield return null;
         }
         yield return new WaitForSecondsRealtime(2);
