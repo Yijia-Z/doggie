@@ -51,53 +51,12 @@ public class Clock : MonoBehaviour
             }
             else if (hour == 6 && !isAM)
             {
-                //PauseTime();
                 StartCoroutine(fadeBlack());
                 isAM = true;
                 hour = 8;
                 minute = 0;
                 day++;
 
-                // Select the next available owner
-                int ownerIndex = -1;
-                bool ownerAvailable = false;
-                Dog[] dogs = FindObjectsOfType<Dog>();
-                for (int i = 0; i < dogs.Length; i++)
-                {
-                    if (DatingProgress.IsOwnerAvailable(i))
-                    {
-                        ownerAvailable = true;
-                    }
-                    if (dogs[i].getHappiness() >= 80 && DatingProgress.IsOwnerAvailable(i))
-                    {
-                        ownerIndex = dogs[i].getOwnerIndex();
-                    }
-                }
-                if (!ownerAvailable)
-                {
-                    // switch to alone ending scene
-                    SceneManager.LoadScene(20); // 
-
-                }
-                else if (ownerIndex == -1)
-                {
-                    Debug.LogError("No available owners found!");
-                }
-                else
-                {
-
-                    // Save the selected owner and load the corresponding scene
-                    DatingProgress.MarkOwnerAsUnavailable(ownerIndex);
-                    DatingProgress.SaveProgress(ownerIndex, 1);
-                    //load scenes
-                    if (ownerIndex == 0)
-                        SceneManager.LoadScene(15); // LoganAskOut
-                    else if (ownerIndex == 1)
-                        SceneManager.LoadScene(16); // ElaineAskOut
-                    else if (ownerIndex == 2)
-                        SceneManager.LoadScene(17); // JeffAskOut
-
-                }
             }
         }
 
@@ -236,10 +195,56 @@ public class Clock : MonoBehaviour
         yield return new WaitForSecondsRealtime(2);
         isFading = false;
 
+        ownerCheck();
+
         isAM = true;
         hour = 8;
         minute = 0;
         StartCoroutine(FadeBlackOut(false));
         
+    }
+
+    private void ownerCheck()
+    {
+        // Select the next available owner
+        int ownerIndex = -1;
+        bool ownerAvailable = false;
+        Dog[] dogs = FindObjectsOfType<Dog>();
+        for (int i = 0; i < dogs.Length; i++)
+        {
+            if (DatingProgress.IsOwnerAvailable(i))
+            {
+                ownerAvailable = true;
+            }
+            if (dogs[i].getHappiness() >= 80 && DatingProgress.IsOwnerAvailable(i))
+            {
+                ownerIndex = dogs[i].getOwnerIndex();
+            }
+        }
+        if (!ownerAvailable)
+        {
+            // switch to alone ending scene
+            SceneManager.LoadScene(20); // 
+
+        }
+        else if (ownerIndex == -1)
+        {
+            Debug.LogError("No available owners found!");
+        }
+        else
+        {
+
+            // Save the selected owner and load the corresponding scene
+            DatingProgress.MarkOwnerAsUnavailable(ownerIndex);
+            DatingProgress.SaveProgress(ownerIndex, 1);
+            //load scenes
+            if (ownerIndex == 0)
+                SceneManager.LoadScene(15); // LoganAskOut
+            else if (ownerIndex == 1)
+                SceneManager.LoadScene(16); // ElaineAskOut
+            else if (ownerIndex == 2)
+                SceneManager.LoadScene(17); // JeffAskOut
+
+        }
     }
 }
