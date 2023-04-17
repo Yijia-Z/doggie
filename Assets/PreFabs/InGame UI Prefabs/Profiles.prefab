@@ -193,8 +193,8 @@ MonoBehaviour:
   m_text: Elaine is a Michelin start chef from France. She just moved here to open
     her first restaurant.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c61df27e88e434a2ca69e5af1341f5f4, type: 2}
+  m_sharedMaterial: {fileID: 1106732833682405660, guid: c61df27e88e434a2ca69e5af1341f5f4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -218,8 +218,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 9
-  m_fontSizeBase: 9
+  m_fontSize: 8
+  m_fontSizeBase: 8
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -228,9 +228,9 @@ MonoBehaviour:
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 20
+  m_characterSpacing: -20
+  m_wordSpacing: 20
+  m_lineSpacing: 55.5
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -329,8 +329,8 @@ MonoBehaviour:
   m_text: Logan is your typical surfing enthusiast. He's all about positive vibrations
     and gnarly wake bro.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c61df27e88e434a2ca69e5af1341f5f4, type: 2}
+  m_sharedMaterial: {fileID: 1106732833682405660, guid: c61df27e88e434a2ca69e5af1341f5f4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -354,8 +354,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 9
-  m_fontSizeBase: 9
+  m_fontSize: 8
+  m_fontSizeBase: 8
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -364,9 +364,9 @@ MonoBehaviour:
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 20
+  m_characterSpacing: -20
+  m_wordSpacing: 20
+  m_lineSpacing: 55
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -619,8 +619,8 @@ MonoBehaviour:
   m_text: Jeff is a big friendly hink. H eowns a popular sports bar in town and is
     a dieheart Bills fan.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c61df27e88e434a2ca69e5af1341f5f4, type: 2}
+  m_sharedMaterial: {fileID: 1106732833682405660, guid: c61df27e88e434a2ca69e5af1341f5f4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -644,8 +644,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 9
-  m_fontSizeBase: 9
+  m_fontSize: 8
+  m_fontSizeBase: 8
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -654,9 +654,9 @@ MonoBehaviour:
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 20
+  m_characterSpacing: -20
+  m_wordSpacing: 20
+  m_lineSpacing: 55.5
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -807,6 +807,10 @@ PrefabInstance:
       value: Dogs
       objectReference: {fileID: 0}
     - target: {fileID: 2300437542768184050, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_fontSize
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300437542768184050, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_margin.x
       value: 26.674034
       objectReference: {fileID: 0}
@@ -815,8 +819,16 @@ PrefabInstance:
       value: 26.744425
       objectReference: {fileID: 0}
     - target: {fileID: 2300437542768184050, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300437542768184050, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_characterSpacing
-      value: -17
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300437542768184050, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 2501652568772598095, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_Pivot.x
@@ -1227,7 +1239,7 @@ PrefabInstance:
     - target: {fileID: 1476440704868306126, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: f9ee45e7104cb824dbe2849eb1fe6de1, type: 3}
+      objectReference: {fileID: 21300000, guid: 77dd0e52f9a33174da1cf4903937223a, type: 3}
     - target: {fileID: 1923121477843028711, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_SizeDelta.x
       value: 67.5
@@ -1263,6 +1275,10 @@ PrefabInstance:
     - target: {fileID: 2300437542768184050, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_characterSpacing
       value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300437542768184050, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 2501652568772598095, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_Pivot.x
@@ -1377,6 +1393,10 @@ PrefabInstance:
       value: 67.5
       objectReference: {fileID: 0}
     - target: {fileID: 3276166644665524988, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3276166644665524988, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -51.7
       objectReference: {fileID: 0}
@@ -1430,6 +1450,18 @@ PrefabInstance:
 
 '
       objectReference: {fileID: 0}
+    - target: {fileID: 5349222055558975959, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_lineSpacing
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 5349222055558975959, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_wordSpacing
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5349222055558975959, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_characterSpacing
+      value: -20
+      objectReference: {fileID: 0}
     - target: {fileID: 5530349160763134212, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_Type
       value: 0
@@ -1437,7 +1469,7 @@ PrefabInstance:
     - target: {fileID: 5530349160763134212, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: e6e494c202c83de4caa5e81b03af0358, type: 3}
+      objectReference: {fileID: 21300000, guid: 0a19ee343cdd6c04fa4864a81578a355, type: 3}
     - target: {fileID: 5530349160763134212, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_Maskable
       value: 1
@@ -1645,7 +1677,11 @@ PrefabInstance:
     - target: {fileID: 8719630507211874634, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 951995f4d95c9b54c8bbf7ceb5b52412, type: 3}
+      objectReference: {fileID: 21300000, guid: ceb0c46c7fa610248a27b13db3a51138, type: 3}
+    - target: {fileID: 8719630507211874634, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9143085252850524155, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_TagString
       value: Toy
