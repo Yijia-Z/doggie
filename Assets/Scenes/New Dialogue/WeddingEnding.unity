@@ -1199,7 +1199,7 @@ MonoBehaviour:
   responses: []
   nextDialogue: {fileID: 0}
   switchScene: 1
-  sceneID: 0
+  sceneID: 21
   startImmediately: 1
 --- !u!114 &1948815299
 MonoBehaviour:
