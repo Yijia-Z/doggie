@@ -19430,8 +19430,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Day 0
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7d80c2245fc759240b3cf82f16fd0ebb, type: 2}
-  m_sharedMaterial: {fileID: -4146948236912855899, guid: 7d80c2245fc759240b3cf82f16fd0ebb, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 83a62f5fad7144f15abdfc85c84727be, type: 2}
+  m_sharedMaterial: {fileID: 2439260246917536837, guid: 83a62f5fad7144f15abdfc85c84727be, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
