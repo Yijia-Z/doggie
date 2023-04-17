@@ -17,12 +17,12 @@ public class Clock : MonoBehaviour
     private bool isAM = true;
     public int day = 1;
     private bool isPaused = false;
+    private bool isFading = false;
 
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(FadeBlackOut(false));
-        BlackPanel.SetActive(false);
     }
 
     // Update is called once per frame
@@ -51,6 +51,7 @@ public class Clock : MonoBehaviour
             }
             else if (hour == 6 && !isAM)
             {
+                //PauseTime();
                 StartCoroutine(fadeBlack());
                 isAM = true;
                 hour = 8;
@@ -75,14 +76,12 @@ public class Clock : MonoBehaviour
                 if (!ownerAvailable)
                 {
                     // switch to alone ending scene
-                    SceneManager.LoadScene(20); // LoganAskOut
+                    SceneManager.LoadScene(20); // 
 
                 }
                 else if (ownerIndex == -1)
                 {
                     Debug.LogError("No available owners found!");
-                    StartCoroutine(FadeBlackOut(false));
-                    BlackPanel.SetActive(false);
                 }
                 else
                 {
@@ -188,6 +187,10 @@ public class Clock : MonoBehaviour
     {
         Color objectColor = BlackPanel.GetComponent<Image>().color;
         float fadeAmount;
+        while (isFading)
+        {
+            yield return new WaitForSecondsRealtime(1);
+        }
 
         if (fadeToBlack)
         {
@@ -211,10 +214,13 @@ public class Clock : MonoBehaviour
                 yield return null;
             }
         }
+
+        BlackPanel.SetActive(false);
     }
 
     public IEnumerator fadeBlack()
     {
+        isFading = true;
         BlackPanel.SetActive(true);
         Color objectColor = BlackPanel.GetComponent<Image>().color;
         float fadeAmount;
@@ -227,5 +233,13 @@ public class Clock : MonoBehaviour
             BlackPanel.GetComponent<Image>().color = objectColor;
             yield return null;
         }
+        yield return new WaitForSecondsRealtime(2);
+        isFading = false;
+
+        isAM = true;
+        hour = 8;
+        minute = 0;
+        StartCoroutine(FadeBlackOut(false));
+        
     }
 }
