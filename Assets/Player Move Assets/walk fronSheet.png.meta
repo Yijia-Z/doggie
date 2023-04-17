@@ -69,7 +69,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -108,10 +108,10 @@ TextureImporter:
       name: walk fronSheet_0
       rect:
         serializedVersion: 2
-        x: 15
+        x: 0
         y: 0
-        width: 33
-        height: 69
+        width: 64
+        height: 70
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -129,9 +129,9 @@ TextureImporter:
       name: walk fronSheet_1
       rect:
         serializedVersion: 2
-        x: 76
+        x: 64
         y: 0
-        width: 39
+        width: 64
         height: 70
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -150,10 +150,10 @@ TextureImporter:
       name: walk fronSheet_2
       rect:
         serializedVersion: 2
-        x: 143
+        x: 128
         y: 0
-        width: 33
-        height: 69
+        width: 64
+        height: 70
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,9 +171,9 @@ TextureImporter:
       name: walk fronSheet_3
       rect:
         serializedVersion: 2
-        x: 204
+        x: 192
         y: 0
-        width: 39
+        width: 64
         height: 70
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -192,10 +192,10 @@ TextureImporter:
       name: walk fronSheet_4
       rect:
         serializedVersion: 2
-        x: 271
+        x: 256
         y: 0
-        width: 33
-        height: 69
+        width: 64
+        height: 70
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
