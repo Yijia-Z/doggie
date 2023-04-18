@@ -30,6 +30,7 @@ public class DialogueManager : MonoBehaviour
     int sceneID;
     private bool isReacting = false;
     public GameObject BlackPanel;
+    public TMP_Text dateNumText;
 
     // Called by Start Dialogue Trigger
     public void OpenDialogue(Message[] messages, Actor[] actors, Response[] responses, bool switchScene)
@@ -190,8 +191,11 @@ public class DialogueManager : MonoBehaviour
     public IEnumerator FadeBlackOut(bool fadeToBlack = true, int fadeSpeed = 1)
     {
         Color objectColor = BlackPanel.GetComponent<Image>().color;
+        Color textColor = dateNumText.color;
         float fadeAmount;
+        float fadeAmount2;
 
+        yield return new WaitForSecondsRealtime(2);
         if (fadeToBlack)
         {
             while (BlackPanel.GetComponent<Image>().color.a < 1)
@@ -208,13 +212,18 @@ public class DialogueManager : MonoBehaviour
             while (BlackPanel.GetComponent<Image>().color.a > 0)
             {
                 fadeAmount = objectColor.a - (fadeSpeed * Time.deltaTime);
+                fadeAmount2 = textColor.a - (fadeSpeed * Time.deltaTime);
 
                 objectColor = new Color(objectColor.r, objectColor.g, objectColor.b, fadeAmount);
+                textColor = new Color(textColor.r, textColor.g, textColor.b, fadeAmount2);
+
                 BlackPanel.GetComponent<Image>().color = objectColor;
+                dateNumText.color = textColor;
                 yield return null;
             }
         }
         BlackPanel.SetActive(false);
+        dateNumText.gameObject.SetActive(false);
     }
 
 
