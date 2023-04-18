@@ -52,11 +52,11 @@ public class Clock : MonoBehaviour
             }
             else if (hour == 6 && !isAM)
             {
+                day++;
                 StartCoroutine(fadeBlack());
                 isAM = true;
                 hour = 8;
                 minute = 0;
-                day++;
 
             }
         }
@@ -193,6 +193,7 @@ public class Clock : MonoBehaviour
         isFading = true;
         BlackPanel.SetActive(true);
         dayText.gameObject.SetActive(true);
+        dayText.text = "Day " + day.ToString();
         Color objectColor = BlackPanel.GetComponent<Image>().color;
         Color textColor = dayText.color;
         float fadeAmount;

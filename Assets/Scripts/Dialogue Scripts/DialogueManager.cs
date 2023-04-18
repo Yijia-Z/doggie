@@ -35,7 +35,6 @@ public class DialogueManager : MonoBehaviour
     public void OpenDialogue(Message[] messages, Actor[] actors, Response[] responses, bool switchScene)
     {
         StartCoroutine(FadeBlackOut(false));
-        BlackPanel.SetActive(false);
         currentMessages = messages;
         currentActors = actors;
         currentResponses =  responses;
@@ -215,6 +214,7 @@ public class DialogueManager : MonoBehaviour
                 yield return null;
             }
         }
+        BlackPanel.SetActive(false);
     }
 
 
