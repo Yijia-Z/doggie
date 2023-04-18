@@ -147,6 +147,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clockText: {fileID: 8792680594762702428}
+  dayText: {fileID: 0}
+  BlackPanel: {fileID: 0}
   speedUpMultiplier: 2
   irlSecToGameMinRatio: 5
   hour: 8
@@ -299,6 +301,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clockText: {fileID: 8792680594762702428}
+  dayText: {fileID: 0}
+  BlackPanel: {fileID: 0}
   speedUpMultiplier: 2
   irlSecToGameMinRatio: 5
   hour: 8
@@ -591,6 +595,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clockText: {fileID: 8792680594762702428}
+  dayText: {fileID: 0}
+  BlackPanel: {fileID: 0}
   speedUpMultiplier: 2
   irlSecToGameMinRatio: 5
   hour: 8
