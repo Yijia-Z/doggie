@@ -9,66 +9,66 @@ EditorBuildSettings:
     path: Assets/Scenes/StartScreen.unity
     guid: 9b75cc17cbea24c4cacd791bcd987647
   - enabled: 1
-    path: Assets/Scenes/New Dialogue/Tutorial Dialogue.unity
-    guid: 3f4a70ec4ea8c2443988ada551a1856b
+    path: Assets/Scenes/Final Dialogue/Tutorial Dialogue.unity
+    guid: 368adef2d3a3bbd449204bf63a4bc5f3
   - enabled: 1
-    path: Assets/Scenes/New Dialogue/LoganIntro.unity
-    guid: e90669fa910f3664491ca5f0a2d49bba
+    path: Assets/Scenes/Final Dialogue/LoganIntro.unity
+    guid: 097aff137fc2d2a4e8948f66e73cb222
   - enabled: 1
     path: Assets/Scenes/DaycareGame.unity
     guid: 655eb91fd6729f444971d78a776aa029
   - enabled: 1
-    path: Assets/Scenes/New Dialogue/LoganDate1.unity
-    guid: 42c431190dedf5c40bc2df0b03032033
+    path: Assets/Scenes/Final Dialogue/LoganDate1.unity
+    guid: 317c09e912670964ba176d9b87448d2e
   - enabled: 1
-    path: Assets/Scenes/New Dialogue/LoganDate2.unity
-    guid: 25a34cbe8df64d343a7206d920280ae5
+    path: Assets/Scenes/Final Dialogue/LoganDate2.unity
+    guid: 73b1b747de65db84d8b1aec98b3a26c5
   - enabled: 1
-    path: Assets/Scenes/New Dialogue/LoganDate3.unity
-    guid: 651780b60e49c234b9250f68aab53453
+    path: Assets/Scenes/Final Dialogue/LoganDate3.unity
+    guid: 70d647dedc9b7084388e53715c672f27
   - enabled: 1
-    path: Assets/Scenes/New Dialogue/ElaineDate1.unity
-    guid: 1fc0d63877a52e742bda2436939ff6cc
+    path: Assets/Scenes/Final Dialogue/ElaineDate1.unity
+    guid: d69496256da16424c869f8266f927062
   - enabled: 1
-    path: Assets/Scenes/New Dialogue/ElaineDate2.unity
-    guid: 7f6de2fca843a0147baf045554d2bbc4
+    path: Assets/Scenes/Final Dialogue/ElaineDate2.unity
+    guid: 81a7c0f68d7946f4fbed1eb1d0883a08
   - enabled: 1
-    path: Assets/Scenes/New Dialogue/ElaineDate3.unity
-    guid: 34c727f64e85d6946a1c8c16b49599e9
+    path: Assets/Scenes/Final Dialogue/ElaineDate3.unity
+    guid: 48e2f5c52330cce46bb15619f0e660fa
   - enabled: 1
-    path: Assets/Scenes/New Dialogue/JeffDate1.unity
-    guid: 704e2102577f0214abfb3c6b864725d9
+    path: Assets/Scenes/Final Dialogue/JeffDate1.unity
+    guid: 23773628b385d84419e0a2fd10bf360d
   - enabled: 1
-    path: Assets/Scenes/New Dialogue/JeffDate2.unity
-    guid: 597af4bf27ad6ff418dc703750159e4c
+    path: Assets/Scenes/Final Dialogue/JeffDate2.unity
+    guid: 3c99c3f9fc38c104b8cbc76a0b3272b3
   - enabled: 1
-    path: Assets/Scenes/New Dialogue/JeffDate3.unity
-    guid: bd12c10610ab36f4490e364c1ff32d0f
+    path: Assets/Scenes/Final Dialogue/JeffDate3.unity
+    guid: c64108377481bde42afc7af666729d90
   - enabled: 1
-    path: Assets/Scenes/New Dialogue/JeffIntro.unity
-    guid: 32445c089dfc59c43a118e4cb2658725
+    path: Assets/Scenes/Final Dialogue/JeffIntro.unity
+    guid: 91002764b5f1cc24293401dda1dceef5
   - enabled: 1
-    path: Assets/Scenes/New Dialogue/ElaineIntro.unity
-    guid: 5702bc00150d7f142a27ea9364006dc4
+    path: Assets/Scenes/Final Dialogue/ElaineIntro.unity
+    guid: 2fcfc673c107cae4fa103bac94d0d05c
   - enabled: 1
-    path: Assets/Scenes/New Dialogue/LoganAskOut.unity
-    guid: 45b99b8ffce58d64692a79c0c1ad1341
+    path: Assets/Scenes/Final Dialogue/LoganAskOut.unity
+    guid: 2af5c40042c88cb44ad0def9ec8d8b14
   - enabled: 1
-    path: Assets/Scenes/New Dialogue/ElaineAskOut.unity
-    guid: 9a768229247aa1c4fa7d63a9d9dc538c
+    path: Assets/Scenes/Final Dialogue/ElaineAskOut.unity
+    guid: 480b7a6afb95b71488f34c49f960f563
   - enabled: 1
-    path: Assets/Scenes/New Dialogue/JeffAskOut.unity
-    guid: cec20f16f89756f42a533619bf2fb3b4
+    path: Assets/Scenes/Final Dialogue/JeffAskOut.unity
+    guid: 73ea807b3e0675f489d78f55daff7f58
   - enabled: 1
-    path: Assets/Scenes/New Dialogue/PlaneEnding.unity
-    guid: 4b43e2824f3306944be57deccc59c63c
+    path: Assets/Scenes/Final Dialogue/PlaneEnding.unity
+    guid: 1a09a0503981eb54cba7e9f3125b3f2a
   - enabled: 1
-    path: Assets/Scenes/New Dialogue/WeddingEnding.unity
-    guid: de760c6e6f7223d4ca2fa9641fbeca57
+    path: Assets/Scenes/Final Dialogue/WeddingEnding.unity
+    guid: 4250b1cf7cb3d304aa76bd28e8975e18
   - enabled: 1
-    path: Assets/Scenes/New Dialogue/AloneEnding.unity
-    guid: 95f532a7ab6b7e94f8f020278b893e55
+    path: Assets/Scenes/Final Dialogue/AloneEnding.unity
+    guid: 76510cc2a728fb447b8a52713f9f9014
   - enabled: 1
     path: Assets/Scenes/Credits.unity
-    guid: ea72158540b380342ba46a99ff8ca4b0
+    guid: 3a1a0947c4e6d47ada84a3aa4e9ae037
   m_configObjects: {}
