@@ -2021,7 +2021,7 @@ PrefabInstance:
       objectReference: {fileID: 353344458}
     - target: {fileID: 4091239783288199061, guid: caaba477ae17e44d6adb06adea31227b, type: 3}
       propertyPath: dogOwnerIndex
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4091239783288199061, guid: caaba477ae17e44d6adb06adea31227b, type: 3}
       propertyPath: inventory_panel
@@ -3701,7 +3701,7 @@ PrefabInstance:
       objectReference: {fileID: 10876414}
     - target: {fileID: 4091239783288199061, guid: caaba477ae17e44d6adb06adea31227b, type: 3}
       propertyPath: dogOwnerIndex
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4091239783288199061, guid: caaba477ae17e44d6adb06adea31227b, type: 3}
       propertyPath: inventory_panel
