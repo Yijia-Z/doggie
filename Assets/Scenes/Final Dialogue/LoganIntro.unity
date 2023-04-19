@@ -1109,7 +1109,7 @@ MonoBehaviour:
   responseBackgroundBox: {fileID: 1700744683}
   isSuccessful: 0
   BlackPanel: {fileID: 1345256177}
-  dateNumText: {fileID: 449990596}
+  dayText: {fileID: 449990596}
 --- !u!114 &772679256
 MonoBehaviour:
   m_ObjectHideFlags: 0
