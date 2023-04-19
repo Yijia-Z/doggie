@@ -13,6 +13,12 @@ public class DatingProgress : MonoBehaviour
         PlayerPrefs.SetInt("OwnerIndex", ownerIndex);
         PlayerPrefs.SetInt("StageIndex", stageIndex);
     }
+    public static void SaveProgress(int ownerIndex, int stageIndex, int dayIndex)
+    {
+        PlayerPrefs.SetInt("OwnerIndex", ownerIndex);
+        PlayerPrefs.SetInt("StageIndex", stageIndex);
+        PlayerPrefs.SetInt("DayIndex", dayIndex);
+    }
 
     // Load the saved dating progress.
     public static bool LoadProgress(out int ownerIndex, out int stageIndex)
@@ -50,5 +56,16 @@ public class DatingProgress : MonoBehaviour
     public static string GetDialogueText(int ownerIndex, int stageIndex)
     {
         return Resources.Load<TextAsset>("Dating/Owner" + ownerIndex + "/Stage" + stageIndex).text;
+    }
+
+    public static bool GetDayIndex(out int dayIndex)
+    {
+        if (PlayerPrefs.HasKey("DayIndex"))
+        {
+            dayIndex = PlayerPrefs.GetInt("DayIndex");
+            return true;
+        }
+        dayIndex = 1;
+        return false;
     }
 }

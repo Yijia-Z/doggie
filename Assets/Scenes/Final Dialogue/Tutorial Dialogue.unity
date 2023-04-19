@@ -646,7 +646,7 @@ MonoBehaviour:
   responseBackgroundBox: {fileID: 1633876565}
   isSuccessful: 0
   BlackPanel: {fileID: 942885504}
-  dateNumText: {fileID: 1911240287}
+  dayText: {fileID: 1911240287}
 --- !u!1 &732724157
 GameObject:
   m_ObjectHideFlags: 0
