@@ -8,8 +8,11 @@ public class MainMenu : MonoBehaviour
 
     [SerializeField] GameObject startButton;
 
+
+
     public void SwitchScene(int sceneID)
     {
         SceneManager.LoadScene(sceneID);
+
     }
 }

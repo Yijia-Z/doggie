@@ -19,6 +19,9 @@ public class Dog : MonoBehaviour
     public float totalHappiness = 100f;
     public float happiness = 30f;
     public bool selected = false;
+    float minWait = 13f;
+    float maxWait = 35f;
+    public float barkCountDown = -1f;
 
     private float secToMinRatio;
     private float timer;
@@ -31,6 +34,9 @@ public class Dog : MonoBehaviour
     public GameObject inventory_panel;
     public GameObject stats_panel;
     public VideoPlayerScript videoPlayerScript;
+    [SerializeField] private AudioSource dogBarkSound;
+    [SerializeField] private AudioSource dogWhineSound;
+
 
     Button[] buttons;
 
@@ -83,6 +89,9 @@ public class Dog : MonoBehaviour
         timer += Time.deltaTime;
         depreciateTimeStats();
         updatetotalHappiness();
+        dogBark();
+
+
 
     }
 
@@ -311,4 +320,23 @@ public class Dog : MonoBehaviour
     {
         return favoriteItem;
     }
+    public void dogBark() {
+      if (barkCountDown < 0f) {
+        if (!dogWhineSound.isPlaying && !dogBarkSound.isPlaying) {
+          if (hunger <= 30f || happiness <= 10f) {
+            dogWhineSound.Play();
+          }
+          else {
+            dogBarkSound.Play();
+          }
+          barkCountDown = Random.Range(minWait, maxWait);
+        }
+      }
+      else {
+        barkCountDown -= Time.deltaTime;
+      }
+
+    }
+
+
 }

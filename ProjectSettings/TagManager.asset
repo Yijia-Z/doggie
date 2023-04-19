@@ -9,6 +9,7 @@ TagManager:
   - Toy
   - Dog
   - Apparel
+  - Button
   layers:
   - Default
   - TransparentFX
