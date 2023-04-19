@@ -260,6 +260,18 @@ PrefabInstance:
       propertyPath: m_text
       value: Food
       objectReference: {fileID: 0}
+    - target: {fileID: 2300437542768184050, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_fontSize
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300437542768184050, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300437542768184050, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_characterSpacing
+      value: -15
+      objectReference: {fileID: 0}
     - target: {fileID: 2501652568772598095, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -348,6 +360,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tab Pane - Food
       objectReference: {fileID: 0}
+    - target: {fileID: 3595464343518831056, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3806766671039244874, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_text
       value: Kibble
@@ -434,6 +450,26 @@ PrefabInstance:
       propertyPath: m_text
       value: Tiara
       objectReference: {fileID: 0}
+    - target: {fileID: 213289064521205918, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 213289064521205918, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 213289064521205918, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 336433829628104320, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 690008325802838209, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_Name
+      value: Headpiece
+      objectReference: {fileID: 0}
     - target: {fileID: 690008325802838209, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_TagString
       value: Apparel
@@ -445,6 +481,34 @@ PrefabInstance:
     - target: {fileID: 2300437542768184050, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_text
       value: Apparel
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300437542768184050, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_fontSize
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300437542768184050, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_margin.x
+      value: 27.861267
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300437542768184050, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_margin.z
+      value: 26.090229
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300437542768184050, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300437542768184050, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_characterSpacing
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300437542768184050, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300437542768184050, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2501652568772598095, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_Pivot.x
@@ -539,6 +603,10 @@ PrefabInstance:
       value: Flower
       objectReference: {fileID: 0}
     - target: {fileID: 3887097850117582020, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_Name
+      value: Neckpiece
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887097850117582020, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_TagString
       value: Apparel
       objectReference: {fileID: 0}
@@ -547,8 +615,16 @@ PrefabInstance:
       value: 284
       objectReference: {fileID: 0}
     - target: {fileID: 4434864319595311832, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_Name
+      value: Headpiece
+      objectReference: {fileID: 0}
+    - target: {fileID: 4434864319595311832, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_TagString
       value: Apparel
+      objectReference: {fileID: 0}
+    - target: {fileID: 4762401623362079685, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_Name
+      value: Neckpiece
       objectReference: {fileID: 0}
     - target: {fileID: 4762401623362079685, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_TagString
@@ -583,6 +659,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1229936556, guid: 6d1ca245e6a2542818bb63059babf81d, type: 3}
     - target: {fileID: 8298043136291381437, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_Name
+      value: Neckpiece
+      objectReference: {fileID: 0}
+    - target: {fileID: 8298043136291381437, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_TagString
       value: Apparel
       objectReference: {fileID: 0}
@@ -594,6 +674,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -1594474064, guid: 6d1ca245e6a2542818bb63059babf81d, type: 3}
+    - target: {fileID: 9143085252850524155, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_Name
+      value: Headpiece
+      objectReference: {fileID: 0}
     - target: {fileID: 9143085252850524155, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_TagString
       value: Apparel
@@ -616,6 +700,14 @@ PrefabInstance:
       propertyPath: m_text
       value: Ice Cube
       objectReference: {fileID: 0}
+    - target: {fileID: 16958390179035297, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_margin.x
+      value: -20.184786
+      objectReference: {fileID: 0}
+    - target: {fileID: 16958390179035297, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_margin.z
+      value: -21.062223
+      objectReference: {fileID: 0}
     - target: {fileID: 690008325802838209, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_TagString
       value: Toy
@@ -627,6 +719,18 @@ PrefabInstance:
     - target: {fileID: 2300437542768184050, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_text
       value: Toys
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300437542768184050, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_fontSize
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300437542768184050, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300437542768184050, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_characterSpacing
+      value: -15
       objectReference: {fileID: 0}
     - target: {fileID: 2501652568772598095, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_Pivot.x
@@ -716,6 +820,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tab Pane - Toys
       objectReference: {fileID: 0}
+    - target: {fileID: 3595464343518831056, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3806766671039244874, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_text
       value: Ball
@@ -786,11 +894,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5949909785868170500, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 45
+      value: 67.5
       objectReference: {fileID: 0}
     - target: {fileID: 5949909785868170500, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 45
+      value: 67.5
       objectReference: {fileID: 0}
     - target: {fileID: 5949909785868170500, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -798,7 +906,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5949909785868170500, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -34
+      value: -52.8
       objectReference: {fileID: 0}
     - target: {fileID: 6647084480743076391, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_text

@@ -147,6 +147,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clockText: {fileID: 8792680594762702428}
+  dayText: {fileID: 0}
+  BlackPanel: {fileID: 0}
   speedUpMultiplier: 2
   irlSecToGameMinRatio: 5
   hour: 8
@@ -299,6 +301,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clockText: {fileID: 8792680594762702428}
+  dayText: {fileID: 0}
+  BlackPanel: {fileID: 0}
   speedUpMultiplier: 2
   irlSecToGameMinRatio: 5
   hour: 8
@@ -377,15 +381,15 @@ MonoBehaviour:
 
     8:00 AM'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7d80c2245fc759240b3cf82f16fd0ebb, type: 2}
-  m_sharedMaterial: {fileID: -4146948236912855899, guid: 7d80c2245fc759240b3cf82f16fd0ebb, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 83a62f5fad7144f15abdfc85c84727be, type: 2}
+  m_sharedMaterial: {fileID: 2439260246917536837, guid: 83a62f5fad7144f15abdfc85c84727be, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4283124605
-  m_fontColor: {r: 0.4901961, g: 0.29411766, b: 0.29411766, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -402,19 +406,19 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 65
-  m_fontSizeBase: 25
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 45
   m_fontSizeMax: 65
-  m_fontStyle: 0
+  m_fontStyle: 16
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: 29.2
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -438,7 +442,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -0.32505798, y: 4.286194, z: -3.0791016, w: 0}
+  m_margin: {x: -0.32505798, y: 4.286194, z: -3.0791016, w: 60.4132}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -591,6 +595,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clockText: {fileID: 8792680594762702428}
+  dayText: {fileID: 0}
+  BlackPanel: {fileID: 0}
   speedUpMultiplier: 2
   irlSecToGameMinRatio: 5
   hour: 8

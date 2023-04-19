@@ -30,12 +30,12 @@ public class DialogueManager : MonoBehaviour
     int sceneID;
     private bool isReacting = false;
     public GameObject BlackPanel;
+    public TMP_Text dayText;
 
     // Called by Start Dialogue Trigger
     public void OpenDialogue(Message[] messages, Actor[] actors, Response[] responses, bool switchScene)
     {
         StartCoroutine(FadeBlackOut(false));
-        BlackPanel.SetActive(false);
         currentMessages = messages;
         currentActors = actors;
         currentResponses =  responses;
@@ -172,9 +172,10 @@ public class DialogueManager : MonoBehaviour
     public IEnumerator SwitchScene()
     {
         BlackPanel.SetActive(true);
+
         Color objectColor = BlackPanel.GetComponent<Image>().color;
         float fadeAmount;
-
+        yield return new WaitForSecondsRealtime(2);
         while (BlackPanel.GetComponent<Image>().color.a < 1)
         {
             fadeAmount = objectColor.a + (1 * Time.deltaTime);
@@ -191,8 +192,10 @@ public class DialogueManager : MonoBehaviour
     public IEnumerator FadeBlackOut(bool fadeToBlack = true, int fadeSpeed = 1)
     {
         Color objectColor = BlackPanel.GetComponent<Image>().color;
+        Color textColor = dayText.color;
         float fadeAmount;
-
+        float fadeAmount2;
+        yield return new WaitForSecondsRealtime(2);
         if (fadeToBlack)
         {
             while (BlackPanel.GetComponent<Image>().color.a < 1)
@@ -210,11 +213,18 @@ public class DialogueManager : MonoBehaviour
             {
                 fadeAmount = objectColor.a - (fadeSpeed * Time.deltaTime);
 
+                fadeAmount2 = textColor.a - (fadeSpeed * Time.deltaTime);
+
                 objectColor = new Color(objectColor.r, objectColor.g, objectColor.b, fadeAmount);
+                textColor = new Color(textColor.r, textColor.g, textColor.b, fadeAmount2);
+
                 BlackPanel.GetComponent<Image>().color = objectColor;
+                dayText.color = textColor;
                 yield return null;
             }
         }
+        BlackPanel.SetActive(false);
+        dayText.gameObject.SetActive(false);
     }
 
 
