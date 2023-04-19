@@ -5,14 +5,9 @@ using UnityEngine;
 public class SpriteFadeIn : MonoBehaviour
 {
     public SpriteRenderer spriteRenderer;
-    public float fadeInDuration = 0.5f; // 1 second
+    public float fadeInDuration = 0.5f; // 0.5 second
     public bool isFadingIn = false;
     private float fadeTimer = 0.0f;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
 
     // Update is called once per frame
     void Update()

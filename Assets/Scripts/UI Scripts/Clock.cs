@@ -54,6 +54,7 @@ public class Clock : MonoBehaviour
             }
             else if (hour == 5 && !isAM)
             {
+                // Select the owner to present
                 ownerSelect();
             }
             else if (hour == 6 && !isAM)
@@ -260,7 +261,7 @@ public class Clock : MonoBehaviour
         }
         else if (ownerIndex == -1)
         {
-            Debug.LogError("No available owners found!");
+            Debug.Log("No available owners found!");
         }
         else
         {
@@ -274,7 +275,6 @@ public class Clock : MonoBehaviour
                 SceneManager.LoadScene(16); // ElaineAskOut
             else if (ownerIndex == 2)
                 SceneManager.LoadScene(17); // JeffAskOut
-
         }
     }
 }

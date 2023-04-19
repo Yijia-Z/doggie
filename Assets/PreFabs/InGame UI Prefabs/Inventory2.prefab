@@ -450,9 +450,25 @@ PrefabInstance:
       propertyPath: m_text
       value: Tiara
       objectReference: {fileID: 0}
+    - target: {fileID: 213289064521205918, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 213289064521205918, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 213289064521205918, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 336433829628104320, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 690008325802838209, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_Name
+      value: Headpiece
       objectReference: {fileID: 0}
     - target: {fileID: 690008325802838209, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_TagString
@@ -587,6 +603,10 @@ PrefabInstance:
       value: Flower
       objectReference: {fileID: 0}
     - target: {fileID: 3887097850117582020, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_Name
+      value: Neckpiece
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887097850117582020, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_TagString
       value: Apparel
       objectReference: {fileID: 0}
@@ -595,8 +615,16 @@ PrefabInstance:
       value: 284
       objectReference: {fileID: 0}
     - target: {fileID: 4434864319595311832, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_Name
+      value: Headpiece
+      objectReference: {fileID: 0}
+    - target: {fileID: 4434864319595311832, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_TagString
       value: Apparel
+      objectReference: {fileID: 0}
+    - target: {fileID: 4762401623362079685, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_Name
+      value: Neckpiece
       objectReference: {fileID: 0}
     - target: {fileID: 4762401623362079685, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_TagString
@@ -631,6 +659,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1229936556, guid: 6d1ca245e6a2542818bb63059babf81d, type: 3}
     - target: {fileID: 8298043136291381437, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_Name
+      value: Neckpiece
+      objectReference: {fileID: 0}
+    - target: {fileID: 8298043136291381437, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_TagString
       value: Apparel
       objectReference: {fileID: 0}
@@ -642,6 +674,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -1594474064, guid: 6d1ca245e6a2542818bb63059babf81d, type: 3}
+    - target: {fileID: 9143085252850524155, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_Name
+      value: Headpiece
+      objectReference: {fileID: 0}
     - target: {fileID: 9143085252850524155, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_TagString
       value: Apparel
