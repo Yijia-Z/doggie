@@ -10,6 +10,7 @@ public class Clock : MonoBehaviour
     public TMP_Text clockText;
     public TMP_Text dayText;
     public GameObject BlackPanel;
+    public SpriteFadeIn spriteFadeIn;
     public float speedUpMultiplier = 2.0f;
     public float irlSecToGameMinRatio = 5.0f;
     private float timer;
@@ -19,7 +20,8 @@ public class Clock : MonoBehaviour
     public int day = 1;
     private bool isPaused = false;
     private bool isFading = false;
-
+    private int ownerIndex = -1;
+    private bool ownerAvailable = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -49,6 +51,10 @@ public class Clock : MonoBehaviour
             if (hour == 13 && !isAM)
             {
                 hour = 1;
+            }
+            else if (hour == 5 && !isAM)
+            {
+                ownerSelect();
             }
             else if (hour == 6 && !isAM)
             {
@@ -219,14 +225,11 @@ public class Clock : MonoBehaviour
         hour = 8;
         minute = 0;
         StartCoroutine(FadeBlackOut(false));
-        
-    }
 
-    private void ownerCheck()
+    }
+    private void ownerSelect()
     {
         // Select the next available owner
-        int ownerIndex = -1;
-        bool ownerAvailable = false;
         Dog[] dogs = FindObjectsOfType<Dog>();
         for (int i = 0; i < dogs.Length; i++)
         {
@@ -239,6 +242,16 @@ public class Clock : MonoBehaviour
                 ownerIndex = dogs[i].getOwnerIndex();
             }
         }
+        if (ownerIndex == 0)
+            spriteFadeIn.spriteRenderer = GameObject.Find("Other Players/Logan").GetComponent<SpriteRenderer>();
+        else if (ownerIndex == 1)
+            spriteFadeIn.spriteRenderer = GameObject.Find("Other Players/Elaine").GetComponent<SpriteRenderer>();
+        else if (ownerIndex == 2)
+            spriteFadeIn.spriteRenderer = GameObject.Find("Other Players/Jeff").GetComponent<SpriteRenderer>();
+        spriteFadeIn.spriteRenderer.color = new Color(1.0f, 1.0f, 1.0f, 0.0f); // set initial alpha to 0
+    }
+    private void ownerCheck()
+    {
         if (!ownerAvailable)
         {
             // switch to alone ending scene
@@ -251,7 +264,6 @@ public class Clock : MonoBehaviour
         }
         else
         {
-
             // Save the selected owner and load the corresponding scene
             DatingProgress.MarkOwnerAsUnavailable(ownerIndex);
             DatingProgress.SaveProgress(ownerIndex, 1);

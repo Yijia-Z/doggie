@@ -12,7 +12,6 @@ public class SpriteFadeIn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        spriteRenderer.color = new Color(1.0f, 1.0f, 1.0f, 0.0f); // set initial alpha to 0
     }
 
     // Update is called once per frame
@@ -22,7 +21,6 @@ public class SpriteFadeIn : MonoBehaviour
         if (!isFadingIn && FindObjectOfType<Clock>().hour == 5 && FindObjectOfType<Clock>().minute >= 30)
         {
             isFadingIn = true;
-            //TODO: change sprite to corresponding owner
         }
         // Fade in the sprite
         if (isFadingIn && fadeTimer < fadeInDuration)
