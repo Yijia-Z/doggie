@@ -25,6 +25,7 @@ public class Clock : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        DatingProgress.GetDayIndex(out day);
         StartCoroutine(FadeBlackOut(false));
     }
 
@@ -159,6 +160,8 @@ public class Clock : MonoBehaviour
         Color textColor = dayText.color;
         float fadeAmount;
         float fadeAmount2;
+
+        yield return new WaitForSecondsRealtime(2);
         while (isFading)
         {
             yield return new WaitForSecondsRealtime(1);
@@ -267,7 +270,7 @@ public class Clock : MonoBehaviour
         {
             // Save the selected owner and load the corresponding scene
             DatingProgress.MarkOwnerAsUnavailable(ownerIndex);
-            DatingProgress.SaveProgress(ownerIndex, 1);
+            DatingProgress.SaveProgress(ownerIndex, 1, day);
             //load scenes
             if (ownerIndex == 0)
                 SceneManager.LoadScene(15); // LoganAskOut
