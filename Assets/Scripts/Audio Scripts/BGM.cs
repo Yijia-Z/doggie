@@ -39,12 +39,18 @@ public class BGM : MonoBehaviour
       rng = Random.Range(0, 3);
       if (rng != oldrng) {
         if (rng == 0) {
+          music2.Stop();
+          music3.Stop();
           music1.Play();
         }
         else if (rng == 1) {
+          music3.Stop();
+          music1.Stop();
           music2.Play();
         }
         else if (rng == 2) {
+          music1.Stop();
+          music2.Stop();
           music3.Play();
         }
       }

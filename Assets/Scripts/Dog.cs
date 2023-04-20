@@ -21,6 +21,7 @@ public class Dog : MonoBehaviour
     public float totalHappiness = 100f;
     public float happiness = 30f;
     public bool selected = false;
+    public bool bark = true;
     float minWait = 13f;
     float maxWait = 35f;
     public float barkCountDown = -1f;
@@ -36,8 +37,11 @@ public class Dog : MonoBehaviour
     public GameObject inventory_panel;
     public GameObject stats_panel;
     public VideoPlayerScript videoPlayerScript;
-    [SerializeField] private AudioSource dogBarkSound;
-    [SerializeField] private AudioSource dogWhineSound;
+    public AudioSource dogBarkSound;
+    public AudioSource dogWhineSound;
+    public AudioSource buttonSound1;
+    public AudioSource buttonSound2;
+    public AudioSource buttonSound3;
 
 
     Button[] buttons;
@@ -91,7 +95,10 @@ public class Dog : MonoBehaviour
         timer += Time.deltaTime;
         depreciateTimeStats();
         updatetotalHappiness();
-        dogBark();
+        if (bark) {
+            dogBark();
+        }
+
 
 
 
@@ -191,6 +198,7 @@ public class Dog : MonoBehaviour
         if (taskPanel.activeSelf == false)
         {
             taskPanel.SetActive(true);
+            buttonSound3.Play();
         }
         else
         {
@@ -202,6 +210,7 @@ public class Dog : MonoBehaviour
     {
         // display inventory
         inventory_panel.SetActive(true);
+        buttonSound3.Play();
 
     }
     private void OnClick()
@@ -209,6 +218,7 @@ public class Dog : MonoBehaviour
         if (selected)
         {
             item.Use(this);
+            buttonSound2.Play();
         }
         inventory_panel.SetActive(false);
     }
@@ -254,6 +264,7 @@ public class Dog : MonoBehaviour
         hygiene -= 5f;
         taskPanel.SetActive(false);
         clock.minute += 5;
+        buttonSound3.Play();
     }
 
     // Wash task
@@ -267,6 +278,7 @@ public class Dog : MonoBehaviour
         Debug.Log("giving bath");
         //Debug.Log("after: " + clock.minute);
         videoPlayerScript.PlayVideo(1);
+        buttonSound3.Play();
     }
 
     // Walk task
@@ -279,6 +291,7 @@ public class Dog : MonoBehaviour
         clock.minute += 20;
         Debug.Log("giving walk");
         videoPlayerScript.PlayVideo(2);
+        buttonSound3.Play();
     }
 
     // Give toy task
@@ -328,9 +341,9 @@ public class Dog : MonoBehaviour
         return favoriteItem;
     }
     public void dogBark() {
-      if (barkCountDown < 0f) {
+      if (barkCountDown < -10f) {
         if (!dogWhineSound.isPlaying && !dogBarkSound.isPlaying) {
-          if (hunger <= 30f || happiness <= 10f) {
+          if (hunger <= 15f || happiness <= 5f) {
             dogWhineSound.Play();
           }
           else {
@@ -343,6 +356,13 @@ public class Dog : MonoBehaviour
         barkCountDown -= Time.deltaTime;
       }
 
+    }
+
+    public void BarkOn() {
+      bark = true;
+    }
+    public void BarkOff() {
+      bark = false;
     }
 
 

@@ -1417,19 +1417,19 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Task 1
+  m_text: 'Story/Script Writing
 
 
-    Task 2
+    Audio Design & Soundtrack
 
 
-    Task 3
+    Programming
 
 
-    Task 4
+    Software
+    Used:
 
-
-    Software Used:'
+    Unity 2021.3.16, Atom, Git, Audacity'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c61df27e88e434a2ca69e5af1341f5f4, type: 2}
   m_sharedMaterial: {fileID: 1106732833682405660, guid: c61df27e88e434a2ca69e5af1341f5f4, type: 2}
