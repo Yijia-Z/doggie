@@ -22,6 +22,7 @@ public class Clock : MonoBehaviour
     private bool isFading = false;
     private int ownerIndex = -1;
     private bool ownerAvailable = false;
+    private bool ownerSelected = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -53,7 +54,7 @@ public class Clock : MonoBehaviour
             {
                 hour = 1;
             }
-            else if (hour == 4 && !isAM)
+            else if (hour >= 4 && !isAM && !ownerSelected)
             {
                 // Select the owner to present
                 ownerSelect();
@@ -253,6 +254,8 @@ public class Clock : MonoBehaviour
         else if (ownerIndex == 2)
             spriteFadeIn.spriteRenderer = GameObject.Find("Other Players/Jeff").GetComponent<SpriteRenderer>();
         spriteFadeIn.spriteRenderer.color = new Color(1.0f, 1.0f, 1.0f, 0.0f); // set initial alpha to 0
+
+        ownerSelected = true;
     }
     private void ownerCheck()
     {
