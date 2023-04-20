@@ -632,7 +632,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4762401623362079685, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_Name
-      value: Bella
+      value: Neckpiece
       objectReference: {fileID: 0}
     - target: {fileID: 4762401623362079685, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_TagString
@@ -668,7 +668,7 @@ PrefabInstance:
       objectReference: {fileID: 1229936556, guid: 6d1ca245e6a2542818bb63059babf81d, type: 3}
     - target: {fileID: 8298043136291381437, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_Name
-      value: Bella
+      value: Neckpiece
       objectReference: {fileID: 0}
     - target: {fileID: 8298043136291381437, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_TagString
@@ -684,7 +684,7 @@ PrefabInstance:
       objectReference: {fileID: -1594474064, guid: 6d1ca245e6a2542818bb63059babf81d, type: 3}
     - target: {fileID: 9143085252850524155, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_Name
-      value: Bella
+      value: Headpiece
       objectReference: {fileID: 0}
     - target: {fileID: 9143085252850524155, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_TagString
