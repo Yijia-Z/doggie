@@ -10,6 +10,9 @@ public class VideoPlayerScript : MonoBehaviour
     public VideoPlayer videoPlayer1;
     public VideoPlayer videoPlayer2;
     public RawImage rawImage;
+    [SerializeField] private AudioSource bubbleSound;
+    [SerializeField] private AudioSource washSound;
+    [SerializeField] private AudioSource walkSound;
     private void Start()
     {
         rawImage.enabled = false;// disable the RawImage component before playing the video
@@ -24,11 +27,14 @@ public class VideoPlayerScript : MonoBehaviour
             case 1:
                 rawImage.enabled = true; // enable the RawImage component before playing the video
                 rawImage.texture = videoPlayer1.texture;
+                washSound.Play();
+                bubbleSound.Play();
                 videoPlayer1.Play();
                 break;
             case 2:
                 rawImage.enabled = true;
                 rawImage.texture = videoPlayer2.texture;
+                walkSound.Play();
                 videoPlayer2.Play();
                 break;
             default:
