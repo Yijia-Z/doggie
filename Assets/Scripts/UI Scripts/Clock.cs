@@ -148,7 +148,7 @@ public class Clock : MonoBehaviour
     {
         if (!isPaused)
         {
-            Time.timeScale = Time.timeScale * speedUpMultiplier;
+            Time.timeScale = 1f * speedUpMultiplier;
         }
     }
 
@@ -242,7 +242,7 @@ public class Clock : MonoBehaviour
             {
                 ownerAvailable = true;
             }
-            if (dogs[i].getHappiness() >= 80 && DatingProgress.IsOwnerAvailable(i))
+            if (dogs[i].getHappiness() >= 60 && DatingProgress.IsOwnerAvailable(i))
             {
                 ownerIndex = dogs[i].getOwnerIndex();
             }
