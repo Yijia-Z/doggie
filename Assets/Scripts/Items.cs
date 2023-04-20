@@ -69,6 +69,15 @@ public class Apparel : Item
     public override void Use(Dog dog)
     {
         dog.equippedApparel = this;
+        if (name == "Neckpiece")
+        {
+            dog.neckpieceImage.sprite = sprite;
+        }
+        else if (name == "Headpiece")
+        {
+            dog.headpieceImage.sprite = sprite;
+        }
+
         dog.happiness += value;
         dog.giveApparel();
         //count--;
