@@ -11,6 +11,7 @@ TagManager:
   - Head
   - Neck
   - Apparel
+  - Button
   layers:
   - Default
   - TransparentFX

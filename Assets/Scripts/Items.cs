@@ -69,6 +69,17 @@ public class Apparel : Item
     public override void Use(Dog dog)
     {
         dog.equippedApparel = this;
+        if (name == "Neckpiece")
+        {
+            dog.neckpiece.SetActive(true);
+            //dog.neckpiece.GetComponent<SpriteRenderer>().sprite = sprite;
+        }
+        else if (name == "Headpiece")
+        {
+            dog.headpiece.SetActive(true);
+            dog.headpiece.GetComponent<SpriteRenderer>().sprite = sprite;
+        }
+
         dog.happiness += value;
         dog.giveApparel();
         //count--;

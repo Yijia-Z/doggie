@@ -32,6 +32,8 @@ public class DialogueManager : MonoBehaviour
     public GameObject BlackPanel;
     public TMP_Text dayText;
 
+    private int relationshipLevel = 5;
+
     // Called by Start Dialogue Trigger
     public void OpenDialogue(Message[] messages, Actor[] actors, Response[] responses, bool switchScene)
     {
@@ -52,7 +54,12 @@ public class DialogueManager : MonoBehaviour
     {
         if (!isActive)
         {
-            isSuccessful = true;
+            relationshipLevel += currentResponses[0].relationshipValue;
+            if (relationshipLevel < 0)
+                relationshipLevel = 0;
+            if (relationshipLevel > 10)
+                relationshipLevel = 10;
+            //isSuccessful = true;
             responseBackgroundBox.localScale = Vector3.zero;
             isActive = true;
             backgroundBox.localScale = Vector3.one;
@@ -67,7 +74,12 @@ public class DialogueManager : MonoBehaviour
     {
         if (!isActive)
         {
-            isSuccessful = false;
+            relationshipLevel += currentResponses[1].relationshipValue;
+            if (relationshipLevel < 0)
+                relationshipLevel = 0;
+            if (relationshipLevel > 10)
+                relationshipLevel = 10;
+            //isSuccessful = false;
             responseBackgroundBox.localScale = Vector3.zero;
             isActive = true;
             backgroundBox.localScale = Vector3.one;
@@ -112,7 +124,7 @@ public class DialogueManager : MonoBehaviour
         {
             isActive = false;
             Debug.Log("Conversation ended!");
-            backgroundBox.localScale = Vector3.zero;
+            //backgroundBox.localScale = Vector3.zero;
             if (currentResponses.Length > 0)
             {
                 DisplayResponses();
@@ -141,7 +153,7 @@ public class DialogueManager : MonoBehaviour
         if (nextDialogue is null)
         {
             Debug.Log("next diag is null");
-            if (isSuccessful)
+            if (relationshipLevel > 5)
             {
                 nextDialogue = goodEnding;
             }
@@ -175,7 +187,7 @@ public class DialogueManager : MonoBehaviour
 
         Color objectColor = BlackPanel.GetComponent<Image>().color;
         float fadeAmount;
-        yield return new WaitForSecondsRealtime(2);
+        
         while (BlackPanel.GetComponent<Image>().color.a < 1)
         {
             fadeAmount = objectColor.a + (1 * Time.deltaTime);
@@ -184,7 +196,7 @@ public class DialogueManager : MonoBehaviour
             BlackPanel.GetComponent<Image>().color = objectColor;
             yield return null;
         }
-        //yield return new WaitForSecondsRealtime(2);
+        yield return new WaitForSecondsRealtime(2);
 
         SceneManager.LoadScene(sceneID);
     }

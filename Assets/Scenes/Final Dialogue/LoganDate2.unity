@@ -832,10 +832,12 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 62144e9602155cb4a8f40cdb7c0e8abe, type: 3}
   responses:
   - response: "Yes, absolutely! I\u2019d love to go with you someday."
+    relationshipValue: 1
     ownerReaction:
       actorId: 1
       message: "Sweet! I\u2019ll drink to that! *Logan chugs the rest of his beer*"
   - response: "Hmmm, let me think about it\u2026 no!"
+    relationshipValue: -3
     ownerReaction:
       actorId: 1
       message: "Ah what, seriously? Well, at least put it in the back of your mind\u2026"
@@ -903,16 +905,18 @@ MonoBehaviour:
   - name: Olivia
     sprite: {fileID: 21300000, guid: 62144e9602155cb4a8f40cdb7c0e8abe, type: 3}
   responses:
-  - response: Of course, like one of my own children!
-    ownerReaction:
-      actorId: 1
-      message: "Aw yeah, that\u2019s what I\u2019m talking about! Maxie\u2019s been
-        so happy as of late."
   - response: Of course, same as every other dog.
+    relationshipValue: -1
     ownerReaction:
       actorId: 1
       message: "Alright that\u2019s cool. Just making sure my pooch gets what he
         needs."
+  - response: Of course, like one of my own children!
+    relationshipValue: 1
+    ownerReaction:
+      actorId: 1
+      message: "Aw yeah, that\u2019s what I\u2019m talking about! Maxie\u2019s been
+        so happy as of late."
   nextDialogue: {fileID: 724388076}
   switchScene: 0
   sceneID: 0
@@ -1070,6 +1074,53 @@ MonoBehaviour:
   isSuccessful: 0
   BlackPanel: {fileID: 1692914520}
   dayText: {fileID: 166794526}
+--- !u!1 &611782548
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 611782550}
+  - component: {fileID: 611782549}
+  m_Layer: 0
+  m_Name: CursorManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &611782549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611782548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4424c3e5fed894f46bc3ab4ef2ba4832, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorTexture: {fileID: 2800000, guid: c06668943b1c9b94c8a54c34623db1a9, type: 3}
+  cursorMode: 0
+  hotSpot: {x: 0, y: 0}
+--- !u!4 &611782550
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611782548}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 877.9637, y: 533.47034, z: 0.7907959}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &724388074
 GameObject:
   m_ObjectHideFlags: 0
@@ -1131,10 +1182,12 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 62144e9602155cb4a8f40cdb7c0e8abe, type: 3}
   responses:
   - response: A long trip around Europe, enough to see the sights!
+    relationshipValue: 0
     ownerReaction:
       actorId: 1
       message: Yoo that sounds sweet, I heard Norway is a pretty chill place.
   - response: A long and hardy trip to freezing cold Siberia!
+    relationshipValue: 1
     ownerReaction:
       actorId: 1
       message: "Yoo I\u2019ve always wanted to go to Siberia, I\u2019ve heard there
@@ -1278,6 +1331,134 @@ RectTransform:
   m_AnchoredPosition: {x: 156.00342, y: -55}
   m_SizeDelta: {x: 1582.1569, y: 151.5586}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &968611775
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 968611777}
+  - component: {fileID: 968611776}
+  m_Layer: 0
+  m_Name: Music
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &968611776
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 968611775}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 4e46e3df3ad069642a6bdd92fb2ef1aa, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.3
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &968611777
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 968611775}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 518.84033, y: 145.60558, z: -3.5463326}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1065265340
 GameObject:
   m_ObjectHideFlags: 0
@@ -1363,7 +1544,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 27.35
+  m_fontSize: 29.1
   m_fontSizeBase: 3
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1651,17 +1832,19 @@ MonoBehaviour:
   - name: Olivia
     sprite: {fileID: 21300000, guid: 62144e9602155cb4a8f40cdb7c0e8abe, type: 3}
   responses:
-  - response: "I like your chill \u2018tude bro."
-    ownerReaction:
-      actorId: 1
-      message: Dawww thanks, I try to be like that one movie, you know the one, The
-        Big Jabroski.
   - response: "I won\u2019t lie, it\u2019s something to do with your perfect hair
       and your washboard abs."
+    relationshipValue: -1
     ownerReaction:
       actorId: 1
       message: "Oh thanks, wait how\u2019d you know about my abs? I haven\u2019t
         taken my shirt off\u2026 *Logan raises an eyebrow*"
+  - response: "I like your chill \u2018tude bro."
+    relationshipValue: 1
+    ownerReaction:
+      actorId: 1
+      message: Dawww thanks, I try to be like that one movie, you know the one, The
+        Big Jabroski.
   nextDialogue: {fileID: 360409118}
   switchScene: 0
   sceneID: 0
@@ -1998,10 +2181,12 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 62144e9602155cb4a8f40cdb7c0e8abe, type: 3}
   responses:
   - response: Doing fine porcupine. And you?
+    relationshipValue: 1
     ownerReaction:
       actorId: 1
       message: "That\u2019s great Sunshine State."
   - response: "Great. Everything\u2019s just peachy. (Sarcastic)"
+    relationshipValue: -1
     ownerReaction:
       actorId: 1
       message: "Woah hey there princess, what\u2019s wrong? *Logan looks confused*"

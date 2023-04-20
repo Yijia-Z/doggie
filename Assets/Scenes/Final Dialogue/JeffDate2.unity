@@ -435,6 +435,134 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &119371597
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 119371599}
+  - component: {fileID: 119371598}
+  m_Layer: 0
+  m_Name: Music
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &119371598
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 119371597}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: c5d8a2a52e9045940ba54cec53d40b8d, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.3
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &119371599
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 119371597}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 512.1786, y: 146.89911, z: -3.4254851}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &270205599
 GameObject:
   m_ObjectHideFlags: 0
@@ -627,15 +755,17 @@ MonoBehaviour:
   - name: 
     sprite: {fileID: 0}
   - name: Jeff
-    sprite: {fileID: 21300000, guid: e6e494c202c83de4caa5e81b03af0358, type: 3}
+    sprite: {fileID: 21300000, guid: 77dd0e52f9a33174da1cf4903937223a, type: 3}
   - name: Olivia
-    sprite: {fileID: 21300000, guid: f9ee45e7104cb824dbe2849eb1fe6de1, type: 3}
+    sprite: {fileID: 21300000, guid: 62144e9602155cb4a8f40cdb7c0e8abe, type: 3}
   responses:
   - response: "Hmmm, let me think about it\u2026 no!"
+    relationshipValue: -3
     ownerReaction:
       actorId: 1
       message: "I see, well in the meantime, perhaps you could think it over, Ollie\u2026 "
   - response: "Yes, absolutely! I\u2019d love to go with you someday."
+    relationshipValue: 2
     ownerReaction:
       actorId: 1
       message: "Wow I didn\u2019t actually expect ye to say yes so fast. You\u2019re
@@ -700,18 +830,20 @@ MonoBehaviour:
   - name: 
     sprite: {fileID: 0}
   - name: Jeff
-    sprite: {fileID: 21300000, guid: e6e494c202c83de4caa5e81b03af0358, type: 3}
+    sprite: {fileID: 21300000, guid: 77dd0e52f9a33174da1cf4903937223a, type: 3}
   - name: Olivia
-    sprite: {fileID: 21300000, guid: f9ee45e7104cb824dbe2849eb1fe6de1, type: 3}
+    sprite: {fileID: 21300000, guid: 62144e9602155cb4a8f40cdb7c0e8abe, type: 3}
   responses:
-  - response: Of course, like one of my own children!
-    ownerReaction:
-      actorId: 1
-      message: Hohoho, should I be jealous? *Jeff looks happy*
   - response: Of course, same as every other dog.
+    relationshipValue: -1
     ownerReaction:
       actorId: 1
       message: "Ah yes, can\u2019t have one dog favored over the others can ye?"
+  - response: Of course, like one of my own children!
+    relationshipValue: 1
+    ownerReaction:
+      actorId: 1
+      message: Hohoho, should I be jealous? *Jeff looks happy*
   nextDialogue: {fileID: 724388076}
   switchScene: 0
   sceneID: 0
@@ -925,16 +1057,18 @@ MonoBehaviour:
   - name: 
     sprite: {fileID: 0}
   - name: Jeff
-    sprite: {fileID: 21300000, guid: e6e494c202c83de4caa5e81b03af0358, type: 3}
+    sprite: {fileID: 21300000, guid: 77dd0e52f9a33174da1cf4903937223a, type: 3}
   - name: Olivia
-    sprite: {fileID: 21300000, guid: f9ee45e7104cb824dbe2849eb1fe6de1, type: 3}
+    sprite: {fileID: 21300000, guid: 62144e9602155cb4a8f40cdb7c0e8abe, type: 3}
   responses:
   - response: A long trip around Europe, enough to see the sights!
+    relationshipValue: 1
     ownerReaction:
       actorId: 1
       message: "Oh man would that be awesome! The last time I was in Europe I wasn\u2019t
         even old enough to wipe me own arse."
   - response: A long and hardy trip to freezing cold Siberia!
+    relationshipValue: -2
     ownerReaction:
       actorId: 1
       message: "Dear lord that sounds harsh, but to each their own I guess\u2026"
@@ -1238,7 +1372,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 27.35
+  m_fontSize: 29.1
   m_fontSizeBase: 3
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1457,16 +1591,18 @@ MonoBehaviour:
   - name: 
     sprite: {fileID: 0}
   - name: Jeff
-    sprite: {fileID: 21300000, guid: e6e494c202c83de4caa5e81b03af0358, type: 3}
+    sprite: {fileID: 21300000, guid: 77dd0e52f9a33174da1cf4903937223a, type: 3}
   - name: Olivia
-    sprite: {fileID: 21300000, guid: f9ee45e7104cb824dbe2849eb1fe6de1, type: 3}
+    sprite: {fileID: 21300000, guid: 62144e9602155cb4a8f40cdb7c0e8abe, type: 3}
   responses:
   - response: Your big muscles and bigger heart.
+    relationshipValue: 2
     ownerReaction:
       actorId: 1
       message: "Dawww, and here I thought it was JUST for my big muscles! *Jeff\u2019s
         eyes light up*"
   - response: Your simple demeanor and dim-witted attitude.
+    relationshipValue: -1
     ownerReaction:
       actorId: 1
       message: "Er, haha thanks, I do try to live a simple life\u2026 *Jeff laughs
@@ -2002,6 +2138,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1692914520}
   m_CullTransparentMesh: 1
+--- !u!1 &1806409397
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1806409399}
+  - component: {fileID: 1806409398}
+  m_Layer: 0
+  m_Name: CursorManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1806409398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806409397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4424c3e5fed894f46bc3ab4ef2ba4832, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorTexture: {fileID: 2800000, guid: c06668943b1c9b94c8a54c34623db1a9, type: 3}
+  cursorMode: 0
+  hotSpot: {x: 0, y: 0}
+--- !u!4 &1806409399
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806409397}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 877.9637, y: 533.47034, z: 0.7907959}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1948815296
 GameObject:
   m_ObjectHideFlags: 0
@@ -2068,15 +2251,17 @@ MonoBehaviour:
   - name: 
     sprite: {fileID: 0}
   - name: Jeff
-    sprite: {fileID: 21300000, guid: e6e494c202c83de4caa5e81b03af0358, type: 3}
+    sprite: {fileID: 21300000, guid: 77dd0e52f9a33174da1cf4903937223a, type: 3}
   - name: Olivia
-    sprite: {fileID: 21300000, guid: f9ee45e7104cb824dbe2849eb1fe6de1, type: 3}
+    sprite: {fileID: 21300000, guid: 62144e9602155cb4a8f40cdb7c0e8abe, type: 3}
   responses:
   - response: Doing fine porcupine. And you?
+    relationshipValue: 1
     ownerReaction:
       actorId: 1
       message: "Hohoho! I\u2019ve been thinking about you Miss Belongs in a Zoo!"
   - response: "Great. Everything\u2019s just peachy. (Sarcastic)"
+    relationshipValue: -1
     ownerReaction:
       actorId: 1
       message: Oh uh, sorry, it sounds bad from your tone of voice. Sorry to hear
