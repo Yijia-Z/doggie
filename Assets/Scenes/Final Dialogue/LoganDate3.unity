@@ -712,10 +712,12 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 62144e9602155cb4a8f40cdb7c0e8abe, type: 3}
   responses:
   - response: Yes
+    relationshipValue: 5
     ownerReaction:
       actorId: 2
       message: (Leave the daycare for good)
   - response: No
+    relationshipValue: -5
     ownerReaction:
       actorId: 2
       message: (Go back to life at the daycare)
@@ -785,16 +787,18 @@ MonoBehaviour:
   - name: Olivia
     sprite: {fileID: 21300000, guid: 62144e9602155cb4a8f40cdb7c0e8abe, type: 3}
   responses:
-  - response: "Yeah that\u2019d be totally rad!"
-    ownerReaction:
-      actorId: 1
-      message: "Aw heck yeah, I\u2019m excited to teach you my young pupil. *Logan
-        is definitely stalling for something\u2026*"
   - response: I already know how to surf.
+    relationshipValue: -1
     ownerReaction:
       actorId: 1
       message: "Oh, well that\u2019s cool, show me your moves sometime. *Logan is
         definitely stalling for something\u2026*"
+  - response: "Yeah that\u2019d be totally rad!"
+    relationshipValue: 1
+    ownerReaction:
+      actorId: 1
+      message: "Aw heck yeah, I\u2019m excited to teach you my young pupil. *Logan
+        is definitely stalling for something\u2026*"
   nextDialogue: {fileID: 724388076}
   switchScene: 0
   sceneID: 0
@@ -1013,19 +1017,21 @@ MonoBehaviour:
   - name: Olivia
     sprite: {fileID: 21300000, guid: 62144e9602155cb4a8f40cdb7c0e8abe, type: 3}
   responses:
-  - response: "*Take a more careful approach*  Yeah, haha, so Logan\u2026 you seem
-      a bit nervous today\u2026 I just want you to know, you can tell me anything. "
-    ownerReaction:
-      actorId: 1
-      message: "*Logan looks a little more confident now.* yeah I\u2019m a bit stoked
-        for this, but I wanted to ask if you\u2026"
   - response: '*Take the direct approach*  Logan, what in tarnation is happening?
       Why do you keep bringing random things up, then changing the subject? Is something
       wrong? '
+    relationshipValue: -2
     ownerReaction:
       actorId: 1
       message: "*Logan looks extra nervous.* Well, uh I was uh, going to ask you
         if, erm\u2026"
+  - response: "*Take a more careful approach*  Yeah, haha, so Logan\u2026 you seem
+      a bit nervous today\u2026 I just want you to know, you can tell me anything. "
+    relationshipValue: 1
+    ownerReaction:
+      actorId: 1
+      message: "*Logan looks a little more confident now.* yeah I\u2019m a bit stoked
+        for this, but I wanted to ask if you\u2026"
   nextDialogue: {fileID: 342009636}
   switchScene: 0
   sceneID: 0
@@ -1609,6 +1615,7 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 62144e9602155cb4a8f40cdb7c0e8abe, type: 3}
   responses:
   - response: Go ahead. *Listen intently*
+    relationshipValue: 1
     ownerReaction:
       actorId: 1
       message: "Well\u2026 it all started one day with a young penguin dude, and
@@ -1618,6 +1625,7 @@ MonoBehaviour:
         agrees to teach him the true meaning of surfing. After that, he\u2026 *You
         realize Logan is explaining the plot of a particular penguin surfing movie*"
   - response: Go ahead. *Zone out*
+    relationshipValue: -3
     ownerReaction:
       actorId: 1
       message: "Bla bla bla penguin, bla bla bla surfing, yadayadayada competition\u2026
@@ -2094,11 +2102,13 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 62144e9602155cb4a8f40cdb7c0e8abe, type: 3}
   responses:
   - response: '*You wore a beautiful formal outfit*'
+    relationshipValue: 1
     ownerReaction:
       actorId: 1
       message: "\u2026splendiferous my fair maiden! *Logan compliments your formal
         attire as best he can* "
   - response: '*You arrived in your pajamas*'
+    relationshipValue: 1
     ownerReaction:
       actorId: 1
       message: "\u2026relaxed! I wish I could be that lax. *Logan loves your pajamas!*"

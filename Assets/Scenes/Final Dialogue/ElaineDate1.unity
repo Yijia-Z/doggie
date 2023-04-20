@@ -555,16 +555,18 @@ MonoBehaviour:
   - name: Olivia
     sprite: {fileID: 21300000, guid: 62144e9602155cb4a8f40cdb7c0e8abe, type: 3}
   responses:
-  - response: This place is adorable! I love it!
-    ownerReaction:
-      actorId: 1
-      message: It is positively charming, no? I love the- how do you say- aesthetic?
-        The nostalgic smell, the quiet atmosphere, you know?
   - response: "Not the biggest coffee fan, I\u2019m more of an alcohol girl."
+    relationshipValue: -1
     ownerReaction:
       actorId: 1
       message: Well, in that regard you would definitely fit in with the people of
         France.
+  - response: This place is adorable! I love it!
+    relationshipValue: 1
+    ownerReaction:
+      actorId: 1
+      message: It is positively charming, no? I love the- how do you say- aesthetic?
+        The nostalgic smell, the quiet atmosphere, you know?
   nextDialogue: {fileID: 724388076}
   switchScene: 0
   sceneID: 0
@@ -926,11 +928,13 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 62144e9602155cb4a8f40cdb7c0e8abe, type: 3}
   responses:
   - response: "I\u2019m from the city."
+    relationshipValue: 1
     ownerReaction:
       actorId: 1
       message: So we share a love for the beautiful urban landscape, no? Not that
         nature is not beautiful, but nothing beats a lit up bustling city.
   - response: "I\u2019m from the country."
+    relationshipValue: -2
     ownerReaction:
       actorId: 1
       message: "Woah, really? You don\u2019t strike me as a country girl at first,
@@ -1452,11 +1456,13 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 62144e9602155cb4a8f40cdb7c0e8abe, type: 3}
   responses:
   - response: The HOT women.
+    relationshipValue: 1
     ownerReaction:
       actorId: 1
       message: I see, perhaps I should get into the doggie daycare business myself,
         no?
   - response: I absolutely love dogs! I wish I WAS a dog!!
+    relationshipValue: -1
     ownerReaction:
       actorId: 1
       message: Ohohoho! I am a fan of dogs myself, but I must say I can enjoy a good
@@ -1931,10 +1937,12 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 62144e9602155cb4a8f40cdb7c0e8abe, type: 3}
   responses:
   - response: Macchiato with a dash of sugar.
+    relationshipValue: 1
     ownerReaction:
       actorId: 1
       message: Ah yes, the froth art they do is always very charming. Johnny!
   - response: Black coffee please.
+    relationshipValue: 0
     ownerReaction:
       actorId: 1
       message: Ah I see, you like it plain and bitter. Where I come from, some would
@@ -2174,11 +2182,13 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 62144e9602155cb4a8f40cdb7c0e8abe, type: 3}
   responses:
   - response: "Not much of a family gal, I\u2019m all by my lonesome\u2026"
+    relationshipValue: 1
     ownerReaction:
       actorId: 1
       message: Ah yes, that is the life. Perhaps someday a big family would be nice,
         but for now I am comfortable being mostly alone.
   - response: I have a big crazy family back home.
+    relationshipValue: -1
     ownerReaction:
       actorId: 1
       message: Oh, I hope that fits your needs. For me, my two brothers are loving

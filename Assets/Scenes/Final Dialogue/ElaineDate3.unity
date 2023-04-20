@@ -633,10 +633,12 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 62144e9602155cb4a8f40cdb7c0e8abe, type: 3}
   responses:
   - response: "This isn\u2019t just about a birthday, is it Elaine?"
+    relationshipValue: 1
     ownerReaction:
       actorId: 1
       message: No, of course not. You are mindful as always.
   - response: Wow, this is amazing! Is that what you meant by talent?
+    relationshipValue: -1
     ownerReaction:
       actorId: 1
       message: Indeed, but this is not just about my brothers...
@@ -935,11 +937,13 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 62144e9602155cb4a8f40cdb7c0e8abe, type: 3}
   responses:
   - response: No, I make my own choices, and I experience the consequences.
+    relationshipValue: 2
     ownerReaction:
       actorId: 1
       message: This is what I like about you, Olivia. You are a free spirit, a leaf
         floating on the wind between different futures.
   - response: Yes, I believe we all have a path set for us.
+    relationshipValue: -1
     ownerReaction:
       actorId: 1
       message: I see, that must be why you are so carefree and unafraid of the future.
@@ -1381,6 +1385,7 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 62144e9602155cb4a8f40cdb7c0e8abe, type: 3}
   responses:
   - response: Go ahead. *Listen intently*
+    relationshipValue: 1
     ownerReaction:
       actorId: 1
       message: "Today is the birthday of my dear beloved twin brothers. They can
@@ -1389,6 +1394,7 @@ MonoBehaviour:
         them, but first\u2026 *Elaine claps twice and looks over towards the coffee
         bar\u2019s stage*"
   - response: Go ahead. *Zone out*
+    relationshipValue: -2
     ownerReaction:
       actorId: 1
       message: "Bla bla bla twin brothers, bla bla bla birthday, yadayadayada love\u2026
@@ -1796,10 +1802,12 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 62144e9602155cb4a8f40cdb7c0e8abe, type: 3}
   responses:
   - response: '*You wore a beautiful formal outfit*'
+    relationshipValue: -1
     ownerReaction:
       actorId: 1
       message: "\u2026absolutely belle! But the formal attire isn\u2019t necessary."
   - response: '*You arrived in your pajamas*'
+    relationshipValue: 1
     ownerReaction:
       actorId: 1
       message: "\u2026very well rested, I would imagine. *Elaine gives a genuine
@@ -2178,10 +2186,12 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 62144e9602155cb4a8f40cdb7c0e8abe, type: 3}
   responses:
   - response: Yes
+    relationshipValue: 5
     ownerReaction:
       actorId: 2
       message: (Leave the daycare for good)
   - response: No
+    relationshipValue: -5
     ownerReaction:
       actorId: 2
       message: (Go back to life at the daycare)
