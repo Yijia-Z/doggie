@@ -631,11 +631,13 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 62144e9602155cb4a8f40cdb7c0e8abe, type: 3}
   responses:
   - response: Of course, same as every other dog.
+    relationshipValue: 0
     ownerReaction:
       actorId: 1
       message: Indeed, it is good to know you are not favoring my Bella too much
         over the needs of the many.
   - response: Of course, like one of my own children!
+    relationshipValue: -1
     ownerReaction:
       actorId: 1
       message: Good to hear, but try not fret over one dog when the rest need just
@@ -934,11 +936,13 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 62144e9602155cb4a8f40cdb7c0e8abe, type: 3}
   responses:
   - response: A long trip around Europe, enough to see the sights!
+    relationshipValue: 2
     ownerReaction:
       actorId: 1
       message: "Ah yes, the sights of Europe are astounding. Marseille, Sicily, Paris\u2026
         *Elaine is daydreaming about such beautiful places*"
   - response: A long and hardy trip to freezing cold Siberia!
+    relationshipValue: -2
     ownerReaction:
       actorId: 1
       message: "My dear, others know me for my love of the cold, but that just seems
@@ -1515,11 +1519,13 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 62144e9602155cb4a8f40cdb7c0e8abe, type: 3}
   responses:
   - response: Your sarcastic attitude and refreshing perspective towards life.
+    relationshipValue: -1
     ownerReaction:
       actorId: 1
       message: Mmm, just as I thought. *Elaine takes a puff of her cigarette*
   - response: "I won\u2019t lie, it\u2019s something to do with your BIG BEAUTIFUL
       BAZONGAS."
+    relationshipValue: 3
     ownerReaction:
       actorId: 1
       message: Ohohoho, just as I suspected. *Elaine smirks*
@@ -1857,10 +1863,12 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 62144e9602155cb4a8f40cdb7c0e8abe, type: 3}
   responses:
   - response: Doing fine porcupine. And you?
+    relationshipValue: 1
     ownerReaction:
       actorId: 1
       message: Same as always Madame Sunrays.
   - response: "Great. Everything\u2019s just peachy. (Sarcastic)"
+    relationshipValue: -1
     ownerReaction:
       actorId: 1
       message: Ah there she is, my ray of sunshine. *Elaine smiles*
@@ -2100,10 +2108,12 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 62144e9602155cb4a8f40cdb7c0e8abe, type: 3}
   responses:
   - response: "Hmmm, let me think about it\u2026 no!"
+    relationshipValue: 0
     ownerReaction:
       actorId: 1
       message: Ah, playing hard to get I see. I will convince you yet, my sweet.
   - response: "Yes, absolutely! I\u2019d love to go with you someday."
+    relationshipValue: 1
     ownerReaction:
       actorId: 1
       message: Indeed, it would be wonderful.

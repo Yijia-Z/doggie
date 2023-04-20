@@ -1640,16 +1640,18 @@ MonoBehaviour:
   - name: 
     sprite: {fileID: 0}
   - name: Jeff
-    sprite: {fileID: 21300000, guid: e6e494c202c83de4caa5e81b03af0358, type: 3}
+    sprite: {fileID: 21300000, guid: 77dd0e52f9a33174da1cf4903937223a, type: 3}
   - name: Olivia
-    sprite: {fileID: 21300000, guid: f9ee45e7104cb824dbe2849eb1fe6de1, type: 3}
+    sprite: {fileID: 21300000, guid: 62144e9602155cb4a8f40cdb7c0e8abe, type: 3}
   responses:
   - response: "Yeah, I\u2019d love to."
+    relationshipValue: 5
     ownerReaction:
       actorId: 1
       message: Alright! I'll see you tonight Ollie!
   - response: "I\u2019m flattered but I don\u2019t date clients. I hope we can be
       friends."
+    relationshipValue: -5
     ownerReaction:
       actorId: 1
       message: Of course...

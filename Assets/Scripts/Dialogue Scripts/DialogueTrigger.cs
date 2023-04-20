@@ -64,6 +64,7 @@ public class Actor
 public class Response
 {
     public string response;
+    public int relationshipValue;
     public Message ownerReaction;
 }
 

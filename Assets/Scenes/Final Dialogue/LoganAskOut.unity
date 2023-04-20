@@ -1777,10 +1777,12 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 62144e9602155cb4a8f40cdb7c0e8abe, type: 3}
   responses:
   - response: Sounds like fun.
+    relationshipValue: 5
     ownerReaction:
       actorId: 1
       message: Totally righteous. I'll see tonight then!
   - response: Sorry, I'm not really interested. Thanks, though.
+    relationshipValue: -5
     ownerReaction:
       actorId: 1
       message: No worries...

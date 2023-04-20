@@ -690,11 +690,13 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 62144e9602155cb4a8f40cdb7c0e8abe, type: 3}
   responses:
   - response: Wait, you own this place? WOWEE is it something!
+    relationshipValue: 1
     ownerReaction:
       actorId: 1
       message: Aye, I only wish me dad was still around to see me now. *Jeff smiles
         but the look in his eyes is a little melancholy.*
   - response: '*Scrunch your nose up* This place is kinda gross.'
+    relationshipValue: -3
     ownerReaction:
       actorId: 1
       message: HEY watch your mouth! Me dad built this place from the ground up himself.
@@ -916,11 +918,13 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 62144e9602155cb4a8f40cdb7c0e8abe, type: 3}
   responses:
   - response: "I\u2019m from the city."
+    relationshipValue: 0
     ownerReaction:
       actorId: 1
       message: "Woah, really? You don\u2019t strike me as a city girl at first, but
         I guess I can see it."
   - response: "I\u2019m from the country."
+    relationshipValue: 0
     ownerReaction:
       actorId: 1
       message: "Woah, really? You don\u2019t strike me as a country girl at first,
@@ -1510,11 +1514,13 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 62144e9602155cb4a8f40cdb7c0e8abe, type: 3}
   responses:
   - response: The HOT men.
+    relationshipValue: 1
     ownerReaction:
       actorId: 1
       message: "Well well well, looks like ya got what ye were lookin\u2019 for!
         *smirks*"
   - response: I absolutely love dogs! I wish I WAS a dog!!
+    relationshipValue: 0
     ownerReaction:
       actorId: 1
       message: "Aye me too! Though I\u2019d leave a huge smelly mess everywhere I
@@ -1853,12 +1859,14 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 62144e9602155cb4a8f40cdb7c0e8abe, type: 3}
   responses:
   - response: BOURBON ON THE ROCKS, LEAVE THE BOTTLE!
+    relationshipValue: 2
     ownerReaction:
       actorId: 1
       message: "Now THAT\u2019S what I\u2019m TALKIN\u2019 about baby! Johnny!"
   - response: Just water will do, thanks.
+    relationshipValue: 0
     ownerReaction:
-      actorId: 1
+      actorId: -2
       message: Not much of a drinker, eh? Johnny!
   nextDialogue: {fileID: 1404882515}
   switchScene: 0
@@ -2094,16 +2102,18 @@ MonoBehaviour:
   - name: Olivia
     sprite: {fileID: 21300000, guid: 62144e9602155cb4a8f40cdb7c0e8abe, type: 3}
   responses:
-  - response: Yeah, a big one back in my hometown. I love them to death!
-    ownerReaction:
-      actorId: 1
-      message: "That sounds absolutely wonderful! I hope I can be apart o\u2019 that
-        sorta thing someday!"
   - response: "I\u2019m not much of a family gal, it\u2019s just me myself and I\u2026"
+    relationshipValue: -1
     ownerReaction:
       actorId: 1
       message: "Ah, I\u2019m sorry to hear that. Maybe we could be family one day,
         if things go right."
+  - response: Yeah, a big one back in my hometown. I love them to death!
+    relationshipValue: 1
+    ownerReaction:
+      actorId: 1
+      message: "That sounds absolutely wonderful! I hope I can be apart o\u2019 that
+        sorta thing someday!"
   nextDialogue: {fileID: 0}
   switchScene: 0
   sceneID: 3
