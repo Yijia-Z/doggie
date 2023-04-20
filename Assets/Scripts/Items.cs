@@ -72,7 +72,7 @@ public class Apparel : Item
         if (name == "Neckpiece")
         {
             dog.neckpiece.SetActive(true);
-            //dog.neckpiece.GetComponent<SpriteRenderer>().sprite = sprite;
+            dog.neckpiece.GetComponent<SpriteRenderer>().sprite = sprite;
         }
         else if (name == "Headpiece")
         {
