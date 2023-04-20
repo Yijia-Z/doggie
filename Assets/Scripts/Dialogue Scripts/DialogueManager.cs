@@ -153,7 +153,7 @@ public class DialogueManager : MonoBehaviour
         if (nextDialogue is null)
         {
             Debug.Log("next diag is null");
-            if (relationshipLevel >= 5)
+            if (relationshipLevel > 5)
             {
                 nextDialogue = goodEnding;
             }

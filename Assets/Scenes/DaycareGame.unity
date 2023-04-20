@@ -29051,7 +29051,7 @@ MonoBehaviour:
   spriteFadeIn: {fileID: 825032481627596427}
   speedUpMultiplier: 50
   irlSecToGameMinRatio: 2
-  hour: 8
+  hour: 9
   minute: 0
   day: 1
 --- !u!1 &1504273639
