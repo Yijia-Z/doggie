@@ -14,7 +14,7 @@ public class Clock : MonoBehaviour
     public float speedUpMultiplier = 2.0f;
     public float irlSecToGameMinRatio = 5.0f;
     private float timer;
-    public int hour = 8;
+    public int hour = 9;
     public int minute = 0;
     private bool isAM = true;
     public int day = 1;
@@ -53,17 +53,17 @@ public class Clock : MonoBehaviour
             {
                 hour = 1;
             }
-            else if (hour == 5 && !isAM)
+            else if (hour == 4 && !isAM)
             {
                 // Select the owner to present
                 ownerSelect();
             }
-            else if (hour == 6 && !isAM)
+            else if (hour == 5 && !isAM)
             {
                 day++;
                 StartCoroutine(fadeBlack());
                 isAM = true;
-                hour = 8;
+                hour = 9;
                 minute = 0;
 
             }
@@ -226,7 +226,7 @@ public class Clock : MonoBehaviour
         ownerCheck();
 
         isAM = true;
-        hour = 8;
+        hour = 9;
         minute = 0;
         StartCoroutine(FadeBlackOut(false));
 

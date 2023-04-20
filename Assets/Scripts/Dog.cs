@@ -14,8 +14,8 @@ public class Dog : MonoBehaviour
     public Item item;
     public Toy equippedToy = null;
     public Apparel equippedApparel = null;
-    public Image neckpieceImage; // reference to the neckpiece image component on the dog
-    public Image headpieceImage; // reference to the headpiece image component on the dog
+    public GameObject neckpiece; // reference to the neckpiece image component on the dog
+    public GameObject headpiece; // reference to the headpiece image component on the dog
     public float hunger = 50f;
     public float hygiene = 100f;
     public float totalHappiness = 100f;
@@ -240,15 +240,7 @@ public class Dog : MonoBehaviour
                 item = new Toy(100, 30 * rate, tag, null, "A toy for dogs to catch");
                 break;
             case "Apparel":
-                item = new Apparel(1, 30 * rate, tag, null, "Cloth for dogs to wear");
-                if (itemName == "Neckpiece")
-                {
-                    neckpieceImage.sprite = sprite;
-                }
-                else if (itemName == "Headpiece")
-                {
-                    headpieceImage.sprite = sprite;
-                }
+                item = new Apparel(1, 30 * rate, itemName, sprite, "Cloth for dogs to wear");
                 break;
             default:
                 Debug.Log("Invalid item tag: " + tag);

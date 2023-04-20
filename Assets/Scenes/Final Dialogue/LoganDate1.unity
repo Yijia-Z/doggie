@@ -690,10 +690,12 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 62144e9602155cb4a8f40cdb7c0e8abe, type: 3}
   responses:
   - response: Yeah, a big one back in my hometown. I love them to death!
+    relationshipValue: 1
     ownerReaction:
       actorId: 1
       message: "Same here, haha, although sometimes they can get on my nerves, y\u2019know?"
   - response: "I\u2019m not much of a family gal, it\u2019s just me myself and I\u2026"
+    relationshipValue: -1
     ownerReaction:
       actorId: 1
       message: "Oh, I\u2019m sorry to hear that. My family has been begging me to
@@ -763,16 +765,18 @@ MonoBehaviour:
   - name: Olivia
     sprite: {fileID: 21300000, guid: 62144e9602155cb4a8f40cdb7c0e8abe, type: 3}
   responses:
+  - response: '*Scrunch your nose up* This place is kinda gross.'
+    relationshipValue: -1
+    ownerReaction:
+      actorId: 1
+      message: "Oh, yeah, I guess the table is kinda sticky\u2026"
   - response: "Yeah it\u2019s alright, but I\u2019d rather be out and about with
       you."
+    relationshipValue: 1
     ownerReaction:
       actorId: 1
       message: "Wait really? Where? I\u2019d love to take you out surfing sometime,
         y\u2019know?"
-  - response: '*Scrunch your nose up* This place is kinda gross.'
-    ownerReaction:
-      actorId: 1
-      message: "Oh, yeah, I guess the table is kinda sticky\u2026"
   nextDialogue: {fileID: 724388076}
   switchScene: 0
   sceneID: 0
@@ -991,11 +995,13 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 62144e9602155cb4a8f40cdb7c0e8abe, type: 3}
   responses:
   - response: "I\u2019m from the city."
+    relationshipValue: 0
     ownerReaction:
       actorId: 1
       message: "Woah, really? You don\u2019t strike me as a city girl at first, but
         I guess I can see it."
   - response: "I\u2019m from the country."
+    relationshipValue: 0
     ownerReaction:
       actorId: 1
       message: "Woah, really? You don\u2019t strike me as a country girl at first,
@@ -1659,11 +1665,13 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 62144e9602155cb4a8f40cdb7c0e8abe, type: 3}
   responses:
   - response: 'I absolutely love dogs! I wish I WAS a dog!! '
+    relationshipValue: 1
     ownerReaction:
       actorId: 1
       message: "Yoo same here! Don\u2019t get me wrong, cats are cool, but dogs are
         just nothing but loving."
   - response: The HOT men.
+    relationshipValue: -2
     ownerReaction:
       actorId: 1
       message: "Really? Is that\u2026 no, you were joking, of course haha. *Logan
@@ -1797,6 +1805,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1598408217}
   m_CullTransparentMesh: 1
+--- !u!1 &1610437335
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1610437337}
+  - component: {fileID: 1610437336}
+  m_Layer: 0
+  m_Name: CursorManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1610437336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1610437335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4424c3e5fed894f46bc3ab4ef2ba4832, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorTexture: {fileID: 2800000, guid: c06668943b1c9b94c8a54c34623db1a9, type: 3}
+  cursorMode: 0
+  hotSpot: {x: 0, y: 0}
+--- !u!4 &1610437337
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1610437335}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 877.9637, y: 533.47034, z: 0.7907959}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &1633876565
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2003,10 +2058,12 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 62144e9602155cb4a8f40cdb7c0e8abe, type: 3}
   responses:
   - response: A glass of wine.
+    relationshipValue: 0
     ownerReaction:
       actorId: 1
       message: Alrighty. Hey buddy! *Logan calls the bartender over to order*
   - response: Just water will do, thanks.
+    relationshipValue: 1
     ownerReaction:
       actorId: 1
       message: "Do you not drink? Hey, it\u2019s cool, I admire that actually. Hey

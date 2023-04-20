@@ -759,11 +759,13 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 62144e9602155cb4a8f40cdb7c0e8abe, type: 3}
   responses:
   - response: Of course, same as every other dog.
+    relationshipValue: 0
     ownerReaction:
       actorId: 1
       message: Indeed, it is good to know you are not favoring my Bella too much
         over the needs of the many.
   - response: Of course, like one of my own children!
+    relationshipValue: -1
     ownerReaction:
       actorId: 1
       message: Good to hear, but try not fret over one dog when the rest need just
@@ -1062,11 +1064,13 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 62144e9602155cb4a8f40cdb7c0e8abe, type: 3}
   responses:
   - response: A long trip around Europe, enough to see the sights!
+    relationshipValue: 2
     ownerReaction:
       actorId: 1
       message: "Ah yes, the sights of Europe are astounding. Marseille, Sicily, Paris\u2026
         *Elaine is daydreaming about such beautiful places*"
   - response: A long and hardy trip to freezing cold Siberia!
+    relationshipValue: -2
     ownerReaction:
       actorId: 1
       message: "My dear, others know me for my love of the cold, but that just seems
@@ -1210,6 +1214,53 @@ RectTransform:
   m_AnchoredPosition: {x: 156.00342, y: -55}
   m_SizeDelta: {x: 1582.1569, y: 151.5586}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &890404450
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 890404452}
+  - component: {fileID: 890404451}
+  m_Layer: 0
+  m_Name: CursorManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &890404451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 890404450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4424c3e5fed894f46bc3ab4ef2ba4832, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorTexture: {fileID: 2800000, guid: c06668943b1c9b94c8a54c34623db1a9, type: 3}
+  cursorMode: 0
+  hotSpot: {x: 0, y: 0}
+--- !u!4 &890404452
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 890404450}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 877.9637, y: 533.47034, z: 0.7907959}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &958066557
 GameObject:
   m_ObjectHideFlags: 0
@@ -1643,11 +1694,13 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 62144e9602155cb4a8f40cdb7c0e8abe, type: 3}
   responses:
   - response: Your sarcastic attitude and refreshing perspective towards life.
+    relationshipValue: -1
     ownerReaction:
       actorId: 1
       message: Mmm, just as I thought. *Elaine takes a puff of her cigarette*
   - response: "I won\u2019t lie, it\u2019s something to do with your BIG BEAUTIFUL
       BAZONGAS."
+    relationshipValue: 3
     ownerReaction:
       actorId: 1
       message: Ohohoho, just as I suspected. *Elaine smirks*
@@ -1985,10 +2038,12 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 62144e9602155cb4a8f40cdb7c0e8abe, type: 3}
   responses:
   - response: Doing fine porcupine. And you?
+    relationshipValue: 1
     ownerReaction:
       actorId: 1
       message: Same as always Madame Sunrays.
   - response: "Great. Everything\u2019s just peachy. (Sarcastic)"
+    relationshipValue: -1
     ownerReaction:
       actorId: 1
       message: Ah there she is, my ray of sunshine. *Elaine smiles*
@@ -2228,10 +2283,12 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 62144e9602155cb4a8f40cdb7c0e8abe, type: 3}
   responses:
   - response: "Hmmm, let me think about it\u2026 no!"
+    relationshipValue: 0
     ownerReaction:
       actorId: 1
       message: Ah, playing hard to get I see. I will convince you yet, my sweet.
   - response: "Yes, absolutely! I\u2019d love to go with you someday."
+    relationshipValue: 1
     ownerReaction:
       actorId: 1
       message: Indeed, it would be wonderful.
