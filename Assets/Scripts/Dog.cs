@@ -14,8 +14,8 @@ public class Dog : MonoBehaviour
     public Item item;
     public Toy equippedToy = null;
     public Apparel equippedApparel = null;
-    public Image neckpieceImage; // reference to the neckpiece image component on the dog
-    public Image headpieceImage; // reference to the headpiece image component on the dog
+    public GameObject neckpiece; // reference to the neckpiece image component on the dog
+    public GameObject headpiece; // reference to the headpiece image component on the dog
     public float hunger = 50f;
     public float hygiene = 100f;
     public float totalHappiness = 100f;
