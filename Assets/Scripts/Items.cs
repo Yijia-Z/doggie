@@ -71,11 +71,13 @@ public class Apparel : Item
         dog.equippedApparel = this;
         if (name == "Neckpiece")
         {
-            dog.neckpieceImage.sprite = sprite;
+            dog.neckpiece.SetActive(true);
+            //dog.neckpiece.GetComponent<SpriteRenderer>().sprite = sprite;
         }
         else if (name == "Headpiece")
         {
-            dog.headpieceImage.sprite = sprite;
+            dog.headpiece.SetActive(true);
+            dog.headpiece.GetComponent<SpriteRenderer>().sprite = sprite;
         }
 
         dog.happiness += value;
