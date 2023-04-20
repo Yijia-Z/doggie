@@ -377,8 +377,16 @@ PrefabInstance:
       value: Food
       objectReference: {fileID: 0}
     - target: {fileID: 4434864319595311832, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_Name
+      value: Bella
+      objectReference: {fileID: 0}
+    - target: {fileID: 4434864319595311832, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_TagString
       value: Food
+      objectReference: {fileID: 0}
+    - target: {fileID: 4762401623362079685, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_Name
+      value: Georgie
       objectReference: {fileID: 0}
     - target: {fileID: 4762401623362079685, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_TagString
@@ -624,7 +632,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4762401623362079685, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_Name
-      value: Neckpiece
+      value: Bella
       objectReference: {fileID: 0}
     - target: {fileID: 4762401623362079685, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_TagString
@@ -660,7 +668,7 @@ PrefabInstance:
       objectReference: {fileID: 1229936556, guid: 6d1ca245e6a2542818bb63059babf81d, type: 3}
     - target: {fileID: 8298043136291381437, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_Name
-      value: Neckpiece
+      value: Bella
       objectReference: {fileID: 0}
     - target: {fileID: 8298043136291381437, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_TagString
@@ -676,7 +684,7 @@ PrefabInstance:
       objectReference: {fileID: -1594474064, guid: 6d1ca245e6a2542818bb63059babf81d, type: 3}
     - target: {fileID: 9143085252850524155, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_Name
-      value: Headpiece
+      value: Bella
       objectReference: {fileID: 0}
     - target: {fileID: 9143085252850524155, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_TagString
@@ -841,6 +849,10 @@ PrefabInstance:
       value: Toy
       objectReference: {fileID: 0}
     - target: {fileID: 4762401623362079685, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_Name
+      value: Georgie
+      objectReference: {fileID: 0}
+    - target: {fileID: 4762401623362079685, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_TagString
       value: Toy
       objectReference: {fileID: 0}
@@ -932,6 +944,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -1656145944, guid: 514de94dc07c442c983891dad0205cba, type: 3}
+    - target: {fileID: 8298043136291381437, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
+      propertyPath: m_Name
+      value: Max
+      objectReference: {fileID: 0}
     - target: {fileID: 8298043136291381437, guid: 7451d5db00ca349f0aabb0abbdab288e, type: 3}
       propertyPath: m_TagString
       value: Toy
