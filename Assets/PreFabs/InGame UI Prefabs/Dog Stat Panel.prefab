@@ -537,6 +537,10 @@ PrefabInstance:
       value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 5172444780702698791, guid: 387151f1d374d4af9b3b751037ded077, type: 3}
+      propertyPath: m_Value
+      value: 0.693
+      objectReference: {fileID: 0}
+    - target: {fileID: 5172444780702698791, guid: 387151f1d374d4af9b3b751037ded077, type: 3}
       propertyPath: m_TargetGraphic
       value: 
       objectReference: {fileID: 0}
@@ -642,6 +646,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7314415384161058705, guid: 387151f1d374d4af9b3b751037ded077, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7314415384161058705, guid: 387151f1d374d4af9b3b751037ded077, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7314415384161058705, guid: 387151f1d374d4af9b3b751037ded077, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7314415384161058705, guid: 387151f1d374d4af9b3b751037ded077, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7314415384161058705, guid: 387151f1d374d4af9b3b751037ded077, type: 3}
+      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -823,12 +843,28 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hygiene Slider
       objectReference: {fileID: 0}
+    - target: {fileID: 6844996964418570412, guid: 387151f1d374d4af9b3b751037ded077, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844996964418570412, guid: 387151f1d374d4af9b3b751037ded077, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7314415384161058705, guid: 387151f1d374d4af9b3b751037ded077, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7314415384161058705, guid: 387151f1d374d4af9b3b751037ded077, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7314415384161058705, guid: 387151f1d374d4af9b3b751037ded077, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7314415384161058705, guid: 387151f1d374d4af9b3b751037ded077, type: 3}
+      propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1002,12 +1038,28 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hunger Slider
       objectReference: {fileID: 0}
+    - target: {fileID: 6844996964418570412, guid: 387151f1d374d4af9b3b751037ded077, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844996964418570412, guid: 387151f1d374d4af9b3b751037ded077, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7314415384161058705, guid: 387151f1d374d4af9b3b751037ded077, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7314415384161058705, guid: 387151f1d374d4af9b3b751037ded077, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7314415384161058705, guid: 387151f1d374d4af9b3b751037ded077, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7314415384161058705, guid: 387151f1d374d4af9b3b751037ded077, type: 3}
+      propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

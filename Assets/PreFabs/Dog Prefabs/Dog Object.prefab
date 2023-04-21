@@ -327,6 +327,8 @@ MonoBehaviour:
   totalHappiness: 100
   happiness: 10
   selected: 0
+  bark: 1
+  barkCountDown: -1
   taskPanel: {fileID: 2640097647371821385}
   bathe_button: {fileID: 4091239783692266101}
   walk_button: {fileID: 4091239784877716693}
@@ -334,6 +336,11 @@ MonoBehaviour:
   inventory_panel: {fileID: 0}
   stats_panel: {fileID: 0}
   videoPlayerScript: {fileID: 0}
+  dogBarkSound: {fileID: 0}
+  dogWhineSound: {fileID: 0}
+  buttonSound1: {fileID: 0}
+  buttonSound2: {fileID: 0}
+  buttonSound3: {fileID: 0}
 --- !u!1 &4091239784964232560
 GameObject:
   m_ObjectHideFlags: 0
@@ -545,11 +552,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 301663086276893507, guid: 9319e4df0d47b4f6a86b0103a2794dcb, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1750557476589283152, guid: 9319e4df0d47b4f6a86b0103a2794dcb, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4285808446
+      objectReference: {fileID: 0}
+    - target: {fileID: 1750557476589283159, guid: 9319e4df0d47b4f6a86b0103a2794dcb, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 86.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 1750557476589283159, guid: 9319e4df0d47b4f6a86b0103a2794dcb, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 30.53
       objectReference: {fileID: 0}
     - target: {fileID: 1750557477234839678, guid: 9319e4df0d47b4f6a86b0103a2794dcb, type: 3}
       propertyPath: m_AnchoredPosition.x
