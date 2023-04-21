@@ -68,4 +68,8 @@ public class DatingProgress : MonoBehaviour
         dayIndex = 1;
         return false;
     }
+    public static void ClearKeys()
+    {
+        PlayerPrefs.DeleteAll();
+    }
 }

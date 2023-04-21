@@ -19,7 +19,6 @@ public class Clock : MonoBehaviour
     private bool isAM = true;
     public int day = 1;
     private bool isPaused = false;
-    private bool isFading = false;
     private int ownerIndex = -1;
     private bool ownerAvailable = false;
     private bool ownerSelected = false;
@@ -54,18 +53,18 @@ public class Clock : MonoBehaviour
             {
                 hour = 1;
             }
-            else if (hour >= 4 && !isAM && !ownerSelected)
+            else if (hour >= 4 && hour < 6 && !isAM && !ownerSelected)
             {
                 // Select the owner to present
+                Debug.Log("SELECTING OWNER...");
                 ownerSelect();
             }
             else if (hour == 5 && !isAM)
             {
-                day++;
+                ResumeTime();
+                Debug.Log("END OF DAY");
                 StartCoroutine(fadeBlack());
-                isAM = true;
-                hour = 9;
-                minute = 0;
+
 
             }
         }
@@ -154,6 +153,9 @@ public class Clock : MonoBehaviour
 
     public IEnumerator FadeBlackOut(bool fadeToBlack = true, int fadeSpeed = 1)
     {
+        isAM = true;
+        hour = 9;
+        minute = 0;
         dayText.gameObject.SetActive(true);
         dayText.text = "Day " + day.ToString();
 
@@ -163,10 +165,6 @@ public class Clock : MonoBehaviour
         float fadeAmount2;
 
         yield return new WaitForSecondsRealtime(2);
-        while (isFading)
-        {
-            yield return new WaitForSecondsRealtime(1);
-        }
 
         if (fadeToBlack)
         {
@@ -201,10 +199,8 @@ public class Clock : MonoBehaviour
 
     public IEnumerator fadeBlack()
     {
-        isFading = true;
         BlackPanel.SetActive(true);
         dayText.gameObject.SetActive(true);
-        dayText.text = "Day " + day.ToString();
         Color objectColor = BlackPanel.GetComponent<Image>().color;
         Color textColor = dayText.color;
         float fadeAmount;
@@ -222,10 +218,9 @@ public class Clock : MonoBehaviour
             yield return null;
         }
         yield return new WaitForSecondsRealtime(2);
-        isFading = false;
 
         ownerCheck();
-
+        day++;
         isAM = true;
         hour = 9;
         minute = 0;
@@ -234,6 +229,7 @@ public class Clock : MonoBehaviour
     }
     private void ownerSelect()
     {
+        ownerIndex = -1;
         // Select the next available owner
         Dog[] dogs = FindObjectsOfType<Dog>();
         for (int i = 0; i < dogs.Length; i++)
@@ -253,7 +249,8 @@ public class Clock : MonoBehaviour
             spriteFadeIn.spriteRenderer = GameObject.Find("Other Players/Elaine").GetComponent<SpriteRenderer>();
         else if (ownerIndex == 2)
             spriteFadeIn.spriteRenderer = GameObject.Find("Other Players/Jeff").GetComponent<SpriteRenderer>();
-        spriteFadeIn.spriteRenderer.color = new Color(1.0f, 1.0f, 1.0f, 0.0f); // set initial alpha to 0
+        if (ownerIndex != -1)
+            spriteFadeIn.spriteRenderer.color = new Color(1.0f, 1.0f, 1.0f, 0.0f); // set initial alpha to 0
 
         ownerSelected = true;
     }
