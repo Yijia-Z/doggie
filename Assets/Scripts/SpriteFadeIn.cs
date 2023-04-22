@@ -13,7 +13,7 @@ public class SpriteFadeIn : MonoBehaviour
     void Update()
     {
         // Check if it's time to fade in 5:30PM
-        if (!isFadingIn && FindObjectOfType<Clock>().hour == 4 && FindObjectOfType<Clock>().minute >= 30)
+        if (!isFadingIn && FindObjectOfType<Clock>().getOwnerIndex() >= 0 && FindObjectOfType<Clock>().hour == 4 && FindObjectOfType<Clock>().minute >= 30)
         {
             isFadingIn = true;
         }
