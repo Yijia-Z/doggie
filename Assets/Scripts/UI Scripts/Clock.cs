@@ -219,8 +219,9 @@ public class Clock : MonoBehaviour
         }
         yield return new WaitForSecondsRealtime(2);
 
-        ownerCheck();
         day++;
+        ownerCheck();
+        ownerSelected = false;
         isAM = true;
         hour = 9;
         minute = 0;
@@ -253,7 +254,9 @@ public class Clock : MonoBehaviour
             spriteFadeIn.spriteRenderer.color = new Color(1.0f, 1.0f, 1.0f, 0.0f); // set initial alpha to 0
 
         ownerSelected = true;
+        Debug.Log("..." + ownerIndex);
     }
+    
     private void ownerCheck()
     {
         if (!ownerAvailable)
@@ -279,5 +282,10 @@ public class Clock : MonoBehaviour
             else if (ownerIndex == 2)
                 SceneManager.LoadScene(17); // JeffAskOut
         }
+    }
+
+    public int getOwnerIndex()
+    {
+        return ownerIndex;
     }
 }
