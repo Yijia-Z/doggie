@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+
 
 // Set to npc character so dialogue starts when player walks up to npc.
 public class Npc : MonoBehaviour
