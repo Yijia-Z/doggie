@@ -19,7 +19,7 @@ TagManager:
   - Player
   - Water
   - UI
-  - 
+  - Dog
   - background grash
   - 
   - 
@@ -54,4 +54,7 @@ TagManager:
     locked: 0
   - name: Characters
     uniqueID: 3679150113
+    locked: 0
+  - name: Dog
+    uniqueID: 1656246185
     locked: 0
