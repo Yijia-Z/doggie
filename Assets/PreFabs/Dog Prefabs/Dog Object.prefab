@@ -198,6 +198,7 @@ GameObject:
   - component: {fileID: 4091239783288199059}
   - component: {fileID: 4091239783288199058}
   - component: {fileID: 4091239783288199061}
+  - component: {fileID: 5400277778375995665}
   m_Layer: 0
   m_Name: Dog Object
   m_TagString: Dog
@@ -341,6 +342,22 @@ MonoBehaviour:
   buttonSound1: {fileID: 0}
   buttonSound2: {fileID: 0}
   buttonSound3: {fileID: 0}
+--- !u!70 &5400277778375995665
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4091239783288199060}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.14895779, y: 0.029791594}
+  m_Size: {x: 1.1894616, y: 2.523625}
+  m_Direction: 0
 --- !u!1 &4091239784964232560
 GameObject:
   m_ObjectHideFlags: 0
