@@ -1601,7 +1601,7 @@ MonoBehaviour:
   - actorId: 2
     message: Oh, thank you. She's very sweet.
   - actorId: 1
-    message: es, she has impeccable taste; only likes the best.
+    message: Yes, she has impeccable taste; only likes the best.
   - actorId: 1
     message: "I've been very busy at my new restaurant, but I\u2019d wouldn\u2019t
       mind taking a break to explore this beautiful city with someone as charming
